@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Soil Data Visualization</title>
+    <script>
+        // 使用 JavaScript 提交表单并动态更新地图
+        function updateMap() {
+            const form = document.getElementById("mapForm");
+            const formData = new FormData(form);
+
+            fetch("/", {
+                method: "POST",
+                body: formData,
+            })
+            .then(response => response.text())
+            .then(html => {
+                // 替换地图的内容
+                document.getElementById("mapContainer").innerHTML = html;
+            })
+            .catch(error => console.error("Error:", error));
+        }
+    </script>
+</head>
+<body>
+    <h1>Soil Data Visualization</h1>
+    <form id="mapForm" method="POST" onsubmit="event.preventDefault(); updateMap();">
+        <label for="column">Select a column to visualize:</label>
+        <select name="column" id="column">
+            {% for col in columns %}
+                <option value="{{ col }}" {% if col == selected_column %}selected{% endif %}>{{ col }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit">Generate Map</button>
+    </form>
+    <div id="mapContainer" style="width: 100%; height: 600px;">
+        {{ map_html|safe }}
+    </div>
+</body>
+</html>
