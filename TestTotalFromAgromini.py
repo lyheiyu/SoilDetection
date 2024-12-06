@@ -1,7 +1,8 @@
 import requests
 import time
+from APIoperation import load_api_key
 
-API_KEY = "dd61ba24bdb6abdc707992d7b6d20ee5"  # API Key
+API_KEY = load_api_key() # API Key
 BASE_URL = "http://api.agromonitoring.com/agro/1.0"
 
 def create_polygon():
