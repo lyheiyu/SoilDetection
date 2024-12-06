@@ -1,9 +1,9 @@
 import requests
 
-
+from APIoperation import load_api_key
 url = "http://api.agromonitoring.com/agro/1.0/polygons"
 params = {
-    "appid": "dd61ba24bdb6abdc707992d7b6d20ee5",
+    "appid": load_api_key(),
     "duplicated": "true"
 }
 data = {
