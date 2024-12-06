@@ -23,6 +23,7 @@
     "created_at": 1733244330
 }
 import requests
+from APIoperation import load_api_key
 
 # 土壤数据 API URL
 url = "http://api.agromonitoring.com/agro/1.0/soil"
@@ -30,7 +31,7 @@ url = "http://api.agromonitoring.com/agro/1.0/soil"
 # 使用多边形 ID 查询
 params = {
     "polyid": "674f30de9ca168bc6ef7cb98",  # 替换为返回的 polygon_id
-    "appid": "dd61ba24bdb6abdc707992d7b6d20ee5"  # 替换为您的 API Key
+    "appid": load_api_key()  # 替换为您的 API Key
 }
 
 response = requests.get(url, params=params)

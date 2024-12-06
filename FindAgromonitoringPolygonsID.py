@@ -1,8 +1,8 @@
 import requests
-
+from APIoperation import load_api_key
 # API 配置
 BASE_URL = "http://api.agromonitoring.com/agro/1.0"
-API_KEY = "dd61ba24bdb6abdc707992d7b6d20ee5"  # 替换为您的 API Key
+API_KEY = load_api_key()
 
 # 获取多边形列表
 url = f"{BASE_URL}/polygons"
