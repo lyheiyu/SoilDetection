@@ -5,7 +5,6 @@ import pandas as pd
 
 app = Flask(__name__)
 
-# 加载 GeoDataFrame
 gdf = gpd.read_file("ESDB/SGDB_PTR.shp")
 columns = gdf.columns.tolist()
 default_column = 'OC_TOP'
