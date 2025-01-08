@@ -52,6 +52,7 @@ sample2 = Soil( bulk_ec = [0.01, 0.02, 0.025, np.nan, 0.030, 0.040],
                 water_ec = 0.5)
 
 sample2_water = predict.Water(sample2)
+sample2.df.to_csv('test.csv',index=False)
 print('sample2_water', sample2_water)
 print('sample2.info.water', sample2.info.water)
 print('sample2.info.bulk_ec', sample2.info.bulk_ec)
