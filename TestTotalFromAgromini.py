@@ -50,7 +50,8 @@ def get_data(endpoint, polygon_id):
         return None
 
 def aggregate_data():
-    polygon_id = create_polygon()
+    # polygon_id = create_polygon()
+    polygon_id = '677e653fc46b9f856bdfb3f0'
     if not polygon_id:
         print("Failed to create polygon. Exiting.")
         return

@@ -30,7 +30,7 @@ url = "http://api.agromonitoring.com/agro/1.0/soil"
 
 # 使用多边形 ID 查询
 params = {
-    "polyid": "674f30de9ca168bc6ef7cb98",  # 替换为返回的 polygon_id
+    "polyid": "677e653fc46b9f856bdfb3f0",  # 替换为返回的 polygon_id
     "appid": load_api_key()  # 替换为您的 API Key
 }
 
