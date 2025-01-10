@@ -49,6 +49,32 @@ import json
 csv_file = "soil_data.csv"
 
 
+#
+# def print_tree(data, indent=0):
+#     """
+#     Recursively print JSON structure as a tree, combining same-level keys for simplicity.
+#     """
+#     if isinstance(data, dict):
+#         same_level = []
+#         for key, value in data.items():
+#             if isinstance(value, (dict, list)):
+#                 if same_level:
+#                     print(" " * indent + f"- {', '.join(same_level)}")
+#                     same_level = []
+#                 print(" " * indent + f"- {key}:")
+#                 print_tree(value, indent + 2)
+#             else:
+#                 same_level.append(f"{key}: {value}")
+#         if same_level:
+#             print(" " * indent + f"- {', '.join(same_level)}")
+#     elif isinstance(data, list):
+#         for index, item in enumerate(data):
+#             print(" " * indent + f"- [{index}]:")
+#             print_tree(item, indent + 2)
+#     else:
+#         print(" " * indent + f"{data}")
+# print_tree(response.json())
+
 # # Extract and write data to the CSV file
 # def convert_json_to_csv(data, csv_file):
 #     headers = ['Layer', 'Depth', 'Mean Value', 'Uncertainty', 'Units']
