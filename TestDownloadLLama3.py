@@ -1,7 +1,5 @@
 from huggingface_hub import login
 from transformers import AutoModel, AutoTokenizer
-# # Replace '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' with your actual access token
-# login(token="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")
 # model_name = "meta-llama/Meta-Llama-3-8B-Instruct"
 import torch
 # Load model directly
