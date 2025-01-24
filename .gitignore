@@ -1,0 +1,12 @@
+# 忽略模型文件夹
+llama-3-12b-local/
+llama3_lora_finetuned/
+Meta-Llama-3-8B/
+meta_llama_3_8B2/
+
+# 忽略临时文件夹
+offload/
+offload2/
+
+# 忽略数据集
+Datasets/qna-dataset-farmgenie-soil-v2.csv
