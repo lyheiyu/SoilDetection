@@ -319,16 +319,16 @@ class CustomTrainer(Trainer):
 # 配置训练参数
 training_args = TrainingArguments(
     output_dir="./llama3_lora_finetuned",
-    per_device_train_batch_size=4,
-    num_train_epochs=3,
-    learning_rate=2e-4,
+    per_device_train_batch_size=2,
+    num_train_epochs=10,
+    learning_rate=2e-2,
     save_strategy="epoch",
     evaluation_strategy="epoch",
     logging_dir="./logs",
     fp16=False
 )
 optimizer = torch.optim.AdamW(
-    filter(lambda p: p.requires_grad, model.parameters()), lr=2e-4
+    filter(lambda p: p.requires_grad, model.parameters()), lr=2e-2
 )
 # 创建 Trainer
 trainer = CustomTrainer(

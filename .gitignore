@@ -7,6 +7,8 @@ meta_llama_3_8B2/
 # 忽略临时文件夹
 offload/
 offload2/
+lora_output/
+
 
 # 忽略数据集
 Datasets/qna-dataset-farmgenie-soil-v2.csv

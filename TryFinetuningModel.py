@@ -95,7 +95,7 @@ def generate_response(prompt, model, tokenizer, max_new_tokens=100):
             **inputs,
             max_new_tokens=max_new_tokens,  # 最大生成的 token 数
             do_sample=True,                # 随机采样模式
-            temperature=0.7,               # 控制生成的随机性
+            temperature=0.5,               # 控制生成的随机性
             top_k=50,                      # 限制前 k 个最高概率的词
             top_p=0.9,                     # 基于累积概率进行采样
             pad_token_id=tokenizer.pad_token_id  # 填充的 token ID
@@ -103,7 +103,7 @@ def generate_response(prompt, model, tokenizer, max_new_tokens=100):
     return tokenizer.decode(outputs[0], skip_special_tokens=True)  # 解码生成的文本
 
 # 测试输入
-prompt = "Could you help me with knowledge of agriculture"
+prompt = "soil health"
 response = generate_response(prompt, model, tokenizer)
 print("Prompt:", prompt)
 print("Response:", response)
