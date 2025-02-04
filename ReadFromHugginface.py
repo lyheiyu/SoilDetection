@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+import pandas as pd
+
+df = pd.read_parquet("hf://datasets/Prazzwal07/soil_data/data/train-00000-of-00001.parquet")
+# save df to csv
+df.to_csv("soil_data.csv", index=False)
+=======
 # import pandas as pd
 #
 # df = pd.read_parquet("hf://datasets/Prazzwal07/soil_data/data/train-00000-of-00001.parquet")
@@ -27,3 +34,4 @@ print(train_dataset[0])
 print(eval_dataset[10])
 # 配置训练
 
+>>>>>>> a948081d218fcefb6e91be954709eaef220fc2cf

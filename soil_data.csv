@@ -1,3 +1,85 @@
+<<<<<<< HEAD
+Layer,Depth,Mean Value,Uncertainty,Units
+bdod,0-5cm,129,6,kg/dm³
+bdod,5-15cm,135,5,kg/dm³
+bdod,15-30cm,143,4,kg/dm³
+bdod,30-60cm,149,4,kg/dm³
+bdod,60-100cm,152,4,kg/dm³
+bdod,100-200cm,154,4,kg/dm³
+cec,0-5cm,282,29,cmol(c)/kg
+cec,5-15cm,189,28,cmol(c)/kg
+cec,15-30cm,168,30,cmol(c)/kg
+cec,30-60cm,175,30,cmol(c)/kg
+cec,60-100cm,171,31,cmol(c)/kg
+cec,100-200cm,162,25,cmol(c)/kg
+cfvo,0-5cm,132,54,cm³/100cm³
+cfvo,5-15cm,109,34,cm³/100cm³
+cfvo,15-30cm,149,42,cm³/100cm³
+cfvo,30-60cm,186,35,cm³/100cm³
+cfvo,60-100cm,234,39,cm³/100cm³
+cfvo,100-200cm,258,33,cm³/100cm³
+clay,0-5cm,317,32,%
+clay,5-15cm,354,28,%
+clay,15-30cm,320,35,%
+clay,30-60cm,318,35,%
+clay,60-100cm,314,35,%
+clay,100-200cm,319,34,%
+nitrogen,0-5cm,550,91,g/kg
+nitrogen,5-15cm,180,14,g/kg
+nitrogen,15-30cm,117,27,g/kg
+nitrogen,30-60cm,92,34,g/kg
+nitrogen,60-100cm,57,32,g/kg
+nitrogen,100-200cm,45,34,g/kg
+ocd,0-5cm,452,21,hg/m³
+ocd,5-15cm,221,16,hg/m³
+ocd,15-30cm,166,22,hg/m³
+ocd,30-60cm,72,18,hg/m³
+ocd,60-100cm,53,19,hg/m³
+ocd,100-200cm,32,18,hg/m³
+ocs,0-30cm,44,16,kg/m²
+phh2o,0-5cm,68,5,-
+phh2o,5-15cm,70,4,-
+phh2o,15-30cm,70,4,-
+phh2o,30-60cm,69,5,-
+phh2o,60-100cm,69,5,-
+phh2o,100-200cm,69,5,-
+sand,0-5cm,185,50,%
+sand,5-15cm,170,50,%
+sand,15-30cm,189,51,%
+sand,30-60cm,192,54,%
+sand,60-100cm,191,52,%
+sand,100-200cm,193,52,%
+silt,0-5cm,497,16,%
+silt,5-15cm,475,18,%
+silt,15-30cm,491,18,%
+silt,30-60cm,490,18,%
+silt,60-100cm,495,18,%
+silt,100-200cm,488,18,%
+soc,0-5cm,374,34,g/kg
+soc,5-15cm,172,13,g/kg
+soc,15-30cm,125,23,g/kg
+soc,30-60cm,60,38,g/kg
+soc,60-100cm,37,34,g/kg
+soc,100-200cm,24,28,g/kg
+wv0010,0-5cm,489,8,10-2 cm³/cm³
+wv0010,5-15cm,414,7,10-2 cm³/cm³
+wv0010,15-30cm,390,8,10-2 cm³/cm³
+wv0010,30-60cm,384,7,10-2 cm³/cm³
+wv0010,60-100cm,368,8,10-2 cm³/cm³
+wv0010,100-200cm,350,8,10-2 cm³/cm³
+wv0033,0-5cm,381,8,10-2 cm³/cm³
+wv0033,5-15cm,333,8,10-2 cm³/cm³
+wv0033,15-30cm,321,8,10-2 cm³/cm³
+wv0033,30-60cm,318,8,10-2 cm³/cm³
+wv0033,60-100cm,307,9,10-2 cm³/cm³
+wv0033,100-200cm,308,9,10-2 cm³/cm³
+wv1500,0-5cm,172,12,10-2 cm³/cm³
+wv1500,5-15cm,176,12,10-2 cm³/cm³
+wv1500,15-30cm,163,12,10-2 cm³/cm³
+wv1500,30-60cm,149,17,10-2 cm³/cm³
+wv1500,60-100cm,153,16,10-2 cm³/cm³
+wv1500,100-200cm,151,16,10-2 cm³/cm³
+=======
 Location,Longitude,Latitude,parentsoil,ph,clay,organicMatter,totalNitrogen,boron,p2o5,sand
 Babala,81.23,29.32,"slate, phyllite",6.48,10.28 %,3.13 %,0.14 %,0.72 ppm,54.91 kg/ha,52.04 %
 Devistan,81.2,29.3,"slate, phyllite",6.48,13.25 %,3.47 %,0.13 %,0.78 ppm,90.48 kg/ha,52.6 %
@@ -1358,3 +1440,4 @@ Ghaighat Triyuga,86.63,26.77,"Sandstone, greywacke, arkose",6.59,18.97 %,2.24 %,
 Jalpachilaune,86.67,26.87,"Sandstone, greywacke, arkose",6.56,19.51 %,3.17 %,0.14 %,0.72 ppm,61.8 kg/ha,53.5 %
 Ramite,86.68,26.9,Quartzite,6.44,17.98 %,3.56 %,0.16 %,0.63 ppm,81.25 kg/ha,53.1 %
 katari,86.37,26.95,"Sandstone, greywacke, arkose",6.44,18.67 %,2.45 %,0.12 %,0.82 ppm,69.93 kg/ha,50.91 %
+>>>>>>> a948081d218fcefb6e91be954709eaef220fc2cf
