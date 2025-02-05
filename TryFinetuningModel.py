@@ -63,7 +63,8 @@ import torch
 from peft import PeftModel
 # 设置原始模型路径
 base_model_path = "./Meta_Llama_3_8B2"  # 修改为你的实际模型路径
-finetuned_model_path = "./llama3_lora_finetuned"
+# finetuned_model_path = "./llama3_lora_finetuned"
+finetuned_model_path = "./lora_output2"
 # 加载基础模型
 print("Loading base model...")
 # model = AutoModelForCausalLM.from_pretrained(
@@ -79,16 +80,17 @@ model = AutoModelForCausalLM.from_pretrained(
     quantization_config=bnb_config,
     # no_split_module_classes=["LlamaDecoderLayer"]
 )
+
 print("Loading fine-tuned LoRA weights...")
-model = PeftModel.from_pretrained(model, finetuned_model_path)
+model = PeftModel.from_pretrained(model, finetuned_model_path, is_trainable=False)
 
 # 加载分词器
 tokenizer = AutoTokenizer.from_pretrained(finetuned_model_path)
 # 加载分词器
 # tokenizer = AutoTokenizer.from_pretrained(base_model_path)
-
+print(model.peft_config["default"])
 # 定义测试函数
-def generate_response(prompt, model, tokenizer, max_new_tokens=100):
+def generate_response(prompt, model, tokenizer, max_new_tokens=50):
     inputs = tokenizer(prompt, return_tensors="pt").to(model.device)  # 将输入转移到模型所在设备
     with torch.no_grad():  # 禁用梯度计算以节省内存
         outputs = model.generate(
@@ -103,7 +105,7 @@ def generate_response(prompt, model, tokenizer, max_new_tokens=100):
     return tokenizer.decode(outputs[0], skip_special_tokens=True)  # 解码生成的文本
 
 # 测试输入
-prompt = "soil health"
+prompt = "What is the best soil for growing wheat?"
 response = generate_response(prompt, model, tokenizer)
 print("Prompt:", prompt)
 print("Response:", response)
