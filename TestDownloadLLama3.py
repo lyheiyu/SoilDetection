@@ -11,6 +11,7 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 # model = AutoModelForCausalLM.from_pretrained("meta-llama/Meta-Llama-3-8B-Instruct")
 # tokenizer = AutoTokenizer.from_pretrained(model_name, use_auth_token=True)
 # model = AutoModel.from_pretrained(model_name, use_auth_token=True)
+#download model for hugging face
 tokenizer = AutoTokenizer.from_pretrained("meta-llama/Meta-Llama-3-8B")
 model = AutoModelForCausalLM.from_pretrained("meta-llama/Meta-Llama-3-8B")
 

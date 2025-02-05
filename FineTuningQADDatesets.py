@@ -12,7 +12,7 @@ from transformers import (
     Trainer,
     BitsAndBytesConfig
 )
-from peft import LoraConfig, get_peft_model, TaskType
+from peft import LoraConfig, get_peft_model, TaskType,PeftModel
 
 ###############################################################################
 # 1. 加载与预处理数据
@@ -29,7 +29,7 @@ data = data[['QUESTION.question', 'ANSWER']].dropna()
 dataset_hf = Dataset.from_pandas(data)
 
 # 将整个数据集拆分为训练集和测试集
-split_datasets = dataset_hf.train_test_split(test_size=0.2, seed=42)
+split_datasets = dataset_hf.train_test_split(test_size=0.1, seed=42)
 
 print("训练集大小:", len(split_datasets["train"]))
 print("测试集大小:", len(split_datasets["test"]))
@@ -202,11 +202,11 @@ class CustomTrainer(Trainer):
 ###############################################################################
 # 7. 配置训练参数
 ###############################################################################
-
+save_model_pach="./lora_output3"
 training_args = TrainingArguments(
-    output_dir="./lora_output",
+    output_dir=save_model_pach,
     overwrite_output_dir=True,
-    num_train_epochs=2,               # 先试5个epoch，可根据需要自行调整
+    num_train_epochs=0.1,               # 先试5个epoch，可根据需要自行调整
     per_device_train_batch_size=2,    # 根据显存大小酌情调整
     per_device_eval_batch_size=2,
     learning_rate=2e-4,               # 建议LoRA场景下从1e-4 ~ 2e-4起试
@@ -235,9 +235,12 @@ trainer.train()
 ###############################################################################
 # 9. 保存微调后模型（LoRA权重 + tokenizer）
 ###############################################################################
+if not isinstance(model, PeftModel):
+    raise ValueError("❌ 当前 `model` 不是 PeftModel，请检查 LoRA 适配器是否正确加载！")
 
-trainer.save_model("./lora_output")  # 等价于 model.save_pretrained(...)
-tokenizer.save_pretrained("./lora_output")
+model.save_pretrained(save_model_pach)
+# trainer.save_model(save_model_pach)  # 等价于 model.save_pretrained(...)
+tokenizer.save_pretrained(save_model_pach)
 
 ###############################################################################
 # 10. 简单推理示例
@@ -254,7 +257,7 @@ finetuned_model = AutoModelForCausalLM.from_pretrained(
     quantization_config=bnb_config
 )
 finetuned_model = get_peft_model(finetuned_model, lora_config)
-finetuned_model.load_adapter("./lora_output")  # 加载LoRA权重
+finetuned_model.load_adapter(save_model_pach)  # 加载LoRA权重
 
 # 构建Prompt
 prompt = "Question: How to improve soil health?\nAnswer:"
