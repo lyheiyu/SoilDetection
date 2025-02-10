@@ -18,6 +18,7 @@ def load_model():
     bnb_config = BitsAndBytesConfig(load_in_8bit=True)
 
     print("Loading base model...")
+
     model = AutoModelForCausalLM.from_pretrained(
         base_model_path,
         device_map="auto",

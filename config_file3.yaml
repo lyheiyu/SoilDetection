@@ -2,10 +2,10 @@ bmi-soilgrids:
   service_id: phh2o
   coverage_id: phh2o_0-5cm_mean
   crs: urn:ogc:def:crs:EPSG::4326
-  west: -105.38
-  south: 39.45
-  east: -104.5
-  north: 40.07
-  width: 316
-  height: 275
-  output: test2.tif
+  west: -10.5
+  south: 51.3
+  east: -5.3
+  north: 55.4
+  width: 500
+  height: 400
+  output: ireland_soil_pH.tif

@@ -54,7 +54,7 @@ from soilgrids import BmiSoilGrids
 # print(crsInfo)
 # initiate a data component
 data_comp = BmiSoilGrids()
-data_comp.initialize("config_file2.yaml")
+data_comp.initialize("config_file3.yaml")
 
 # get variable info
 var_name = data_comp.get_output_var_names()[0]
@@ -108,8 +108,8 @@ im = ax.imshow(data_2D, extent=extent, vmin=0)
 fig.colorbar(im)
 plt.xlabel("X")
 plt.ylabel("Y")
-plt.title("Mean pH between 0 and 5 cm soil depth in Senegal")
-
+# plt.title("Mean pH between 0 and 5 cm soil depth in Senegal")
+plt.title("Mean pH between 0 and 5 cm soil depth in Ireland")
 # finalize data component
 data_comp.finalize()
 plt.show()
@@ -120,7 +120,7 @@ import numpy as np
 import pandas as pd
 
 # 读取 TIFF 文件
-tif_file = "test2.tif"
+tif_file = "test3.tif"
 with rasterio.open(tif_file) as src:
     data = src.read(1)  # 读取第一个波段
     transform = src.transform  # 获取地理变换参数
