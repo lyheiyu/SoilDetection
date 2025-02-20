@@ -54,7 +54,9 @@ from soilgrids import BmiSoilGrids
 # print(crsInfo)
 # initiate a data component
 data_comp = BmiSoilGrids()
-data_comp.initialize("config_file3.yaml")
+# data_comp.initialize("config_file3.yaml")
+
+data_comp.initialize("config_fileFrance.yaml")
 
 # get variable info
 var_name = data_comp.get_output_var_names()[0]
@@ -109,7 +111,7 @@ fig.colorbar(im)
 plt.xlabel("X")
 plt.ylabel("Y")
 # plt.title("Mean pH between 0 and 5 cm soil depth in Senegal")
-plt.title("Mean pH between 0 and 5 cm soil depth in Ireland")
+plt.title("Mean pH between 0 and 5 cm soil depth")
 # finalize data component
 data_comp.finalize()
 plt.show()
