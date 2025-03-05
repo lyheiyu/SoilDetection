@@ -14,7 +14,7 @@ lora_function_calling/
 function_call1/
 function_call2/
 function_call3/
-
+DeepSeek-R1-Distill-Llama-8B/
 
 # 忽略数据集
 Datasets/qna-dataset-farmgenie-soil-v2.csv

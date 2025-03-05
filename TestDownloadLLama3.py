@@ -12,11 +12,12 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 # tokenizer = AutoTokenizer.from_pretrained(model_name, use_auth_token=True)
 # model = AutoModel.from_pretrained(model_name, use_auth_token=True)
 #download model for hugging face
-tokenizer = AutoTokenizer.from_pretrained("meta-llama/Meta-Llama-3-8B")
-model = AutoModelForCausalLM.from_pretrained("meta-llama/Meta-Llama-3-8B")
-
+# tokenizer = AutoTokenizer.from_pretrained("meta-llama/Meta-Llama-3-8B")
+# model = AutoModelForCausalLM.from_pretrained("meta-llama/Meta-Llama-3-8B")
+tokenizer = AutoTokenizer.from_pretrained("deepseek-ai/DeepSeek-R1-Distill-Llama-8B")
+model = AutoModelForCausalLM.from_pretrained("deepseek-ai/DeepSeek-R1-Distill-Llama-8B")
 # Specify the directory to save the tokenizer and model
-save_directory = "./meta_llama_3_8B2"
+save_directory = "./DeepSeek-R1-Distill-Llama-8B"
 
 # Save the tokenizer and model locally
 tokenizer.save_pretrained(save_directory)
