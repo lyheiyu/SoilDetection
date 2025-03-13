@@ -1,0 +1,58 @@
+,0,1,2
+0,aluminiumProperty,http://w3id.org/glosis/model/layerhorizon/aluminiumProperty,39
+1,Calcium (Ca++) - total,http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Caltot,9
+2,Carbon (C) - organic,http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Carorg,10
+3,Carbon (C) - total,http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Cartot,11
+4,Copper (Cu) - extractable,http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Copext,12
+5,Copper (Cu) - total,http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Coptot,13
+6,Hydrogen (H+) - exchangeable,http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Hydexc,14
+7,Iron (Fe) - extractable,http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Iroext,15
+8,Iron (Fe) - total,http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Irotot,16
+9,Magnesium (Mg++) - exchangeable,http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Magexc,17
+10,Magnesium (Mg) - extractable,http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Magext,18
+11,Magnesium (Mg) - total,http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Magtot,19
+12,Manganese (Mn) - extractable,http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Manext,20
+13,Manganese (Mn) - total,http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Mantot,21
+14,Nitrogen (N) - total,http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Nittot,22
+15,Phosphorus (P) - extractable,http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Phoext,23
+16,Phosphorus (P) - retention,http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Phoret,24
+17,Phosphorus (P) - total,http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Photot,25
+18,Potassium (K+) - exchangeable,http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Potexc,26
+19,Potassium (K) - extractable,http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Potext,27
+20,Potassium (K) - total,http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Pottot,28
+21,Sodium (Na+) - exchangeable %,http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Sodexp,29
+22,Sodium (Na) - extractable,http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Sodext,30
+23,Sodium (Na) - total,http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Sodtot,31
+24,Sulfur (S) - extractable,http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Sulext,32
+25,Sulfur (S) - total,http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Sultot,33
+26,Clay texture fraction,http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Textclay,34
+27,Sand texture fraction,http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Textsand,35
+28,Silt texture fraction,http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Textsilt,36
+29,Zinc (Zn) - extractable,http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Zinext,37
+30,pH - Hydrogen potential,http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-pH,38
+31,bulkDensityFineEarthProperty,http://w3id.org/glosis/model/layerhorizon/bulkDensityFineEarthProperty,40
+32,bulkDensityWholeSoilProperty,http://w3id.org/glosis/model/layerhorizon/bulkDensityWholeSoilProperty,41
+33,cadmiumProperty,http://w3id.org/glosis/model/layerhorizon/cadmiumProperty,42
+34,carbonInorganicProperty,http://w3id.org/glosis/model/layerhorizon/carbonInorganicProperty,43
+35,cationExchangeCapacitycSoilProperty,http://w3id.org/glosis/model/layerhorizon/cationExchangeCapacitycSoilProperty,44
+36,coarseFragmentsProperty,http://w3id.org/glosis/model/layerhorizon/coarseFragmentsProperty,45
+37,effectiveCecProperty,http://w3id.org/glosis/model/layerhorizon/effectiveCecProperty,46
+38,electricalConductivityProperty,http://w3id.org/glosis/model/layerhorizon/electricalConductivityProperty,47
+39,gypsumProperty,http://w3id.org/glosis/model/layerhorizon/gypsumProperty,48
+40,hydraulicConductivityProperty,http://w3id.org/glosis/model/layerhorizon/hydraulicConductivityProperty,49
+41,manganeseProperty,http://w3id.org/glosis/model/layerhorizon/manganeseProperty,50
+42,molybdenumProperty,http://w3id.org/glosis/model/layerhorizon/molybdenumProperty,51
+43,organicMatterProperty,http://w3id.org/glosis/model/layerhorizon/organicMatterProperty,52
+44,pHProperty,http://w3id.org/glosis/model/layerhorizon/pHProperty,53
+45,porosityProperty,http://w3id.org/glosis/model/layerhorizon/porosityProperty,54
+46,solubleSaltsProperty,http://w3id.org/glosis/model/layerhorizon/solubleSaltsProperty,55
+47,totalCarbonateEquivalentProperty,http://w3id.org/glosis/model/layerhorizon/totalCarbonateEquivalentProperty,56
+48,zincProperty,http://w3id.org/glosis/model/layerhorizon/zincProperty,57
+49,Acidity - exchangeable,http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Aciexc,1
+50,Boron (B) - total,http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Bortot,6
+51,Aluminium (Al+++) - exchangeable,http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Aluexc,2
+52,Available water capacity - volumetric (FC to WP),http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Avavol,3
+53,Base saturation - calculated,http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Bascal,4
+54,Boron (B) - extractable,http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Borext,5
+55,Calcium (Ca++) - exchangeable,http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Calexc,7
+56,Calcium (Ca++) - extractable,http://w3id.org/glosis/model/codelists/physioChemicalPropertyCode-Calext,8
