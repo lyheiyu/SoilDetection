@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Leaflet Polygon Draw Example</title>
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+
+    <!-- Leaflet.draw CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.css"/>
+
+    <style>
+        html, body, #map {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+
+<div id="map"></div>
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<!-- Leaflet.draw JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.js"></script>
+
+<script>
+    // 初始化地图 (以爱尔兰 Athlone 为例)
+    var map = L.map('map').setView([53.4239, -7.9407], 13);
+
+    // 加载 OpenStreetMap 图层
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap contributors'
+    }).addTo(map);
+
+    // 创建一个图层组，用于存储绘制的地块
+    var drawnItems = new L.FeatureGroup().addTo(map);
+
+    // 添加绘制控件
+    var drawControl = new L.Control.Draw({
+        draw: {
+            polygon: true,      // 多边形
+            rectangle: true,    // 矩形
+            circle: false,      // 圆形（暂不需要）
+            marker: false,      // 标记（暂不需要）
+            polyline: false,    // 线条（暂不需要）
+            circlemarker: false // 圆点标记（暂不需要）
+        },
+        edit: {
+            featureGroup: drawnItems,
+            edit: true,
+            remove: true
+        }
+    });
+
+    map.addControl(drawControl);
+
+    // 当用户绘制完一个图形时触发的事件
+    map.on(L.Draw.Event.CREATED, function (event) {
+        var layer = event.layer;
+
+        // 将绘制的图形添加到图层组中
+        drawnItems.addLayer(layer);
+
+        // 提示用户已经绘制完成，并显示坐标信息
+        var geojson = layer.toGeoJSON();
+        console.log(geojson);
+        alert(geojson);
+        alert("地块绘制成功！\n\n坐标数据已输出至控制台。");
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "citation": "",
+  "description": "",
+  "features": {
+    "QUESTION.question": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "ANSWER": {
+      "dtype": "string",
+      "_type": "Value"
+    }
+  },
+  "homepage": "",
+  "license": ""
+}

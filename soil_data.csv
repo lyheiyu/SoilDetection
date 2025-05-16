@@ -1,0 +1,1443 @@
+<<<<<<< HEAD
+Layer,Depth,Mean Value,Uncertainty,Units
+bdod,0-5cm,129,6,kg/dm³
+bdod,5-15cm,135,5,kg/dm³
+bdod,15-30cm,143,4,kg/dm³
+bdod,30-60cm,149,4,kg/dm³
+bdod,60-100cm,152,4,kg/dm³
+bdod,100-200cm,154,4,kg/dm³
+cec,0-5cm,282,29,cmol(c)/kg
+cec,5-15cm,189,28,cmol(c)/kg
+cec,15-30cm,168,30,cmol(c)/kg
+cec,30-60cm,175,30,cmol(c)/kg
+cec,60-100cm,171,31,cmol(c)/kg
+cec,100-200cm,162,25,cmol(c)/kg
+cfvo,0-5cm,132,54,cm³/100cm³
+cfvo,5-15cm,109,34,cm³/100cm³
+cfvo,15-30cm,149,42,cm³/100cm³
+cfvo,30-60cm,186,35,cm³/100cm³
+cfvo,60-100cm,234,39,cm³/100cm³
+cfvo,100-200cm,258,33,cm³/100cm³
+clay,0-5cm,317,32,%
+clay,5-15cm,354,28,%
+clay,15-30cm,320,35,%
+clay,30-60cm,318,35,%
+clay,60-100cm,314,35,%
+clay,100-200cm,319,34,%
+nitrogen,0-5cm,550,91,g/kg
+nitrogen,5-15cm,180,14,g/kg
+nitrogen,15-30cm,117,27,g/kg
+nitrogen,30-60cm,92,34,g/kg
+nitrogen,60-100cm,57,32,g/kg
+nitrogen,100-200cm,45,34,g/kg
+ocd,0-5cm,452,21,hg/m³
+ocd,5-15cm,221,16,hg/m³
+ocd,15-30cm,166,22,hg/m³
+ocd,30-60cm,72,18,hg/m³
+ocd,60-100cm,53,19,hg/m³
+ocd,100-200cm,32,18,hg/m³
+ocs,0-30cm,44,16,kg/m²
+phh2o,0-5cm,68,5,-
+phh2o,5-15cm,70,4,-
+phh2o,15-30cm,70,4,-
+phh2o,30-60cm,69,5,-
+phh2o,60-100cm,69,5,-
+phh2o,100-200cm,69,5,-
+sand,0-5cm,185,50,%
+sand,5-15cm,170,50,%
+sand,15-30cm,189,51,%
+sand,30-60cm,192,54,%
+sand,60-100cm,191,52,%
+sand,100-200cm,193,52,%
+silt,0-5cm,497,16,%
+silt,5-15cm,475,18,%
+silt,15-30cm,491,18,%
+silt,30-60cm,490,18,%
+silt,60-100cm,495,18,%
+silt,100-200cm,488,18,%
+soc,0-5cm,374,34,g/kg
+soc,5-15cm,172,13,g/kg
+soc,15-30cm,125,23,g/kg
+soc,30-60cm,60,38,g/kg
+soc,60-100cm,37,34,g/kg
+soc,100-200cm,24,28,g/kg
+wv0010,0-5cm,489,8,10-2 cm³/cm³
+wv0010,5-15cm,414,7,10-2 cm³/cm³
+wv0010,15-30cm,390,8,10-2 cm³/cm³
+wv0010,30-60cm,384,7,10-2 cm³/cm³
+wv0010,60-100cm,368,8,10-2 cm³/cm³
+wv0010,100-200cm,350,8,10-2 cm³/cm³
+wv0033,0-5cm,381,8,10-2 cm³/cm³
+wv0033,5-15cm,333,8,10-2 cm³/cm³
+wv0033,15-30cm,321,8,10-2 cm³/cm³
+wv0033,30-60cm,318,8,10-2 cm³/cm³
+wv0033,60-100cm,307,9,10-2 cm³/cm³
+wv0033,100-200cm,308,9,10-2 cm³/cm³
+wv1500,0-5cm,172,12,10-2 cm³/cm³
+wv1500,5-15cm,176,12,10-2 cm³/cm³
+wv1500,15-30cm,163,12,10-2 cm³/cm³
+wv1500,30-60cm,149,17,10-2 cm³/cm³
+wv1500,60-100cm,153,16,10-2 cm³/cm³
+wv1500,100-200cm,151,16,10-2 cm³/cm³
+=======
+Location,Longitude,Latitude,parentsoil,ph,clay,organicMatter,totalNitrogen,boron,p2o5,sand
+Babala,81.23,29.32,"slate, phyllite",6.48,10.28 %,3.13 %,0.14 %,0.72 ppm,54.91 kg/ha,52.04 %
+Devistan,81.2,29.3,"slate, phyllite",6.48,13.25 %,3.47 %,0.13 %,0.78 ppm,90.48 kg/ha,52.6 %
+Devikot,81.17,29.27,Quartzite,6.27,14.01 %,3.35 %,0.13 %,0.9 ppm,70.26 kg/ha,51.25 %
+Patalkot,81.13,29.25,Quartzite,6.16,14.12 %,3.12 %,0.17 %,0.87 ppm,68.85 kg/ha,57.22 %
+Duni,81.1,29.25,"slate, phyllite",5.93,18.62 %,3.49 %,0.2 %,0.93 ppm,103.14 kg/ha,50.65 %
+Marku,81.13,29.23,"slate, phyllite",6.17,15.01 %,3.14 %,0.13 %,0.92 ppm,48.82 kg/ha,53.14 %
+Jalpadevi,81.18,29.22,"slate, phyllite",6.22,16.01 %,1.81 %,0.12 %,0.79 ppm,34.21 kg/ha,41.74 %
+SIddheswar,81.2,29.25,"slate, phyllite",6.29,13.86 %,2.22 %,0.11 %,0.91 ppm,65.48 kg/ha,47.96 %
+Dhudharukot,81.22,29.27,Quartzite,6.21,12.65 %,2.47 %,0.14 %,0.85 ppm,49.07 kg/ha,49.75 %
+Kuskot,81.27,29.28,"slate, phyllite",6.31,11.91 %,3.28 %,0.15 %,0.8 ppm,40.41 kg/ha,59.79 %
+Thanti,81.33,29.28,"Gneiss, migmatite",6.05,11.78 %,3.0 %,0.14 %,0.76 ppm,48.31 kg/ha,50.22 %
+Sodasadevi,81.33,29.23,"slate, phyllite",6.1,14.64 %,3.36 %,0.13 %,0.88 ppm,63.38 kg/ha,49.25 %
+Sutar,81.45,29.18,"Gneiss, migmatite",6.2,12.81 %,2.81 %,0.13 %,0.92 ppm,58.06 kg/ha,54.8 %
+Darna,81.48,29.18,"Gneiss, migmatite",6.56,12.92 %,2.53 %,0.12 %,1.03 ppm,95.3 kg/ha,56.74 %
+Ramarosan,81.38,29.22,"Gneiss, migmatite",6.2,13.66 %,2.84 %,0.14 %,0.89 ppm,53.92 kg/ha,57.44 %
+Warla,81.48,29.13,Quartzite,6.11,15.11 %,3.33 %,0.15 %,0.93 ppm,71.4 kg/ha,55.88 %
+Binayak,81.38,29.1,"slate, phyllite",6.06,14.45 %,3.28 %,0.14 %,0.97 ppm,52.36 kg/ha,52.88 %
+Kalekanda,81.53,29.12,Quartzite,6.33,14.19 %,2.95 %,0.12 %,0.93 ppm,80.36 kg/ha,49.58 %
+Bayala,81.38,29.03,Quartzite,6.32,22.9 %,3.44 %,0.18 %,1.02 ppm,123.85 kg/ha,50.38 %
+Muli,81.35,29.03,"slate, phyllite",6.05,14.86 %,3.95 %,0.14 %,0.99 ppm,63.5 kg/ha,50.05 %
+Dhakari,81.27,29.0,"slate, phyllite",5.98,18.39 %,3.42 %,0.15 %,0.99 ppm,58.22 kg/ha,48.19 %
+Basti,81.17,29.05,Quartzite,6.15,27.83 %,3.23 %,0.16 %,1.16 ppm,60.11 kg/ha,46.82 %
+Payal,81.17,29.17,Quartzite,6.38,18.66 %,2.27 %,0.12 %,1.13 ppm,72.75 kg/ha,51.72 %
+Nada,81.32,29.93,"Gneiss, migmatite",7.28,14.04 %,5.29 %,0.26 %,1.14 ppm,172.98 kg/ha,52.96 %
+Rahaph,81.52,29.82,"Fluvial, calcareous",6.96,6.81 %,5.61 %,0.25 %,1.37 ppm,208.24 kg/ha,51.57 %
+Bhairavsthan,81.43,29.92,"Gneiss, migmatite",7.14,10.73 %,5.56 %,0.27 %,0.64 ppm,213.42 kg/ha,51.9 %
+Dhamali,81.37,29.0,"slate, phyllite",6.04,16.21 %,3.61 %,0.14 %,1.1 ppm,100.19 kg/ha,45.53 %
+Sakot,81.08,29.18,Quartzite,6.41,18.07 %,2.2 %,0.1 %,1.08 ppm,64.36 kg/ha,50.44 %
+Mangalstan,81.22,29.08,Quartzite,6.17,23.65 %,3.56 %,0.16 %,1.01 ppm,107.28 kg/ha,49.29 %
+Hansapur,83.05,28.07,Quartzite,6.55,8.69 %,2.95 %,0.12 %,0.93 ppm,166.92 kg/ha,48.7 %
+Khan,83.13,28.03,Quartzite,6.76,9.05 %,3.12 %,0.11 %,0.87 ppm,155.43 kg/ha,46.78 %
+Bhagawati,83.2,28.02,Quartzite,6.82,9.42 %,2.9 %,0.09 %,0.98 ppm,187.92 kg/ha,42.4 %
+Argha,83.1,28.0,Quartzite,6.79,9.52 %,2.92 %,0.08 %,0.87 ppm,192.37 kg/ha,45.75 %
+Dhakawang,82.98,28.03,"slate, phyllite",6.83,6.64 %,2.35 %,0.07 %,0.89 ppm,149.09 kg/ha,50.6 %
+Nuwakot,83.03,27.95,Quartzite,6.88,10.59 %,2.84 %,0.09 %,0.84 ppm,109.95 kg/ha,49.63 %
+Sandikhanrka,83.13,27.95,Quartzite,6.83,10.36 %,2.76 %,0.09 %,0.83 ppm,157.14 kg/ha,47.03 %
+Kerunga,83.22,27.97,Quartzite,6.87,11.89 %,2.65 %,0.09 %,0.85 ppm,160.67 kg/ha,44.47 %
+Khidim,83.27,27.9,Quartzite,6.75,13.27 %,3.13 %,0.13 %,1.02 ppm,82.37 kg/ha,52.18 %
+Narpani,83.15,27.93,Quartzite,6.54,11.59 %,3.16 %,0.12 %,0.87 ppm,140.9 kg/ha,47.46 %
+Dhanchaur,83.03,27.92,Quartzite,6.35,12.09 %,2.96 %,0.12 %,0.95 ppm,90.26 kg/ha,59.82 %
+Siddara,82.92,27.85,"Sandstone, greywacke, arkose",6.07,9.59 %,3.24 %,0.09 %,0.8 ppm,44.42 kg/ha,83.19 %
+Sitapur,83.12,27.87,Quartzite,6.01,8.2 %,4.45 %,0.09 %,0.88 ppm,24.79 kg/ha,79.19 %
+Panrna,83.3,27.87,Quartzite,6.61,12.06 %,3.41 %,0.15 %,1.01 ppm,84.31 kg/ha,54.97 %
+Maidan,83.23,27.85,Quartzite,6.07,10.62 %,3.99 %,0.12 %,1.16 ppm,39.34 kg/ha,73.76 %
+Simalpani,83.17,27.8,"Sandstone, greywacke, arkose",5.92,8.5 %,3.4 %,0.14 %,0.86 ppm,28.62 kg/ha,86.82 %
+Shiralaya,83.07,27.77,"Sandstone, greywacke, arkose",5.87,9.06 %,2.93 %,0.1 %,1.56 ppm,58.43 kg/ha,69.52 %
+Bhaluwang,82.73,27.83,"Colluvial, calcareous",7.5,36.98 %,1.94 %,0.1 %,0.69 ppm,54.71 kg/ha,27.51 %
+Samkot,82.92,27.83,"Sandstone, greywacke, arkose",6.09,10.84 %,3.28 %,0.11 %,0.74 ppm,36.31 kg/ha,71.21 %
+Juluke,82.83,27.88,"Sandstone, greywacke, arkose",6.49,13.32 %,2.95 %,0.12 %,0.63 ppm,61.75 kg/ha,69.51 %
+Nishi,83.0,28.4,"Gneiss, migmatite",6.07,10.12 %,2.47 %,0.05 %,0.38 ppm,253.06 kg/ha,36.82 %
+Boharagaun,83.05,28.37,"Gneiss, migmatite",6.16,10.73 %,2.79 %,0.05 %,0.43 ppm,274.97 kg/ha,35.92 %
+Devistan,83.08,28.35,"Gneiss, migmatite",6.3,13.43 %,2.25 %,0.04 %,0.56 ppm,276.29 kg/ha,38.13 %
+Arnakot,83.12,28.33,"Gneiss, migmatite",6.44,13.14 %,2.1 %,0.05 %,0.59 ppm,241.56 kg/ha,34.81 %
+Adhikarichaur,83.1,28.42,"Gneiss, migmatite",6.1,8.9 %,2.04 %,0.05 %,0.51 ppm,263.6 kg/ha,33.01 %
+Pahira,83.17,28.43,"Gneiss, migmatite",5.98,9.99 %,2.03 %,0.06 %,0.57 ppm,243.71 kg/ha,29.76 %
+Bangadoran,83.18,28.4,"Gneiss, migmatite",6.06,11.57 %,2.52 %,0.05 %,0.51 ppm,308.26 kg/ha,29.67 %
+Khung,83.2,28.37,"Gneiss, migmatite",6.2,12.04 %,2.11 %,0.05 %,0.56 ppm,271.51 kg/ha,30.96 %
+Heel,83.12,28.27,"Gneiss, migmatite",5.9,6.93 %,2.36 %,0.08 %,0.79 ppm,205.79 kg/ha,38.83 %
+Durling,83.18,28.28,Quartzite,6.44,13.0 %,2.12 %,0.07 %,0.44 ppm,215.21 kg/ha,33.56 %
+Ramuwa,83.3,28.3,"Gneiss, migmatite",5.74,13.39 %,2.69 %,0.16 %,0.75 ppm,114.59 kg/ha,38.73 %
+Heele,83.38,28.28,"Gneiss, migmatite",6.0,12.3 %,1.54 %,0.09 %,0.69 ppm,138.47 kg/ha,29.53 %
+Jaljala,83.27,28.25,Quartzite,6.06,12.4 %,2.72 %,0.12 %,0.77 ppm,148.72 kg/ha,35.46 %
+Righa,83.32,28.2,Quartzite,6.34,12.96 %,2.79 %,0.12 %,0.74 ppm,125.4 kg/ha,38.85 %
+Mouma,83.37,28.22,Quartzite,6.12,13.57 %,3.16 %,0.16 %,0.77 ppm,145.08 kg/ha,37.17 %
+Haliyal,83.4,28.2,Quartzite,6.14,11.87 %,3.26 %,0.15 %,0.73 ppm,139.04 kg/ha,38.29 %
+Narethati,83.45,28.22,Quartzite,5.81,13.1 %,3.68 %,0.19 %,0.8 ppm,87.09 kg/ha,44.89 %
+Sukaura,83.38,28.13,Quartzite,6.34,11.02 %,3.44 %,0.15 %,0.81 ppm,156.92 kg/ha,40.01 %
+Chhisti,83.57,28.1,Quartzite,6.57,11.1 %,3.52 %,0.16 %,0.84 ppm,107.43 kg/ha,43.79 %
+Jaidi,83.6,28.12,Quartzite,6.56,10.22 %,3.12 %,0.15 %,0.74 ppm,104.55 kg/ha,47.34 %
+Damek,83.53,28.18,"slate, phyllite",5.7,12.24 %,4.55 %,0.22 %,1.01 ppm,47.99 kg/ha,51.06 %
+Balewa,83.63,28.22,Quartzite,5.76,12.67 %,3.23 %,0.16 %,0.98 ppm,119.05 kg/ha,41.33 %
+Baglung,83.57,28.27,"slate, phyllite",6.0,14.85 %,2.37 %,0.1 %,0.3 ppm,119.77 kg/ha,33.07 %
+Dhamja,83.48,28.3,"slate, phyllite",5.8,11.91 %,1.88 %,0.08 %,0.71 ppm,146.16 kg/ha,23.15 %
+Argal,83.42,28.28,Quartzite,5.82,10.24 %,3.07 %,0.09 %,0.69 ppm,166.97 kg/ha,33.27 %
+Palakot,83.53,28.27,Quartzite,5.95,10.76 %,2.29 %,0.07 %,0.26 ppm,157.24 kg/ha,33.65 %
+Sigama,83.52,28.23,"slate, phyllite",5.85,9.9 %,2.56 %,0.11 %,0.56 ppm,156.48 kg/ha,28.1 %
+Gokuleswor,80.5,29.63,"slate, phyllite",7.19,14.51 %,3.49 %,0.14 %,1.0 ppm,94.08 kg/ha,34.0 %
+Dilasaini,80.58,29.63,Quartzite,6.65,11.05 %,3.71 %,0.11 %,0.95 ppm,164.47 kg/ha,40.84 %
+Mathraj,80.67,29.63,Quartzite,6.17,9.34 %,4.55 %,0.09 %,0.7 ppm,115.95 kg/ha,51.02 %
+Nusadev,80.73,29.63,Quartzite,5.99,11.64 %,4.21 %,0.09 %,0.59 ppm,113.08 kg/ha,47.73 %
+Hat,80.68,29.6,"slate, phyllite",6.46,9.43 %,4.12 %,0.08 %,0.75 ppm,75.46 kg/ha,36.83 %
+Bumraj,80.73,29.55,Quartzite,6.34,10.56 %,4.73 %,0.1 %,0.61 ppm,68.11 kg/ha,37.74 %
+Shikharpur,80.67,29.5,Quartzite,6.53,10.8 %,5.22 %,0.07 %,0.98 ppm,109.49 kg/ha,30.02 %
+Bijayapur,80.6,29.55,Quartzite,7.0,11.64 %,6.59 %,0.08 %,1.2 ppm,132.43 kg/ha,27.4 %
+Shreekot,80.52,29.57,"slate, phyllite",6.97,13.52 %,4.77 %,0.05 %,0.95 ppm,113.49 kg/ha,27.04 %
+Nwali,80.47,29.6,Quartzite,6.85,13.98 %,4.65 %,0.06 %,1.24 ppm,131.07 kg/ha,29.99 %
+Dasharathchandra,80.4,29.55,"slate, phyllite",7.49,13.58 %,4.91 %,0.04 %,1.34 ppm,161.02 kg/ha,28.74 %
+Surgasthan,80.43,29.47,"slate, phyllite",6.9,14.15 %,5.76 %,0.07 %,1.1 ppm,96.96 kg/ha,34.07 %
+Patan,80.57,29.47,Quartzite,6.53,14.86 %,4.97 %,0.08 %,1.0 ppm,125.18 kg/ha,45.92 %
+Chaukham,80.73,29.5,Quartzite,6.52,10.43 %,5.55 %,0.07 %,0.93 ppm,87.32 kg/ha,32.55 %
+Shivaling,80.8,29.45,"slate, phyllite",6.51,13.6 %,4.94 %,0.09 %,0.95 ppm,106.1 kg/ha,40.2 %
+Thalazanderl,80.82,29.4,Quartzite,6.77,17.24 %,3.67 %,0.08 %,0.92 ppm,73.58 kg/ha,38.57 %
+Sikosh,80.73,29.42,Quartzite,6.65,16.11 %,4.58 %,0.09 %,0.83 ppm,124.61 kg/ha,44.89 %
+Siddhapur,80.65,29.4,Quartzite,6.56,15.1 %,5.26 %,0.12 %,0.89 ppm,88.16 kg/ha,49.1 %
+Silanga,80.58,29.42,Quartzite,6.42,17.32 %,5.16 %,0.09 %,0.9 ppm,84.09 kg/ha,50.61 %
+Melauli,80.43,29.4,Quartzite,6.62,11.35 %,4.05 %,0.06 %,1.06 ppm,193.57 kg/ha,54.85 %
+Shibanath,80.37,29.42,"slate, phyllite",6.33,11.65 %,3.28 %,0.05 %,0.99 ppm,136.2 kg/ha,48.46 %
+Udayaded,80.35,29.37,Quartzite,6.51,9.08 %,2.59 %,0.04 %,1.22 ppm,316.9 kg/ha,64.78 %
+Sharmali,80.3,29.35,Quartzite,6.54,11.13 %,2.82 %,0.08 %,1.05 ppm,233.05 kg/ha,71.33 %
+Bhumeswar,80.52,29.48,Quartzite,6.53,12.38 %,5.01 %,0.04 %,0.95 ppm,112.88 kg/ha,41.99 %
+Kaphalasen,80.82,29.67,Quartzite,6.37,11.37 %,7.78 %,0.24 %,0.84 ppm,56.68 kg/ha,49.86 %
+Deulikot,80.8,29.58,"slate, phyllite",6.56,10.55 %,5.02 %,0.21 %,0.32 ppm,50.68 kg/ha,47.56 %
+Pipalkot,80.85,29.62,Quartzite,6.66,8.39 %,4.21 %,0.19 %,0.27 ppm,50.13 kg/ha,42.84 %
+Khiratadi,80.87,29.57,Quartzite,6.39,10.43 %,3.56 %,0.16 %,0.35 ppm,34.13 kg/ha,44.49 %
+Deulekh,80.82,29.53,"slate, phyllite",6.63,7.39 %,4.04 %,0.18 %,0.6 ppm,45.87 kg/ha,45.9 %
+Banjh,80.88,29.52,Quartzite,6.99,9.92 %,3.84 %,0.17 %,0.45 ppm,44.32 kg/ha,39.73 %
+Rayal,80.93,29.48,Quartzite,6.45,9.98 %,3.44 %,0.17 %,0.74 ppm,49.67 kg/ha,44.71 %
+Lekhgaun,81.0,29.58,"Gneiss, migmatite",6.32,9.55 %,4.81 %,0.23 %,1.1 ppm,39.22 kg/ha,54.88 %
+Sainparsela,80.98,29.53,Quartzite,6.2,10.0 %,5.2 %,0.23 %,0.53 ppm,50.93 kg/ha,54.08 %
+Bhamchaur,80.92,29.53,Quartzite,6.21,10.42 %,4.87 %,0.21 %,0.54 ppm,51.64 kg/ha,45.98 %
+Chaidhari,81.02,29.48,Quartzite,7.31,8.48 %,3.28 %,0.17 %,0.49 ppm,21.08 kg/ha,43.05 %
+Majhigaun,81.13,29.43,"Gneiss, migmatite",6.37,11.56 %,4.42 %,0.18 %,0.4 ppm,49.66 kg/ha,48.36 %
+Koiralakot,81.03,29.45,"Gneiss, migmatite",6.33,10.2 %,3.92 %,0.15 %,0.43 ppm,40.92 kg/ha,38.33 %
+Kadu,81.08,29.53,"Gneiss, migmatite",6.27,10.52 %,4.8 %,0.21 %,0.55 ppm,36.96 kg/ha,45.83 %
+Subeda,81.15,29.53,"Gneiss, migmatite",6.42,24.57 %,4.82 %,0.21 %,0.47 ppm,37.55 kg/ha,45.73 %
+Gadaraya,81.25,29.43,"Gneiss, migmatite",6.07,9.58 %,4.31 %,0.23 %,0.33 ppm,27.18 kg/ha,45.65 %
+Koidewal,81.25,29.5,"Gneiss, migmatite",6.42,14.7 %,4.82 %,0.21 %,0.49 ppm,68.95 kg/ha,56.72 %
+Rilu,81.3,29.57,"Gneiss, migmatite",5.71,9.5 %,4.05 %,0.19 %,0.19 ppm,32.84 kg/ha,47.57 %
+Talkot,81.32,29.62,"Gneiss, migmatite",5.98,9.59 %,4.36 %,0.22 %,0.18 ppm,44.77 kg/ha,44.72 %
+Chainpur,81.18,29.6,"Gneiss, migmatite",6.32,9.59 %,6.08 %,0.31 %,0.51 ppm,58.35 kg/ha,52.86 %
+Dhamena,81.27,29.68,"Gneiss, migmatite",6.35,9.34 %,5.85 %,0.25 %,0.52 ppm,40.82 kg/ha,54.99 %
+Surma,81.07,29.65,"Gneiss, migmatite",6.31,9.44 %,6.42 %,0.29 %,0.35 ppm,52.03 kg/ha,46.58 %
+Kanda,81.22,29.38,"Gneiss, migmatite",6.14,11.36 %,3.6 %,0.17 %,0.69 ppm,42.4 kg/ha,59.74 %
+Dogadi,81.27,29.42,"Gneiss, migmatite",6.19,9.98 %,4.63 %,0.22 %,0.31 ppm,40.34 kg/ha,51.81 %
+Bajura,81.3,29.35,"Gneiss, migmatite",6.3,9.81 %,2.77 %,0.13 %,0.67 ppm,46.06 kg/ha,62.58 %
+Chhatara,81.35,29.28,"Gneiss, migmatite",6.15,11.26 %,2.88 %,0.12 %,0.67 ppm,53.46 kg/ha,59.01 %
+Bramhatol,81.35,29.38,"Gneiss, migmatite",6.45,10.04 %,2.83 %,0.14 %,0.57 ppm,33.05 kg/ha,60.11 %
+Mankot,81.33,29.47,"Gneiss, migmatite",6.32,9.94 %,5.0 %,0.27 %,0.45 ppm,61.33 kg/ha,57.85 %
+Aatichaur,81.35,29.42,"Gneiss, migmatite",6.21,11.04 %,4.19 %,0.18 %,0.49 ppm,42.57 kg/ha,53.11 %
+Budhiganga,81.48,29.43,"Gneiss, migmatite",6.14,7.46 %,4.56 %,0.19 %,0.49 ppm,56.33 kg/ha,60.6 %
+Badimalika,81.47,29.38,"Gneiss, migmatite",6.41,8.04 %,4.8 %,0.19 %,0.48 ppm,204.52 kg/ha,59.94 %
+Pandusan,81.6,29.45,"Gneiss, migmatite",6.4,9.51 %,3.31 %,0.16 %,0.36 ppm,34.74 kg/ha,59.79 %
+Rugin,81.72,29.58,"Gneiss, migmatite",6.64,9.29 %,4.8 %,0.25 %,0.35 ppm,118.55 kg/ha,50.86 %
+Jukot,81.75,29.45,"Gneiss, migmatite",6.53,9.81 %,3.14 %,0.15 %,0.42 ppm,31.45 kg/ha,60.4 %
+Bichhaya,81.68,29.65,"Gneiss, migmatite",6.74,12.29 %,4.77 %,0.26 %,0.17 ppm,82.63 kg/ha,46.85 %
+Titihiriya,81.53,28.18,Fluvial non calcareous,7.15,25.63 %,1.22 %,0.07 %,2.05 ppm,33.38 kg/ha,35.11 %
+Raniyapur,81.57,28.15,Fluvial non calcareous,6.49,23.45 %,1.2 %,0.07 %,1.76 ppm,38.16 kg/ha,36.68 %
+Sonapur,81.53,28.15,Fluvial non calcareous,6.73,27.13 %,1.77 %,0.09 %,0.41 ppm,19.34 kg/ha,23.4 %
+Udarapur,81.52,28.12,Fluvial non calcareous,6.71,28.25 %,1.83 %,0.09 %,0.41 ppm,53.91 kg/ha,45.46 %
+Sitapur,81.53,28.1,Fluvial non calcareous,7.13,28.4 %,2.17 %,0.11 %,0.89 ppm,82.18 kg/ha,41.58 %
+Radhapur,81.52,28.07,Fluvial non calcareous,7.24,31.95 %,2.35 %,0.11 %,0.91 ppm,93.63 kg/ha,34.37 %
+Khajura,81.6,28.1,Fluvial non calcareous,6.11,37.71 %,2.16 %,0.1 %,0.22 ppm,26.62 kg/ha,17.8 %
+Nepalgunj,81.62,28.05,Fluvial non calcareous,6.84,30.09 %,2.21 %,0.11 %,1.71 ppm,71.95 kg/ha,37.22 %
+HIminiya,81.65,28.0,Fluvial non calcareous,7.19,33.55 %,2.56 %,0.11 %,1.1 ppm,79.72 kg/ha,34.14 %
+Manikapur,81.65,28.08,Fluvial non calcareous,6.2,29.5 %,2.6 %,0.13 %,0.62 ppm,95.17 kg/ha,29.48 %
+Basgeswari,81.6,28.13,Fluvial non calcareous,6.27,31.98 %,1.87 %,0.09 %,0.44 ppm,33.66 kg/ha,19.02 %
+Samserganj,81.65,28.15,Fluvial non calcareous,6.2,28.48 %,2.6 %,0.12 %,1.95 ppm,32.77 kg/ha,28.21 %
+Rajhena,81.67,28.2,Fluvial non calcareous,6.71,23.53 %,2.47 %,0.14 %,2.81 ppm,49.69 kg/ha,32.95 %
+Kohalpur,81.72,28.22,Fluvial non calcareous,7.97,51.0 %,2.2 %,0.11 %,0.33 ppm,328.05 kg/ha,26.62 %
+Naubasta,81.67,28.25,Fluvial non calcareous,7.12,24.56 %,2.15 %,0.11 %,1.09 ppm,126.07 kg/ha,32.07 %
+Jabdahawa,81.62,28.23,Fluvial non calcareous,6.63,18.44 %,1.97 %,0.11 %,1.48 ppm,79.96 kg/ha,42.62 %
+Mahadevpuri,81.8,28.15,Fluvial non calcareous,7.18,37.15 %,2.79 %,0.15 %,0.56 ppm,133.34 kg/ha,29.12 %
+Binauna,81.83,28.05,Fluvial non calcareous,7.06,29.82 %,2.57 %,0.13 %,1.17 ppm,105.24 kg/ha,34.28 %
+Bejapur,81.9,27.98,"Sandstone, greywacke, arkose",6.97,31.58 %,3.06 %,0.14 %,2.41 ppm,128.14 kg/ha,43.05 %
+Holiya,81.73,27.97,"Fluvial, calcareous",7.3,32.3 %,2.58 %,0.12 %,2.11 ppm,95.14 kg/ha,36.05 %
+Gangapur,81.9,27.88,Fluvial non calcareous,7.27,26.69 %,2.25 %,0.1 %,3.58 ppm,75.46 kg/ha,32.16 %
+Matahiya,81.8,27.92,Fluvial non calcareous,7.45,33.17 %,2.43 %,0.12 %,2.0 ppm,94.36 kg/ha,37.64 %
+Banakatti,81.7,28.03,Fluvial non calcareous,6.9,31.87 %,2.42 %,0.11 %,1.42 ppm,76.04 kg/ha,34.77 %
+Phatepur,81.77,28.02,Fluvial non calcareous,6.98,35.26 %,3.08 %,0.15 %,1.18 ppm,129.39 kg/ha,30.41 %
+Betahani,81.7,28.0,Fluvial non calcareous,7.1,32.28 %,2.57 %,0.12 %,1.66 ppm,80.54 kg/ha,32.57 %
+Puraina,81.65,28.12,Fluvial non calcareous,5.81,49.02 %,5.79 %,0.29 %,0.29 ppm,105.28 kg/ha,26.62 %
+Banakatawa,81.6,28.18,Fluvial non calcareous,6.35,18.87 %,1.44 %,0.09 %,3.05 ppm,36.63 kg/ha,32.89 %
+Amlekhganj,85.0,27.28,"Fluvial, calcareous",6.69,12.39 %,2.12 %,0.11 %,1.63 ppm,120.51 kg/ha,52.19 %
+Ratanpuri,85.08,27.28,Fluvial non calcareous,6.76,13.14 %,1.85 %,0.1 %,1.28 ppm,61.88 kg/ha,50.22 %
+Nijgadh,85.15,27.23,"Fluvial, calcareous",7.2,17.99 %,1.63 %,0.1 %,1.23 ppm,59.24 kg/ha,40.69 %
+Pipara Simara,85.97,27.15,"Sandstone, greywacke, arkose",6.27,14.02 %,3.03 %,0.14 %,0.92 ppm,66.93 kg/ha,55.29 %
+Dumarwana,85.02,27.13,Fluvial non calcareous,6.77,12.54 %,2.04 %,0.1 %,2.34 ppm,24.38 kg/ha,40.78 %
+Bharatganj,85.18,27.18,Fluvial non calcareous,6.63,12.44 %,1.53 %,0.06 %,1.25 ppm,86.66 kg/ha,51.94 %
+Singaul,85.25,27.2,Fluvial non calcareous,7.12,17.88 %,1.76 %,0.1 %,0.68 ppm,43.29 kg/ha,38.17 %
+Kakadi,85.12,27.13,Fluvial non calcareous,7.01,14.53 %,3.12 %,0.12 %,1.31 ppm,69.91 kg/ha,46.45 %
+Jitpur,84.95,27.12,Fluvial non calcareous,6.64,12.99 %,1.07 %,0.07 %,1.31 ppm,18.68 kg/ha,39.34 %
+Manaharwa,85.03,27.08,Fluvial non calcareous,7.36,26.42 %,2.33 %,0.09 %,0.71 ppm,26.18 kg/ha,34.15 %
+Prasauna,85.12,27.08,Fluvial non calcareous,6.74,15.38 %,1.96 %,0.08 %,0.53 ppm,45.09 kg/ha,52.08 %
+Rampurwa,85.17,27.03,Fluvial non calcareous,7.13,19.68 %,2.18 %,0.09 %,2.05 ppm,49.76 kg/ha,34.63 %
+Kabahigaon,85.02,26.9,Fluvial non calcareous,6.22,30.95 %,1.22 %,0.07 %,0.57 ppm,38.35 kg/ha,26.96 %
+Nirahi,85.08,26.98,Fluvial non calcareous,7.07,23.83 %,2.25 %,0.13 %,3.52 ppm,95.25 kg/ha,32.91 %
+Tetariya,85.1,27.03,Fluvial non calcareous,7.45,18.77 %,2.65 %,0.11 %,1.11 ppm,48.69 kg/ha,44.91 %
+Kalaiya,84.98,27.02,Fluvial non calcareous,6.99,43.41 %,3.04 %,0.16 %,0.87 ppm,26.27 kg/ha,30.81 %
+Prastoka,84.95,27.07,Fluvial non calcareous,7.36,11.63 %,1.3 %,0.08 %,1.64 ppm,26.48 kg/ha,40.26 %
+Prasauni,84.92,27.02,Fluvial non calcareous,6.77,39.09 %,3.04 %,0.15 %,0.96 ppm,22.95 kg/ha,20.68 %
+Matiarwa,84.95,27.95,"slate, phyllite",5.92,14.31 %,2.7 %,0.14 %,1.06 ppm,77.51 kg/ha,43.56 %
+Itiyahi,84.88,27.98,Quartzite,6.07,15.91 %,3.04 %,0.14 %,1.13 ppm,99.33 kg/ha,47.94 %
+Matisar,84.97,27.02,Fluvial non calcareous,7.14,38.8 %,3.11 %,0.16 %,0.86 ppm,27.86 kg/ha,30.61 %
+Bariyarpur,85.05,27.98,"slate, phyllite",5.85,13.43 %,3.75 %,0.17 %,0.93 ppm,155.79 kg/ha,51.67 %
+Laluwadi,85.05,27.87,"slate, phyllite",5.99,19.98 %,2.36 %,0.12 %,2.96 ppm,53.73 kg/ha,45.42 %
+Pheta,84.93,27.0,Fluvial non calcareous,7.16,34.48 %,2.8 %,0.14 %,0.77 ppm,30.01 kg/ha,35.86 %
+Nagarkot,85.5,27.72,"slate, phyllite",5.67,14.71 %,2.09 %,0.1 %,0.86 ppm,232.95 kg/ha,58.4 %
+Machhenarayan,85.47,27.7,Fluvial non calcareous,5.55,13.68 %,2.13 %,0.1 %,0.92 ppm,324.01 kg/ha,57.19 %
+Pancha Mahalaxmi,85.45,27.72,"slate, phyllite",5.65,15.06 %,2.02 %,0.1 %,0.79 ppm,241.21 kg/ha,53.97 %
+Changu Narayan,85.42,27.72,Fluvial non calcareous,5.94,16.63 %,1.75 %,0.1 %,0.84 ppm,265.81 kg/ha,51.17 %
+Kharipati,85.45,27.68,Fluvial non calcareous,5.83,17.4 %,2.0 %,0.12 %,0.84 ppm,256.55 kg/ha,52.29 %
+Bageswori,85.48,27.68,"slate, phyllite",5.81,16.9 %,2.3 %,0.12 %,0.87 ppm,212.22 kg/ha,57.18 %
+Sudal,85.47,27.67,Fluvial non calcareous,5.53,17.55 %,2.74 %,0.12 %,0.85 ppm,232.91 kg/ha,54.26 %
+Duwakot,85.4,27.68,Fluvial non calcareous,6.19,17.64 %,2.25 %,0.11 %,0.81 ppm,408.13 kg/ha,50.87 %
+Bhatgaon,85.42,27.67,Fluvial non calcareous,5.88,16.7 %,2.25 %,0.12 %,0.87 ppm,378.13 kg/ha,56.07 %
+Jhaukhel,85.43,27.68,Fluvial non calcareous,5.45,16.58 %,1.65 %,0.11 %,0.82 ppm,214.63 kg/ha,53.83 %
+Thimi,85.37,27.67,Fluvial non calcareous,6.05,17.72 %,2.75 %,0.11 %,0.83 ppm,524.02 kg/ha,51.27 %
+Balkot,85.37,27.65,Fluvial non calcareous,6.17,17.86 %,2.07 %,0.11 %,0.89 ppm,261.74 kg/ha,56.65 %
+Sallaghari,85.4,27.67,Fluvial non calcareous,5.87,17.65 %,2.47 %,0.12 %,0.83 ppm,401.42 kg/ha,56.18 %
+Bhaktapur,85.43,27.67,Fluvial non calcareous,6.03,17.55 %,2.41 %,0.12 %,0.99 ppm,353.99 kg/ha,55.64 %
+Chittapol,85.43,27.65,Fluvial non calcareous,5.59,15.83 %,1.98 %,0.11 %,0.86 ppm,205.33 kg/ha,62.56 %
+Suryabinayak,85.43,27.63,"slate, phyllite",5.73,11.76 %,2.31 %,0.12 %,1.03 ppm,79.86 kg/ha,71.64 %
+Sipadol,85.42,27.65,"slate, phyllite",5.54,15.66 %,1.79 %,0.11 %,0.86 ppm,203.9 kg/ha,62.35 %
+Gundu,85.4,27.63,Fluvial non calcareous,5.71,13.45 %,2.0 %,0.12 %,0.88 ppm,96.26 kg/ha,67.91 %
+Dadhikot,85.38,27.65,Fluvial non calcareous,6.37,18.12 %,2.47 %,0.11 %,0.87 ppm,224.89 kg/ha,53.92 %
+Palanse,85.45,27.63,"slate, phyllite",5.81,13.81 %,2.72 %,0.13 %,1.07 ppm,91.22 kg/ha,70.96 %
+Dobhane,86.95,27.38,"Gneiss, migmatite",5.92,10.06 %,5.37 %,0.16 %,0.82 ppm,135.27 kg/ha,63.31 %
+Khatamma,87.03,27.4,Quartzite,5.81,11.57 %,4.57 %,0.14 %,0.82 ppm,138.12 kg/ha,63.53 %
+Kulunga,87.1,27.43,"slate, phyllite",6.09,14.49 %,4.27 %,0.12 %,0.87 ppm,173.61 kg/ha,59.62 %
+Kudak Kaule,87.08,27.37,"slate, phyllite",6.03,11.36 %,4.13 %,0.11 %,0.92 ppm,158.17 kg/ha,62.99 %
+Timma,87.0,27.43,"Gneiss, migmatite",5.88,9.84 %,4.65 %,0.16 %,0.93 ppm,162.39 kg/ha,58.16 %
+Kimaluno,87.05,27.47,"Gneiss, migmatite",5.79,13.94 %,3.86 %,0.14 %,0.71 ppm,212.78 kg/ha,64.07 %
+Shadanada,87.12,27.33,"slate, phyllite",6.21,15.01 %,3.87 %,0.12 %,0.92 ppm,153.26 kg/ha,59.47 %
+Sanpang,87.12,27.3,"slate, phyllite",6.2,14.86 %,3.69 %,0.12 %,0.96 ppm,108.91 kg/ha,58.31 %
+Boya,87.08,27.27,Quartzite,6.0,11.45 %,4.09 %,0.16 %,0.89 ppm,85.09 kg/ha,57.7 %
+supteswor,87.0,27.22,"slate, phyllite",6.06,14.19 %,3.08 %,0.15 %,0.85 ppm,80.63 kg/ha,56.91 %
+annapurna,86.93,27.18,Quartzite,5.99,12.15 %,3.54 %,0.17 %,0.95 ppm,81.13 kg/ha,61.92 %
+Bokhim,87.03,27.18,Quartzite,6.29,17.86 %,3.0 %,0.15 %,0.91 ppm,78.88 kg/ha,56.66 %
+Yangpang,87.17,27.23,"slate, phyllite",6.18,16.31 %,3.24 %,0.12 %,0.83 ppm,79.98 kg/ha,56.06 %
+Charambi,87.2,27.18,Quartzite,6.29,14.91 %,2.97 %,0.14 %,1.17 ppm,68.6 kg/ha,56.44 %
+Yaku,87.18,27.13,Quartzite,6.23,16.69 %,2.91 %,0.15 %,1.05 ppm,62.09 kg/ha,56.26 %
+Sanodumma,87.17,27.08,Quartzite,6.34,20.7 %,2.71 %,0.13 %,0.97 ppm,64.35 kg/ha,57.17 %
+Bastim,87.1,27.1,Quartzite,6.48,19.36 %,2.71 %,0.12 %,0.97 ppm,59.4 kg/ha,57.25 %
+Bhojpur,87.03,27.17,Quartzite,6.2,16.06 %,3.06 %,0.14 %,0.99 ppm,68.85 kg/ha,57.59 %
+Kot,86.98,27.13,Quartzite,6.36,16.73 %,3.51 %,0.17 %,0.95 ppm,113.17 kg/ha,61.4 %
+lekharka,86.93,27.13,Quartzite,6.04,11.09 %,3.69 %,0.18 %,0.93 ppm,59.97 kg/ha,62.26 %
+Okhre,86.95,27.08,Quartzite,6.18,14.04 %,3.82 %,0.17 %,0.9 ppm,84.41 kg/ha,60.11 %
+Baikunthe,87.0,27.05,Quartzite,6.05,13.57 %,3.76 %,0.18 %,0.86 ppm,73.02 kg/ha,63.59 %
+Homtang,87.17,27.0,"slate, phyllite",6.46,23.96 %,2.62 %,0.12 %,1.01 ppm,53.33 kg/ha,55.54 %
+Sidrang,87.08,27.0,"slate, phyllite",6.27,16.05 %,3.61 %,0.18 %,0.9 ppm,77.63 kg/ha,60.31 %
+Thidinigkha,87.0,26.98,"slate, phyllite",6.26,15.58 %,3.63 %,0.17 %,0.84 ppm,65.75 kg/ha,61.39 %
+Pangcha,86.97,26.92,Quartzite,6.28,19.26 %,3.2 %,0.14 %,0.75 ppm,66.68 kg/ha,59.21 %
+Dummana,87.07,26.93,Quartzite,6.34,21.02 %,2.88 %,0.13 %,0.79 ppm,52.01 kg/ha,57.49 %
+Hasanpur,87.12,26.93,Quartzite,6.58,27.56 %,2.85 %,0.13 %,0.89 ppm,38.79 kg/ha,58.11 %
+Dewantar,87.07,26.97,Quartzite,6.35,18.57 %,3.49 %,0.16 %,0.75 ppm,85.1 kg/ha,58.73 %
+Darechok,84.6,27.85,Quartzite,6.09,15.43 %,3.9 %,0.2 %,2.64 ppm,99.13 kg/ha,52.73 %
+Chandibhangyang,84.57,27.8,Quartzite,5.91,13.68 %,4.04 %,0.2 %,0.92 ppm,76.83 kg/ha,49.84 %
+Kabilas,84.48,27.77,"Colluvial, calcareous",5.87,11.78 %,2.18 %,0.13 %,0.92 ppm,69.94 kg/ha,52.17 %
+Kaule,84.63,27.77,Quartzite,5.88,15.16 %,4.02 %,0.21 %,1.14 ppm,146.52 kg/ha,53.52 %
+Shaktikhor,84.4,27.73,"Sandstone, greywacke, arkose",5.75,20.36 %,2.63 %,0.15 %,1.15 ppm,116.16 kg/ha,46.38 %
+Siddi,84.63,27.7,"Sandstone, greywacke, arkose",5.9,12.03 %,3.54 %,0.19 %,0.92 ppm,109.3 kg/ha,56.11 %
+Lothar,84.72,27.7,Quartzite,5.94,12.99 %,3.45 %,0.2 %,1.1 ppm,104.06 kg/ha,55.24 %
+Narayangarh,84.42,27.68,"Colluvial, calcareous",6.11,13.08 %,2.27 %,0.13 %,1.08 ppm,92.76 kg/ha,49.98 %
+Jutpani,84.52,27.68,"Lacustrine, non calcareous",6.09,14.89 %,2.2 %,0.12 %,3.37 ppm,96.91 kg/ha,45.53 %
+Korak,84.67,27.63,"Sandstone, greywacke, arkose",5.84,13.71 %,2.29 %,0.13 %,0.94 ppm,65.81 kg/ha,48.16 %
+Pithuwa,84.53,27.63,"Fluvial, calcareous",6.06,14.07 %,2.02 %,0.11 %,3.46 ppm,86.46 kg/ha,47.53 %
+Mangalpur,84.32,27.67,"Fluvial, calcareous",6.08,15.49 %,1.86 %,0.11 %,1.03 ppm,44.79 kg/ha,47.23 %
+Bharatpur,84.42,27.65,"Colluvial, calcareous",6.23,17.67 %,2.59 %,0.13 %,1.56 ppm,121.9 kg/ha,46.73 %
+Meghauli,84.2,27.57,"Fluvial, calcareous",6.21,5.89 %,1.92 %,0.1 %,1.3 ppm,47.95 kg/ha,47.63 %
+Chitraban,84.33,27.62,"Colluvial, calcareous",6.14,17.2 %,2.08 %,0.11 %,1.45 ppm,70.98 kg/ha,45.56 %
+Ratnanagar,84.5,27.58,"Fluvial, calcareous",6.18,11.52 %,2.13 %,0.11 %,1.22 ppm,112.48 kg/ha,43.73 %
+Piple,84.68,27.58,"Fluvial, calcareous",6.04,13.92 %,2.28 %,0.14 %,1.2 ppm,128.82 kg/ha,45.97 %
+Kothar,84.58,27.55,"Colluvial, calcareous",6.17,13.98 %,2.35 %,0.12 %,1.18 ppm,99.99 kg/ha,47.91 %
+Padampur,84.48,27.53,"Colluvial, calcareous",6.29,16.15 %,2.75 %,0.14 %,1.21 ppm,89.0 kg/ha,50.45 %
+Gardi,84.23,27.47,"Sandstone, greywacke, arkose",6.32,15.94 %,3.47 %,0.15 %,1.07 ppm,63.72 kg/ha,54.17 %
+madi,84.37,27.42,"Sandstone, greywacke, arkose",6.47,16.54 %,2.6 %,0.11 %,0.95 ppm,40.54 kg/ha,49.69 %
+Bhagauda,84.32,27.43,"Colluvial, calcareous",6.4,16.01 %,2.52 %,0.11 %,0.96 ppm,55.96 kg/ha,49.47 %
+Gitanagar,84.37,27.62,"Colluvial, calcareous",6.32,16.68 %,2.28 %,0.12 %,1.31 ppm,97.46 kg/ha,44.41 %
+Dewal Debyapur,80.45,29.47,"slate, phyllite",6.33,13.87 %,5.52 %,0.07 %,1.14 ppm,95.05 kg/ha,37.89 %
+Dhadrapur,80.5,29.35,"slate, phyllite",6.51,7.82 %,3.13 %,0.13 %,1.13 ppm,76.72 kg/ha,59.54 %
+Samjee,80.55,29.35,"slate, phyllite",6.4,5.73 %,3.16 %,0.12 %,1.09 ppm,77.68 kg/ha,63.21 %
+Ayayameru,80.58,29.37,Quartzite,6.46,13.06 %,4.43 %,0.11 %,0.98 ppm,91.02 kg/ha,50.45 %
+Kotai,80.63,29.33,Quartzite,6.19,17.93 %,2.84 %,0.13 %,0.94 ppm,89.88 kg/ha,51.76 %
+Belapur,80.73,29.35,Quartzite,6.59,13.66 %,2.53 %,0.09 %,1.17 ppm,83.75 kg/ha,62.48 %
+Nawadurga,80.7,29.32,Quartzite,6.53,16.42 %,2.33 %,0.11 %,0.93 ppm,98.72 kg/ha,61.21 %
+Ganeshpur,80.65,29.27,Quartzite,6.32,22.5 %,4.73 %,0.22 %,0.86 ppm,50.25 kg/ha,67.34 %
+Ashigram,80.63,29.22,Quartzite,6.44,15.25 %,4.45 %,0.21 %,0.98 ppm,104.65 kg/ha,63.1 %
+Gankhel,80.53,29.18,Quartzite,6.5,17.06 %,3.2 %,0.16 %,1.24 ppm,68.06 kg/ha,62.56 %
+Bagarkot,80.47,29.28,Quartzite,6.44,16.02 %,3.84 %,0.19 %,0.86 ppm,139.14 kg/ha,66.17 %
+Bageswori,80.38,29.32,Quartzite,6.61,12.84 %,3.02 %,0.11 %,1.06 ppm,150.33 kg/ha,62.88 %
+Rupal,80.33,29.28,Quartzite,6.59,12.63 %,2.77 %,0.11 %,1.07 ppm,97.04 kg/ha,76.32 %
+Gogan,80.4,29.18,Quartzite,6.51,22.45 %,4.2 %,0.21 %,1.5 ppm,165.06 kg/ha,57.22 %
+Sirsha,80.33,29.15,"Sandstone, greywacke, arkose",6.34,19.55 %,2.92 %,0.15 %,0.98 ppm,77.42 kg/ha,47.36 %
+Parashuram,80.3,29.13,"Sandstone, greywacke, arkose",6.69,23.5 %,3.39 %,0.16 %,1.2 ppm,127.07 kg/ha,59.29 %
+Alital,80.48,29.07,"Sandstone, greywacke, arkose",6.58,19.15 %,3.66 %,0.18 %,1.25 ppm,120.77 kg/ha,54.26 %
+Gankha,80.53,29.18,Quartzite,6.5,17.06 %,3.2 %,0.16 %,1.24 ppm,68.06 kg/ha,62.56 %
+Siddanath,80.42,29.07,"Sandstone, greywacke, arkose",6.6,18.91 %,2.43 %,0.12 %,0.97 ppm,96.5 kg/ha,62.93 %
+Shikar,80.63,29.22,Quartzite,6.44,15.25 %,4.45 %,0.21 %,0.98 ppm,104.65 kg/ha,63.1 %
+Pipalkot,81.53,29.07,Quartzite,6.37,18.52 %,3.89 %,0.13 %,0.93 ppm,72.24 kg/ha,55.47 %
+Tilepata,81.47,29.02,Quartzite,6.34,21.38 %,3.38 %,0.13 %,1.03 ppm,104.15 kg/ha,52.13 %
+Sigaudi,81.43,28.98,Quartzite,6.28,19.16 %,2.83 %,0.14 %,1.0 ppm,72.36 kg/ha,47.37 %
+lalchandra,81.53,28.98,"slate, phyllite",6.16,15.54 %,3.14 %,0.14 %,1.2 ppm,146.14 kg/ha,51.14 %
+Bisaila,81.58,29.02,Quartzite,5.96,10.79 %,2.01 %,0.11 %,0.87 ppm,46.88 kg/ha,55.13 %
+Kusapahi,81.63,28.98,Quartzite,6.07,13.22 %,2.86 %,0.14 %,0.91 ppm,91.81 kg/ha,55.36 %
+Chamunda,81.58,28.95,Quartzite,6.12,15.11 %,3.16 %,0.13 %,1.01 ppm,74.79 kg/ha,54.88 %
+Samikandh,81.55,28.92,"slate, phyllite",6.2,14.36 %,2.75 %,0.13 %,1.09 ppm,72.84 kg/ha,49.34 %
+Bindraseni,81.5,28.9,Quartzite,6.5,17.95 %,3.32 %,0.13 %,1.24 ppm,87.23 kg/ha,47.27 %
+Dullu,81.57,28.83,"slate, phyllite",6.29,17.85 %,3.7 %,0.14 %,1.38 ppm,146.94 kg/ha,50.39 %
+Raniban,81.68,28.93,Quartzite,6.24,17.28 %,3.41 %,0.12 %,0.96 ppm,121.77 kg/ha,51.0 %
+Baluwatar,81.77,28.95,"Gneiss, migmatite",6.12,9.94 %,2.69 %,0.13 %,0.81 ppm,68.18 kg/ha,56.49 %
+Kalika,81.88,28.93,Quartzite,6.21,12.88 %,3.19 %,0.13 %,0.75 ppm,83.8 kg/ha,52.86 %
+Naumule,81.82,28.88,"Gneiss, migmatite",6.1,15.36 %,3.25 %,0.15 %,0.94 ppm,140.49 kg/ha,52.82 %
+Narayan Municipality,81.72,28.85,"slate, phyllite",6.18,14.97 %,2.99 %,0.12 %,1.17 ppm,107.76 kg/ha,57.54 %
+Rawatkot,81.63,28.88,Quartzite,6.21,16.72 %,3.19 %,0.12 %,1.08 ppm,96.62 kg/ha,54.42 %
+Malika,81.62,28.78,"slate, phyllite",6.34,16.79 %,3.28 %,0.11 %,1.19 ppm,164.65 kg/ha,57.57 %
+Seri,81.62,28.72,"slate, phyllite",6.29,14.8 %,4.46 %,0.15 %,0.94 ppm,84.0 kg/ha,54.74 %
+Gauri,81.67,28.75,Quartzite,6.41,20.72 %,3.3 %,0.13 %,1.15 ppm,206.65 kg/ha,57.32 %
+Pilalel,81.72,28.67,Quartzite,6.16,17.69 %,4.59 %,0.19 %,1.0 ppm,124.3 kg/ha,50.49 %
+Katli,81.8,28.75,Quartzite,6.21,16.2 %,3.66 %,0.15 %,1.02 ppm,116.76 kg/ha,52.95 %
+Room,81.82,28.8,Quartzite,6.19,15.29 %,3.26 %,0.11 %,0.96 ppm,133.18 kg/ha,52.34 %
+Jagannath,81.87,28.77,"slate, phyllite",6.1,16.75 %,3.18 %,0.14 %,0.97 ppm,134.43 kg/ha,52.79 %
+Lakuri,81.72,28.78,Quartzite,6.6,19.5 %,3.33 %,0.14 %,1.11 ppm,351.28 kg/ha,58.95 %
+Kharigaiga,81.7,28.9,"slate, phyllite",6.05,14.45 %,2.91 %,0.12 %,0.96 ppm,92.75 kg/ha,53.3 %
+Kalimati rampur,82.97,28.22,"slate, phyllite",5.91,3.38 %,3.22 %,0.12 %,0.83 ppm,127.49 kg/ha,52.91 %
+Bagmare,82.13,28.2,"Lacustrine, non calcareous",6.87,16.62 %,2.68 %,0.12 %,1.29 ppm,195.22 kg/ha,46.95 %
+Panchkule,82.07,28.12,"Sandstone, greywacke, arkose",6.75,20.23 %,2.84 %,0.13 %,0.93 ppm,91.98 kg/ha,47.78 %
+Shantinagar,82.22,28.17,"Colluvial, calcareous",6.84,18.6 %,2.93 %,0.12 %,1.33 ppm,223.96 kg/ha,47.78 %
+Shreegaon,82.17,28.12,"Lacustrine, non calcareous",6.92,19.56 %,2.95 %,0.16 %,1.0 ppm,187.32 kg/ha,42.15 %
+Goltakuri,82.13,28.05,"Sandstone, greywacke, arkose",6.82,20.99 %,2.95 %,0.13 %,0.91 ppm,91.23 kg/ha,48.82 %
+Tulsipur,82.3,28.13,"Colluvial, calcareous",6.86,18.52 %,2.7 %,0.11 %,1.86 ppm,256.73 kg/ha,48.52 %
+Tarigaon,82.27,28.08,"Lacustrine, non calcareous",6.9,19.21 %,2.89 %,0.15 %,1.51 ppm,188.62 kg/ha,44.27 %
+Uranari,82.22,28.05,"Lacustrine, non calcareous",7.13,26.74 %,2.9 %,0.16 %,1.31 ppm,207.37 kg/ha,39.53 %
+Ameliya,82.2,27.95,"Sandstone, greywacke, arkose",6.92,23.11 %,2.89 %,0.12 %,1.37 ppm,101.55 kg/ha,46.76 %
+Dhikpur,82.35,28.05,"Lacustrine, non calcareous",6.85,22.07 %,2.82 %,0.14 %,1.43 ppm,193.06 kg/ha,41.76 %
+Hapur,82.42,28.1,"Colluvial, calcareous",6.79,16.22 %,2.74 %,0.1 %,1.12 ppm,197.28 kg/ha,46.64 %
+Ghorahi,82.48,28.05,"Colluvial, calcareous",6.68,14.33 %,2.71 %,0.11 %,1.22 ppm,219.11 kg/ha,44.04 %
+Saigha,82.5,28.1,Quartzite,6.78,13.06 %,2.98 %,0.1 %,1.02 ppm,183.45 kg/ha,43.46 %
+Syuja,82.57,28.05,"slate, phyllite",6.73,10.98 %,3.25 %,0.09 %,0.98 ppm,176.46 kg/ha,40.96 %
+Loharpani,82.67,27.98,Quartzite,6.76,11.85 %,2.7 %,0.09 %,0.93 ppm,164.23 kg/ha,49.47 %
+Hanspur,82.7,27.93,"Sandstone, greywacke, arkose",6.84,13.62 %,2.85 %,0.12 %,0.88 ppm,96.39 kg/ha,54.29 %
+Bhaluwang,82.73,27.82,"Fluvial, calcareous",7.09,25.77 %,2.75 %,0.15 %,1.42 ppm,114.77 kg/ha,48.91 %
+Lamahi,82.57,27.87,"Colluvial, calcareous",7.25,34.64 %,2.56 %,0.14 %,0.44 ppm,63.57 kg/ha,28.25 %
+Gadhawa,82.52,27.75,"Sandstone, greywacke, arkose",6.8,20.93 %,2.91 %,0.12 %,3.98 ppm,75.23 kg/ha,51.08 %
+Khardariya,82.43,27.85,"Colluvial, calcareous",7.23,31.11 %,2.64 %,0.13 %,1.44 ppm,58.81 kg/ha,32.86 %
+Satbariya,82.35,27.92,"Sandstone, greywacke, arkose",7.04,30.22 %,2.8 %,0.13 %,2.6 ppm,76.99 kg/ha,42.98 %
+rampurwa,82.52,27.97,"Fluvial, calcareous",6.87,15.71 %,2.62 %,0.1 %,1.15 ppm,148.33 kg/ha,46.65 %
+Phulbari,82.3,27.98,"Sandstone, greywacke, arkose",6.69,17.57 %,2.7 %,0.11 %,0.91 ppm,77.65 kg/ha,48.37 %
+Saudiyar,82.4,28.0,"Fluvial, calcareous",6.92,21.3 %,2.72 %,0.12 %,0.81 ppm,194.3 kg/ha,39.84 %
+Bela,82.42,27.78,"Sandstone, greywacke, arkose",6.78,23.26 %,3.06 %,0.13 %,6.72 ppm,114.57 kg/ha,48.64 %
+Maidi,84.77,27.88,"slate, phyllite",6.06,18.88 %,2.52 %,0.14 %,1.09 ppm,59.75 kg/ha,41.79 %
+nalang,84.83,27.85,Quartzite,5.99,16.58 %,2.31 %,0.13 %,1.05 ppm,65.12 kg/ha,48.61 %
+Salyantar,84.82,28.0,Fluvial non calcareous,5.96,20.44 %,2.24 %,0.12 %,2.61 ppm,50.31 kg/ha,44.55 %
+Jyamrung,84.87,27.97,Quartzite,5.94,16.05 %,2.89 %,0.14 %,1.03 ppm,60.34 kg/ha,45.35 %
+Marphak,84.95,28.0,"slate, phyllite",5.98,14.87 %,2.94 %,0.14 %,0.87 ppm,75.33 kg/ha,42.12 %
+Semjong,84.98,27.97,Quartzite,5.85,13.4 %,3.45 %,0.17 %,0.94 ppm,130.12 kg/ha,49.57 %
+Khari,84.77,27.92,"slate, phyllite",5.99,20.47 %,2.7 %,0.14 %,2.96 ppm,52.49 kg/ha,44.22 %
+MuraliBhanjhyang,84.85,27.9,"slate, phyllite",6.0,17.9 %,2.23 %,0.12 %,1.12 ppm,47.49 kg/ha,44.03 %
+Sunaulabazar,84.9,27.85,Quartzite,5.99,16.41 %,3.93 %,0.21 %,1.06 ppm,183.17 kg/ha,50.52 %
+Kaleri,84.98,27.82,Quartzite,6.11,19.23 %,2.35 %,0.13 %,2.82 ppm,68.45 kg/ha,42.46 %
+Kumpur,84.87,27.82,Quartzite,6.11,18.68 %,2.48 %,0.12 %,2.93 ppm,77.03 kg/ha,42.87 %
+Benighat,84.8,27.78,"slate, phyllite",6.04,18.35 %,2.91 %,0.14 %,2.61 ppm,63.87 kg/ha,45.22 %
+Gajuri,84.83,27.77,Quartzite,6.21,18.27 %,2.7 %,0.14 %,2.65 ppm,69.98 kg/ha,44.71 %
+Baireni,84.97,27.77,"slate, phyllite",6.03,18.6 %,2.72 %,0.12 %,2.24 ppm,70.07 kg/ha,43.35 %
+Jogimara,84.68,27.78,Quartzite,6.05,13.47 %,2.89 %,0.14 %,0.88 ppm,68.85 kg/ha,49.88 %
+Kandrang,84.77,27.7,Quartzite,6.03,14.47 %,4.34 %,0.21 %,1.1 ppm,120.6 kg/ha,55.19 %
+Pida,84.9,27.72,"slate, phyllite",6.0,12.14 %,3.24 %,0.17 %,1.12 ppm,132.08 kg/ha,51.82 %
+Bmumistan,85.02,27.72,Quartzite,6.02,13.49 %,2.59 %,0.13 %,1.1 ppm,117.03 kg/ha,49.73 %
+Thakre,85.1,27.73,"slate, phyllite",6.03,18.36 %,2.54 %,0.14 %,0.85 ppm,164.62 kg/ha,45.15 %
+Naubise,85.15,27.7,Quartzite,6.01,14.25 %,2.89 %,0.16 %,1.03 ppm,130.0 kg/ha,52.75 %
+Jibanpur,85.17,27.75,"slate, phyllite",6.02,17.54 %,2.26 %,0.11 %,2.17 ppm,133.43 kg/ha,47.11 %
+Kebalpur,85.1,27.75,"slate, phyllite",6.08,17.2 %,2.44 %,0.11 %,2.23 ppm,108.03 kg/ha,44.34 %
+Goganpani,85.07,27.77,Quartzite,6.06,18.12 %,2.7 %,0.14 %,2.57 ppm,125.04 kg/ha,44.86 %
+Mahadevstan,84.83,27.7,Quartzite,6.02,12.53 %,3.35 %,0.2 %,1.06 ppm,116.34 kg/ha,53.24 %
+Reegaon,84.97,28.1,"Gneiss, migmatite",5.85,12.2 %,3.85 %,0.16 %,0.89 ppm,200.1 kg/ha,46.77 %
+Lipa,85.02,28.15,"Gneiss, migmatite",5.92,12.88 %,3.62 %,0.12 %,0.73 ppm,226.52 kg/ha,42.58 %
+Tipling,85.15,28.18,"Gneiss, migmatite",6.28,7.82 %,3.81 %,0.12 %,1.22 ppm,200.81 kg/ha,43.28 %
+Gundi,84.93,28.03,"slate, phyllite",5.92,15.18 %,2.87 %,0.15 %,1.12 ppm,104.06 kg/ha,44.01 %
+Arughat,84.82,28.03,Quartzite,5.88,17.86 %,2.17 %,0.12 %,1.0 ppm,46.22 kg/ha,44.19 %
+Chanuwa,87.28,27.15,Fluvial non calcareous,6.39,22.23 %,2.98 %,0.13 %,1.08 ppm,76.41 kg/ha,53.42 %
+Dandagaon,87.32,27.17,"slate, phyllite",6.33,17.66 %,3.06 %,0.17 %,1.46 ppm,76.7 kg/ha,58.54 %
+Jaleswor,87.33,27.15,"slate, phyllite",6.4,16.93 %,2.86 %,0.15 %,0.95 ppm,73.1 kg/ha,58.64 %
+Marek Katrahe,87.37,27.13,Quartzite,6.16,15.71 %,3.49 %,0.21 %,0.97 ppm,62.63 kg/ha,62.62 %
+Mahalaxmi Municipality,87.32,27.12,"slate, phyllite",6.42,17.68 %,3.13 %,0.16 %,1.12 ppm,97.3 kg/ha,59.56 %
+Leguwa,87.28,27.1,"slate, phyllite",6.45,22.16 %,2.58 %,0.12 %,1.3 ppm,70.25 kg/ha,55.53 %
+Nunthala,87.37,27.1,"slate, phyllite",6.28,15.03 %,3.45 %,0.19 %,0.87 ppm,68.84 kg/ha,59.64 %
+Murtidunga,87.35,27.08,"slate, phyllite",6.28,17.28 %,2.85 %,0.14 %,0.93 ppm,75.88 kg/ha,62.12 %
+Arkahule,87.32,27.12,"slate, phyllite",6.42,17.68 %,3.13 %,0.16 %,1.12 ppm,97.3 kg/ha,59.56 %
+Pakhrebas,87.23,27.07,"slate, phyllite",6.33,19.24 %,2.86 %,0.16 %,0.97 ppm,60.68 kg/ha,58.18 %
+Hattikharka,87.32,27.07,"slate, phyllite",6.34,17.97 %,2.86 %,0.15 %,1.0 ppm,64.37 kg/ha,63.34 %
+SIshuwa Bazar,87.38,27.07,"slate, phyllite",6.16,14.31 %,3.73 %,0.19 %,0.92 ppm,69.05 kg/ha,62.93 %
+Mugha,87.23,27.02,"slate, phyllite",6.55,23.67 %,2.83 %,0.13 %,0.98 ppm,51.84 kg/ha,57.62 %
+Khoku,87.2,26.98,"slate, phyllite",6.59,26.56 %,2.25 %,0.11 %,0.9 ppm,34.32 kg/ha,61.14 %
+Chunwang,87.25,27.0,"slate, phyllite",6.53,20.47 %,3.04 %,0.14 %,0.98 ppm,52.45 kg/ha,64.62 %
+Dhankuta,87.32,26.97,Quartzite,6.64,25.92 %,2.45 %,0.11 %,0.98 ppm,30.28 kg/ha,57.88 %
+Tankhuwa,86.38,26.97,"Fluvial, calcareous",6.48,19.08 %,2.2 %,0.1 %,0.97 ppm,78.32 kg/ha,54.91 %
+Kurulw Tenupa,87.48,26.93,Quartzite,6.84,24.99 %,2.41 %,0.11 %,0.91 ppm,33.22 kg/ha,61.22 %
+Bodhe,87.42,26.93,Quartzite,6.75,26.34 %,2.25 %,0.11 %,0.9 ppm,43.92 kg/ha,58.51 %
+Moana Budhuk,87.43,26.9,"slate, phyllite",6.62,22.18 %,2.82 %,0.14 %,0.73 ppm,37.12 kg/ha,63.82 %
+Dudhabare,87.53,26.87,Quartzite,6.37,18.39 %,4.19 %,0.22 %,0.64 ppm,66.57 kg/ha,69.09 %
+Mulghat,87.32,26.92,Quartzite,6.51,30.48 %,2.29 %,0.12 %,1.28 ppm,56.11 kg/ha,55.58 %
+Ankhisalla,87.25,26.93,Quartzite,6.56,31.86 %,2.87 %,0.13 %,1.1 ppm,47.1 kg/ha,54.65 %
+Chintang,87.18,26.93,Quartzite,6.55,29.33 %,2.78 %,0.14 %,0.82 ppm,44.61 kg/ha,57.08 %
+Bhedetar,87.32,26.85,Quartzite,6.32,20.26 %,4.04 %,0.2 %,0.6 ppm,121.68 kg/ha,61.29 %
+Rajarani,87.42,26.9,Quartzite,6.51,20.43 %,2.79 %,0.14 %,0.85 ppm,46.66 kg/ha,65.89 %
+Lalgadh,85.92,26.97,Fluvial non calcareous,5.7,11.01 %,1.3 %,0.08 %,0.41 ppm,28.73 kg/ha,51.79 %
+Mithila,85.95,26.93,Fluvial non calcareous,5.71,13.94 %,1.43 %,0.08 %,0.3 ppm,41.19 kg/ha,46.47 %
+Ganeshmancharnath,86.1,26.95,"Sandstone, greywacke, arkose",6.37,13.93 %,2.19 %,0.12 %,0.9 ppm,66.94 kg/ha,52.09 %
+Bharat Pur,86.08,26.88,Fluvial non calcareous,5.84,11.23 %,1.12 %,0.08 %,0.29 ppm,31.37 kg/ha,46.24 %
+Hariharpur,85.98,26.9,"Fluvial, calcareous",6.26,9.23 %,0.82 %,0.06 %,0.6 ppm,20.19 kg/ha,54.23 %
+Baleswor,85.93,26.88,Fluvial non calcareous,5.82,12.06 %,1.27 %,0.08 %,0.49 ppm,28.85 kg/ha,50.31 %
+Dhanusa,86.0,26.83,Fluvial non calcareous,6.4,15.31 %,0.8 %,0.06 %,0.33 ppm,9.56 kg/ha,43.3 %
+Sapahe,85.93,26.8,Fluvial non calcareous,6.73,13.33 %,0.95 %,0.07 %,0.25 ppm,17.54 kg/ha,46.75 %
+Tarapati Sirsaha,85.98,26.78,Fluvial non calcareous,6.49,14.13 %,0.97 %,0.06 %,0.43 ppm,13.72 kg/ha,41.64 %
+Raghunathpur,86.12,26.82,Fluvial non calcareous,6.64,15.51 %,1.0 %,0.1 %,0.5 ppm,41.07 kg/ha,48.33 %
+Khariyali,86.08,26.75,Fluvial non calcareous,6.69,19.32 %,1.04 %,0.1 %,0.56 ppm,36.51 kg/ha,47.07 %
+Kurtha,85.88,26.75,Fluvial non calcareous,6.66,35.88 %,1.04 %,0.06 %,0.36 ppm,32.98 kg/ha,18.3 %
+Janakpur,85.93,26.72,Fluvial non calcareous,6.75,23.42 %,0.99 %,0.06 %,2.25 ppm,43.65 kg/ha,45.61 %
+Nagarain,85.92,26.63,Fluvial non calcareous,6.94,39.21 %,1.05 %,0.06 %,0.42 ppm,87.39 kg/ha,19.41 %
+Chakkar,86.03,26.7,Fluvial non calcareous,6.79,23.68 %,1.13 %,0.08 %,0.52 ppm,41.96 kg/ha,35.23 %
+Harine,86.15,26.73,Fluvial non calcareous,6.72,17.72 %,1.18 %,0.07 %,0.63 ppm,32.77 kg/ha,47.74 %
+Balahakhatal,86.13,26.63,,6.91,25.44 %,1.25 %,0.08 %,0.69 ppm,44.74 kg/ha,31.82 %
+Lakhauri,86.0,26.67,Fluvial non calcareous,6.88,28.99 %,1.04 %,0.07 %,0.41 ppm,38.41 kg/ha,31.14 %
+Lohana,85.95,26.68,Fluvial non calcareous,6.92,31.2 %,1.03 %,0.06 %,0.44 ppm,46.32 kg/ha,27.37 %
+Phulgama,85.9,26.63,Fluvial non calcareous,6.87,38.04 %,1.01 %,0.06 %,0.37 ppm,42.67 kg/ha,23.75 %
+Lamabagar,86.18,27.98,"Gneiss, migmatite",6.99,9.65 %,6.17 %,0.14 %,0.98 ppm,235.67 kg/ha,48.58 %
+bigu,86.05,27.83,"Gneiss, migmatite",6.01,7.69 %,6.3 %,0.12 %,0.59 ppm,198.39 kg/ha,48.36 %
+Palpalkharka,86.03,27.82,"Gneiss, migmatite",5.97,6.29 %,5.95 %,0.11 %,1.02 ppm,223.94 kg/ha,46.59 %
+Dolakha,86.17,27.78,"Gneiss, migmatite",5.78,12.01 %,5.04 %,0.15 %,0.61 ppm,213.66 kg/ha,55.57 %
+Abare,86.12,27.77,"Gneiss, migmatite",5.99,8.2 %,4.97 %,0.16 %,0.6 ppm,228.11 kg/ha,51.73 %
+Lapilam,86.08,27.73,"Gneiss, migmatite",5.91,7.63 %,5.44 %,0.13 %,0.77 ppm,236.95 kg/ha,57.62 %
+Kalinchok,86.02,27.73,"Gneiss, migmatite",5.79,7.72 %,6.01 %,0.11 %,1.11 ppm,215.28 kg/ha,45.68 %
+Lamidanda,86.13,27.72,"Gneiss, migmatite",6.04,9.24 %,4.76 %,0.15 %,0.9 ppm,214.77 kg/ha,51.96 %
+SUnkhani,86.1,27.7,"slate, phyllite",5.75,10.47 %,4.83 %,0.16 %,0.73 ppm,216.3 kg/ha,58.79 %
+Bocha,85.97,27.7,"Gneiss, migmatite",5.62,9.29 %,5.21 %,0.1 %,0.69 ppm,177.11 kg/ha,66.57 %
+Kabhre,86.13,27.63,Quartzite,5.7,15.59 %,3.89 %,0.13 %,0.58 ppm,168.48 kg/ha,55.12 %
+Jiri,86.22,27.62,"slate, phyllite",5.76,7.15 %,4.68 %,0.12 %,0.53 ppm,114.26 kg/ha,61.98 %
+Bihimeswor Municipality,86.02,27.65,Quartzite,6.02,10.01 %,4.18 %,0.13 %,0.66 ppm,165.8 kg/ha,54.81 %
+Pauwati,86.05,27.57,Quartzite,6.04,11.85 %,2.77 %,0.07 %,0.83 ppm,169.73 kg/ha,52.5 %
+Chama,86.13,27.52,Quartzite,5.75,14.3 %,2.62 %,0.07 %,0.9 ppm,145.42 kg/ha,53.16 %
+Melung,86.05,27.5,Quartzite,6.22,14.77 %,2.67 %,0.07 %,0.85 ppm,165.86 kg/ha,49.79 %
+Sailunge Danda,86.0,27.57,"Gneiss, migmatite",5.83,11.69 %,3.86 %,0.09 %,1.01 ppm,103.42 kg/ha,58.93 %
+Jule,86.12,27.55,"slate, phyllite",5.7,11.18 %,3.3 %,0.1 %,0.79 ppm,116.91 kg/ha,58.12 %
+Katakuti,85.97,27.6,"Gneiss, migmatite",5.79,14.36 %,3.5 %,0.1 %,1.08 ppm,118.31 kg/ha,59.68 %
+Dudhpokhari,85.93,27.6,Quartzite,5.88,10.47 %,3.26 %,0.08 %,0.77 ppm,81.62 kg/ha,59.01 %
+Sailung,85.92,27.65,Quartzite,5.66,11.55 %,3.36 %,0.09 %,0.77 ppm,126.76 kg/ha,67.39 %
+namdu,86.1,27.63,"slate, phyllite",5.79,16.54 %,3.56 %,0.12 %,0.76 ppm,172.36 kg/ha,51.36 %
+Mali,86.27,27.62,"slate, phyllite",5.71,8.52 %,5.12 %,0.11 %,0.6 ppm,130.5 kg/ha,63.96 %
+Suri,86.2,27.73,"Gneiss, migmatite",5.89,9.8 %,5.6 %,0.18 %,0.48 ppm,191.03 kg/ha,55.83 %
+Kaigaon,82.68,29.25,"Gneiss, migmatite",7.45,13.83 %,4.78 %,0.23 %,0.55 ppm,159.44 kg/ha,53.8 %
+Saldang,83.12,29.38,"Gneiss, migmatite",7.53,20.59 %,4.15 %,0.23 %,0.47 ppm,108.61 kg/ha,53.06 %
+Tinje,83.28,29.28,"Gneiss, migmatite",7.49,15.26 %,4.69 %,0.25 %,0.6 ppm,166.42 kg/ha,51.73 %
+Dhou,83.18,29.08,"Gneiss, migmatite",7.7,20.65 %,4.38 %,0.23 %,0.77 ppm,166.82 kg/ha,55.07 %
+Dunai,82.87,28.87,"Gneiss, migmatite",6.57,10.63 %,5.19 %,0.24 %,0.49 ppm,167.11 kg/ha,53.52 %
+Juphal,82.8,28.95,"Gneiss, migmatite",6.87,12.65 %,5.23 %,0.24 %,1.23 ppm,153.58 kg/ha,54.1 %
+Rimi,82.5,29.12,"Gneiss, migmatite",6.31,10.39 %,4.73 %,0.24 %,0.35 ppm,86.0 kg/ha,55.88 %
+Munigaon,82.43,29.12,"Gneiss, migmatite",6.35,7.07 %,5.36 %,0.22 %,0.59 ppm,121.57 kg/ha,54.85 %
+Tarmi,82.43,29.07,"Gneiss, migmatite",6.27,8.72 %,5.78 %,0.24 %,0.39 ppm,95.22 kg/ha,55.4 %
+Sunhoo,82.7,28.95,"Gneiss, migmatite",6.33,7.31 %,5.03 %,0.23 %,0.65 ppm,154.82 kg/ha,56.36 %
+Majhfal,82.78,28.87,"Gneiss, migmatite",6.41,12.99 %,4.73 %,0.22 %,0.5 ppm,213.05 kg/ha,53.8 %
+Chapali,80.9,29.38,Quartzite,6.38,18.41 %,3.72 %,0.15 %,0.89 ppm,132.41 kg/ha,48.09 %
+Toleni,81.0,29.38,Quartzite,6.41,16.96 %,4.23 %,0.19 %,0.69 ppm,72.43 kg/ha,51.87 %
+Maadevstan,80.88,29.33,"slate, phyllite",6.45,15.33 %,2.82 %,0.1 %,1.01 ppm,71.34 kg/ha,50.23 %
+Khatiwada,80.95,29.3,"slate, phyllite",6.42,17.59 %,2.69 %,0.12 %,0.98 ppm,75.12 kg/ha,53.1 %
+Sanagaon,81.07,29.25,Quartzite,6.39,17.83 %,2.93 %,0.13 %,0.93 ppm,85.55 kg/ha,50.82 %
+SIlgadhi,80.93,29.27,Quartzite,6.73,20.32 %,2.2 %,0.12 %,0.92 ppm,107.4 kg/ha,60.34 %
+Latamandu,80.82,29.28,Quartzite,6.46,14.96 %,2.51 %,0.15 %,0.97 ppm,137.48 kg/ha,50.47 %
+Mudadhara,80.83,29.2,Quartzite,6.35,18.16 %,3.61 %,0.17 %,0.9 ppm,99.68 kg/ha,63.55 %
+SaraswotiNagar,80.72,29.15,Quartzite,6.1,14.71 %,3.8 %,0.18 %,1.07 ppm,94.92 kg/ha,51.98 %
+Kapaleke,80.87,29.17,Quartzite,6.58,15.4 %,3.62 %,0.16 %,1.03 ppm,155.1 kg/ha,54.94 %
+Dhirkamandu,80.93,29.1,Quartzite,6.36,14.47 %,3.08 %,0.13 %,1.11 ppm,153.41 kg/ha,58.84 %
+Gharkeswor,80.6,29.13,Quartzite,6.43,16.82 %,3.96 %,0.18 %,1.04 ppm,83.12 kg/ha,47.44 %
+Laxminagar,80.68,29.05,Quartzite,6.58,15.09 %,4.19 %,0.19 %,0.96 ppm,85.84 kg/ha,52.29 %
+Bipinagar,80.73,29.0,Quartzite,6.44,19.08 %,3.56 %,0.17 %,0.96 ppm,101.08 kg/ha,53.07 %
+Pokhari,81.08,29.2,"slate, phyllite",6.38,18.18 %,2.33 %,0.12 %,1.05 ppm,78.04 kg/ha,47.02 %
+Tikhatar,80.98,29.13,Quartzite,6.45,16.19 %,3.55 %,0.16 %,1.0 ppm,114.74 kg/ha,53.99 %
+Lanakedareswor,80.95,29.03,"slate, phyllite",6.28,15.5 %,3.75 %,0.18 %,1.0 ppm,67.79 kg/ha,53.55 %
+Dhangalgaon,80.93,28.97,Quartzite,6.62,18.38 %,3.43 %,0.16 %,1.17 ppm,86.01 kg/ha,48.42 %
+Kanachpur,81.1,29.02,Quartzite,6.24,20.57 %,3.6 %,0.18 %,1.1 ppm,75.95 kg/ha,53.77 %
+Simchaur,81.02,28.98,Quartzite,6.46,21.72 %,3.56 %,0.17 %,1.08 ppm,105.75 kg/ha,48.86 %
+NIrauli,80.75,29.05,Quartzite,6.46,13.41 %,3.98 %,0.17 %,0.97 ppm,51.84 kg/ha,48.08 %
+Patal,80.78,29.03,Quartzite,6.41,13.38 %,3.63 %,0.16 %,1.14 ppm,60.2 kg/ha,47.05 %
+Manakapadi,80.85,29.07,"slate, phyllite",6.21,15.61 %,2.89 %,0.15 %,1.05 ppm,54.02 kg/ha,46.04 %
+Chhatiwon,80.6,29.07,"Sandstone, greywacke, arkose",6.11,13.55 %,3.14 %,0.15 %,1.09 ppm,34.25 kg/ha,46.35 %
+Ghyalchok,84.72,27.82,Quartzite,5.97,16.4 %,2.82 %,0.15 %,1.05 ppm,53.69 kg/ha,45.77 %
+Bhumichok,84.67,27.82,Fluvial non calcareous,6.16,14.38 %,3.95 %,0.19 %,1.19 ppm,104.85 kg/ha,51.83 %
+Makaising,84.65,27.87,Quartzite,6.05,16.86 %,2.73 %,0.14 %,2.29 ppm,42.39 kg/ha,45.64 %
+Manakamana,84.57,27.88,Quartzite,6.05,15.95 %,3.23 %,0.16 %,2.81 ppm,47.98 kg/ha,46.68 %
+Phujel,84.7,27.9,Quartzite,6.07,18.06 %,2.72 %,0.12 %,2.67 ppm,104.95 kg/ha,46.17 %
+Ghairung,84.63,27.92,Quartzite,5.94,13.78 %,3.37 %,0.17 %,0.91 ppm,108.35 kg/ha,47.91 %
+Deurali,84.5,27.92,Fluvial non calcareous,6.06,16.74 %,3.02 %,0.15 %,2.37 ppm,36.69 kg/ha,36.25 %
+Shyangli,84.45,27.97,Fluvial non calcareous,5.84,18.65 %,2.41 %,0.14 %,2.67 ppm,32.71 kg/ha,40.27 %
+Mrikot,84.52,27.98,Fluvial non calcareous,5.93,16.52 %,2.61 %,0.13 %,2.57 ppm,23.81 kg/ha,37.52 %
+borlang,84.73,27.97,Quartzite,5.98,22.41 %,2.77 %,0.17 %,2.9 ppm,57.66 kg/ha,44.82 %
+Gorkha,84.62,27.98,"slate, phyllite",5.87,20.75 %,2.59 %,0.16 %,2.64 ppm,31.9 kg/ha,38.54 %
+Nareshow,84.6,28.02,Fluvial non calcareous,6.05,18.72 %,2.77 %,0.15 %,1.11 ppm,35.07 kg/ha,43.78 %
+Palungtar,84.47,28.03,Fluvial non calcareous,5.6,16.32 %,2.42 %,0.12 %,1.06 ppm,21.71 kg/ha,41.47 %
+Khoplang,84.53,28.03,"slate, phyllite",5.68,18.14 %,2.52 %,0.13 %,1.06 ppm,19.46 kg/ha,37.64 %
+Takukot,84.68,28.07,Quartzite,5.84,18.19 %,2.84 %,0.15 %,1.21 ppm,103.16 kg/ha,37.95 %
+Aarughat,84.8,28.03,Quartzite,5.9,16.22 %,2.51 %,0.12 %,0.91 ppm,37.4 kg/ha,43.01 %
+Jaubari,84.62,28.1,Quartzite,5.83,13.97 %,3.35 %,0.16 %,0.8 ppm,133.45 kg/ha,44.94 %
+Hansapur,84.62,28.15,Quartzite,5.93,12.24 %,3.3 %,0.15 %,0.76 ppm,111.25 kg/ha,43.92 %
+Simjung,84.68,28.17,"slate, phyllite",5.86,12.42 %,3.4 %,0.16 %,0.82 ppm,121.35 kg/ha,44.37 %
+Thumi,84.8,28.12,Quartzite,5.8,14.2 %,3.43 %,0.19 %,0.77 ppm,111.6 kg/ha,47.68 %
+Lapu,84.85,28.17,"Gneiss, migmatite",5.92,12.4 %,3.84 %,0.12 %,0.78 ppm,225.72 kg/ha,43.39 %
+Kharibot,84.65,28.22,"Gneiss, migmatite",5.77,11.44 %,3.94 %,0.18 %,0.72 ppm,90.89 kg/ha,50.77 %
+Laprak,84.8,28.22,"Gneiss, migmatite",5.96,9.32 %,4.8 %,0.12 %,0.51 ppm,188.57 kg/ha,41.88 %
+Ghyachok,84.68,28.27,"Gneiss, migmatite",6.41,9.62 %,2.81 %,0.15 %,2.0 ppm,191.07 kg/ha,46.22 %
+Prok,84.82,28.52,"Gneiss, migmatite",6.58,7.24 %,5.48 %,0.18 %,0.55 ppm,222.26 kg/ha,44.99 %
+Manbu,84.9,28.13,"Gneiss, migmatite",5.9,12.35 %,3.72 %,0.15 %,0.73 ppm,152.46 kg/ha,44.33 %
+Runchet,84.9,28.25,"Gneiss, migmatite",5.88,11.96 %,4.26 %,0.12 %,0.55 ppm,198.96 kg/ha,44.03 %
+Keraujaa,84.98,28.32,"Gneiss, migmatite",6.52,7.3 %,4.4 %,0.18 %,2.33 ppm,245.45 kg/ha,46.62 %
+Hawangdi,83.08,28.23,Quartzite,5.93,12.69 %,3.17 %,0.16 %,0.65 ppm,142.11 kg/ha,40.71 %
+Darlung,83.13,28.23,Quartzite,5.85,4.79 %,4.46 %,0.18 %,0.84 ppm,164.73 kg/ha,56.75 %
+Neta,83.18,28.23,Quartzite,6.15,5.3 %,4.33 %,0.19 %,0.75 ppm,200.09 kg/ha,52.68 %
+Malagri,83.03,28.17,Quartzite,6.07,7.6 %,3.88 %,0.18 %,0.82 ppm,199.49 kg/ha,51.34 %
+Sirseni,83.08,28.17,Quartzite,5.78,4.45 %,3.83 %,0.17 %,0.8 ppm,160.26 kg/ha,57.92 %
+Purkotdaha,83.05,28.13,Quartzite,6.15,5.8 %,3.18 %,0.13 %,0.83 ppm,147.95 kg/ha,51.23 %
+Wagla,83.12,28.15,Quartzite,6.02,5.59 %,3.85 %,0.17 %,0.68 ppm,162.83 kg/ha,55.24 %
+Amarpur,83.15,28.15,Quartzite,6.09,7.41 %,3.09 %,0.14 %,0.5 ppm,176.2 kg/ha,49.93 %
+Dohali,83.22,28.18,Quartzite,6.05,5.72 %,3.42 %,0.15 %,0.79 ppm,147.14 kg/ha,51.62 %
+Pipaldhara,83.13,28.08,Quartzite,6.37,7.36 %,4.12 %,0.18 %,0.9 ppm,175.81 kg/ha,47.47 %
+Dhukot,83.2,28.12,Fluvial non calcareous,6.53,8.22 %,2.77 %,0.13 %,0.63 ppm,158.29 kg/ha,45.96 %
+Musikot,83.27,28.17,"slate, phyllite",6.63,11.76 %,2.55 %,0.13 %,0.67 ppm,209.83 kg/ha,40.53 %
+Kugha,83.32,28.15,Quartzite,6.61,13.02 %,2.55 %,0.09 %,0.79 ppm,126.57 kg/ha,35.91 %
+Gumli,83.28,28.08,Quartzite,6.48,11.8 %,3.17 %,0.15 %,0.92 ppm,166.91 kg/ha,43.64 %
+Aapchaur,83.33,28.12,Fluvial non calcareous,6.88,13.11 %,2.71 %,0.11 %,0.75 ppm,157.58 kg/ha,37.12 %
+Resunga,83.25,28.05,"slate, phyllite",6.65,10.25 %,2.92 %,0.11 %,0.92 ppm,180.22 kg/ha,41.17 %
+Rupakot,83.37,28.05,Fluvial non calcareous,6.48,9.86 %,2.7 %,0.12 %,0.87 ppm,225.71 kg/ha,42.69 %
+Shantipur,83.4,28.1,Quartzite,6.93,14.16 %,2.71 %,0.1 %,0.89 ppm,151.09 kg/ha,34.74 %
+Gwagha,83.47,28.1,Quartzite,6.56,11.46 %,3.42 %,0.12 %,0.83 ppm,157.73 kg/ha,42.01 %
+Bharse,83.43,28.07,Quartzite,6.27,10.33 %,3.99 %,0.2 %,0.9 ppm,149.52 kg/ha,46.8 %
+Digam,83.37,27.97,Quartzite,6.89,13.93 %,2.77 %,0.12 %,1.13 ppm,125.78 kg/ha,41.98 %
+Limgha,83.47,28.02,Quartzite,6.6,13.11 %,3.21 %,0.15 %,0.97 ppm,148.06 kg/ha,42.83 %
+Thulo Lumpek,83.5,27.98,Quartzite,7.32,10.39 %,3.8 %,0.18 %,0.89 ppm,113.36 kg/ha,45.76 %
+Khagal Gaon,81.72,30.05,"Gneiss, migmatite",6.79,13.78 %,3.44 %,0.23 %,0.16 ppm,87.35 kg/ha,54.36 %
+Dandafaya,81.77,30.0,"Gneiss, migmatite",6.88,14.41 %,3.22 %,0.23 %,0.39 ppm,86.76 kg/ha,53.54 %
+Simikot,81.83,29.98,"Gneiss, migmatite",7.22,12.99 %,3.98 %,0.25 %,0.19 ppm,74.18 kg/ha,53.74 %
+Raya,81.83,29.85,"Gneiss, migmatite",6.99,13.41 %,4.61 %,0.22 %,0.5 ppm,105.27 kg/ha,55.12 %
+Rodikot,81.97,29.85,"Gneiss, migmatite",6.72,9.53 %,4.46 %,0.24 %,0.25 ppm,86.83 kg/ha,55.87 %
+Gothi,81.98,29.78,"Gneiss, migmatite",6.81,12.99 %,3.46 %,0.25 %,0.2 ppm,73.54 kg/ha,50.42 %
+Sarkeedeu,81.83,29.77,"Gneiss, migmatite",6.87,13.7 %,4.55 %,0.23 %,1.08 ppm,91.4 kg/ha,53.01 %
+Jair,81.97,29.72,"Gneiss, migmatite",6.95,11.43 %,3.82 %,0.26 %,0.27 ppm,130.46 kg/ha,54.1 %
+Kalika,81.8,29.72,"Gneiss, migmatite",6.69,9.08 %,5.03 %,0.23 %,0.37 ppm,88.97 kg/ha,55.0 %
+Shreenagar,81.87,29.68,"Gneiss, migmatite",7.0,13.19 %,4.24 %,0.26 %,0.28 ppm,95.78 kg/ha,50.97 %
+Maila,81.73,29.63,"Gneiss, migmatite",6.44,13.83 %,4.53 %,0.25 %,0.22 ppm,85.64 kg/ha,50.17 %
+Darma,82.12,29.68,"Gneiss, migmatite",6.91,7.11 %,4.41 %,0.23 %,0.29 ppm,123.57 kg/ha,56.1 %
+maimajhuwa,87.95,27.07,"slate, phyllite",6.13,11.49 %,4.2 %,0.19 %,1.45 ppm,133.14 kg/ha,52.38 %
+Jamuna,88.0,27.03,"slate, phyllite",5.81,15.84 %,3.75 %,0.2 %,1.45 ppm,165.45 kg/ha,55.78 %
+Maipokhari,87.9,27.02,"slate, phyllite",5.98,16.57 %,3.92 %,0.2 %,1.29 ppm,128.34 kg/ha,49.02 %
+Jogmai,88.05,27.0,"slate, phyllite",6.18,14.0 %,4.26 %,0.2 %,1.46 ppm,114.73 kg/ha,52.67 %
+ManBhanjhyang,88.1,26.97,"slate, phyllite",6.0,16.12 %,4.01 %,0.21 %,1.33 ppm,134.98 kg/ha,54.63 %
+Nayabazar,88.03,26.93,"slate, phyllite",5.94,15.04 %,4.34 %,0.21 %,1.17 ppm,109.43 kg/ha,52.04 %
+Suryodaya,88.05,26.88,"slate, phyllite",5.98,16.51 %,4.6 %,0.23 %,1.17 ppm,238.12 kg/ha,46.83 %
+Kanyam,88.08,26.85,"slate, phyllite",5.78,16.75 %,4.02 %,0.22 %,1.17 ppm,248.73 kg/ha,55.47 %
+Kolbung,88.03,26.78,"Sandstone, greywacke, arkose",5.36,9.14 %,2.95 %,0.13 %,2.38 ppm,93.89 kg/ha,61.22 %
+Ilam,87.92,26.9,Fluvial non calcareous,5.87,17.43 %,3.49 %,0.16 %,1.25 ppm,106.66 kg/ha,57.85 %
+Sakhejung,87.87,26.98,"slate, phyllite",5.75,16.67 %,4.67 %,0.22 %,1.19 ppm,155.77 kg/ha,51.71 %
+Phakphok,87.75,27.0,"slate, phyllite",5.99,15.65 %,3.69 %,0.18 %,1.16 ppm,127.38 kg/ha,58.96 %
+Mangalbare,87.82,26.95,"slate, phyllite",5.97,18.7 %,3.64 %,0.18 %,1.56 ppm,102.72 kg/ha,61.18 %
+Lumba,87.73,26.92,"slate, phyllite",5.94,17.24 %,3.58 %,0.18 %,1.15 ppm,157.56 kg/ha,58.03 %
+Ibhang,87.75,26.87,Quartzite,5.8,16.47 %,3.47 %,0.18 %,1.14 ppm,109.46 kg/ha,57.76 %
+Sakfara,87.65,26.82,"Sandstone, greywacke, arkose",5.85,16.65 %,2.87 %,0.12 %,0.51 ppm,66.61 kg/ha,57.33 %
+Bajho,87.72,26.78,"Sandstone, greywacke, arkose",6.08,19.31 %,2.74 %,0.13 %,1.4 ppm,60.49 kg/ha,53.89 %
+Danabari,87.9,26.75,"Sandstone, greywacke, arkose",5.79,15.27 %,3.28 %,0.15 %,2.11 ppm,112.21 kg/ha,50.4 %
+Mahamai,87.82,26.73,"Sandstone, greywacke, arkose",5.78,19.15 %,3.24 %,0.18 %,1.45 ppm,110.83 kg/ha,51.61 %
+Chulachuli,87.75,26.7,Fluvial non calcareous,6.09,19.87 %,2.17 %,0.1 %,2.93 ppm,65.24 kg/ha,45.55 %
+Godak,87.97,26.88,"slate, phyllite",5.97,17.73 %,3.26 %,0.16 %,11.55 ppm,129.31 kg/ha,60.96 %
+Jirmale,88.13,26.78,Quartzite,5.65,9.04 %,4.54 %,0.21 %,1.96 ppm,283.69 kg/ha,60.12 %
+Barbote,87.9,26.95,"slate, phyllite",5.93,16.86 %,3.7 %,0.19 %,1.17 ppm,85.2 kg/ha,59.55 %
+Nayakwada,82.32,29.07,"Fluvial, calcareous",6.31,4.68 %,4.86 %,0.21 %,1.25 ppm,188.13 kg/ha,55.62 %
+Rokayagaon,82.18,29.02,"Gneiss, migmatite",6.35,6.35 %,4.25 %,0.21 %,0.51 ppm,157.26 kg/ha,54.2 %
+Pairk,82.13,28.85,"Gneiss, migmatite",6.11,12.14 %,3.7 %,0.19 %,0.55 ppm,164.03 kg/ha,50.81 %
+Ramidanda,82.25,28.98,"Gneiss, migmatite",6.24,8.35 %,4.52 %,0.2 %,0.28 ppm,213.08 kg/ha,47.48 %
+Sakela,82.35,28.93,"Gneiss, migmatite",6.36,5.46 %,4.78 %,0.16 %,0.75 ppm,196.01 kg/ha,51.06 %
+Ragda,82.45,28.93,"Gneiss, migmatite",6.46,6.28 %,5.02 %,0.21 %,0.24 ppm,191.61 kg/ha,46.84 %
+Danabari,82.0,28.95,"Gneiss, migmatite",6.37,5.54 %,3.19 %,0.13 %,0.97 ppm,198.28 kg/ha,61.05 %
+Garkhakot,82.02,28.88,Quartzite,5.97,11.73 %,3.53 %,0.19 %,0.65 ppm,238.73 kg/ha,57.9 %
+Archhani,82.12,28.87,"Gneiss, migmatite",6.16,10.76 %,3.28 %,0.2 %,0.57 ppm,173.51 kg/ha,47.4 %
+Lahai,82.27,28.83,"Gneiss, migmatite",6.17,6.54 %,3.68 %,0.2 %,0.63 ppm,190.46 kg/ha,50.93 %
+Khagenkot,82.35,28.82,"Gneiss, migmatite",6.23,11.35 %,3.56 %,0.19 %,0.63 ppm,154.76 kg/ha,55.73 %
+Dhume,82.17,28.82,"Gneiss, migmatite",6.22,12.57 %,3.53 %,0.2 %,0.55 ppm,179.46 kg/ha,53.27 %
+Khalanga,82.18,28.73,"Gneiss, migmatite",6.29,16.5 %,3.01 %,0.16 %,0.91 ppm,190.67 kg/ha,51.43 %
+Punama,82.13,28.7,"slate, phyllite",6.42,15.51 %,2.24 %,0.13 %,1.08 ppm,120.46 kg/ha,56.91 %
+Jagatipur,82.15,28.63,Quartzite,6.13,11.84 %,1.45 %,0.1 %,0.98 ppm,124.15 kg/ha,59.28 %
+Bhoor,82.07,28.65,Quartzite,6.38,17.41 %,1.63 %,0.16 %,1.03 ppm,123.61 kg/ha,45.52 %
+Jhapra,82.08,28.67,"slate, phyllite",6.39,14.5 %,2.12 %,0.11 %,1.1 ppm,103.18 kg/ha,54.21 %
+Pajara,82.03,28.78,Quartzite,6.81,21.54 %,2.67 %,0.16 %,1.06 ppm,203.94 kg/ha,43.25 %
+Kortrang,81.93,28.85,"Gneiss, migmatite",6.41,15.31 %,3.25 %,0.17 %,1.01 ppm,148.19 kg/ha,56.98 %
+Majhakot,81.93,28.8,"slate, phyllite",6.38,19.83 %,2.94 %,0.14 %,0.88 ppm,107.8 kg/ha,51.95 %
+Salma,81.93,28.73,"slate, phyllite",6.21,18.27 %,3.04 %,0.12 %,0.9 ppm,70.98 kg/ha,52.25 %
+Dasera,82.0,28.73,Quartzite,6.42,21.52 %,3.12 %,0.15 %,1.1 ppm,163.04 kg/ha,44.52 %
+Sima,81.93,28.65,"slate, phyllite",6.26,18.23 %,2.81 %,0.13 %,0.94 ppm,174.53 kg/ha,49.34 %
+Karkigaon,82.05,28.68,Quartzite,6.44,19.07 %,2.79 %,0.13 %,1.1 ppm,173.07 kg/ha,48.42 %
+Khudabari,87.97,26.72,"Fluvial, calcareous",5.45,9.88 %,2.97 %,0.15 %,2.51 ppm,72.51 kg/ha,57.59 %
+Shantinagarr,88.07,26.73,"Colluvial, calcareous",5.51,7.18 %,3.31 %,0.15 %,2.46 ppm,109.61 kg/ha,57.68 %
+bahundangi,88.15,26.73,"Colluvial, calcareous",5.51,9.47 %,3.13 %,0.14 %,2.67 ppm,111.14 kg/ha,51.91 %
+Sanischare,88.0,26.67,Fluvial non calcareous,5.87,22.88 %,6.5 %,0.32 %,0.64 ppm,31.08 kg/ha,40.83 %
+Kanki,87.9,26.63,Fluvial non calcareous,6.08,14.99 %,4.24 %,0.21 %,0.68 ppm,28.94 kg/ha,53.31 %
+Birtamode,87.98,26.62,Fluvial non calcareous,5.67,24.12 %,1.96 %,0.1 %,0.58 ppm,22.49 kg/ha,37.81 %
+Chandragadhi,88.07,26.58,Fluvial non calcareous,5.43,17.41 %,3.06 %,0.16 %,1.38 ppm,50.33 kg/ha,45.66 %
+Damak,87.67,26.67,Fluvial non calcareous,5.81,14.51 %,1.68 %,0.08 %,0.36 ppm,48.84 kg/ha,41.46 %
+Kerkha,87.77,26.63,"Fluvial, calcareous",5.7,18.33 %,1.27 %,0.07 %,0.45 ppm,104.41 kg/ha,37.05 %
+Shivasatakshi,87.82,26.6,Fluvial non calcareous,5.34,19.4 %,1.2 %,0.06 %,1.38 ppm,38.25 kg/ha,26.68 %
+Gauradaha,87.72,26.55,Fluvial non calcareous,5.85,33.77 %,4.69 %,0.09 %,0.47 ppm,77.77 kg/ha,19.11 %
+ohabara,87.67,26.5,Fluvial non calcareous,5.74,28.58 %,2.92 %,0.08 %,0.39 ppm,19.24 kg/ha,23.72 %
+Gauriganj,87.72,26.45,Fluvial non calcareous,5.44,31.5 %,2.37 %,0.08 %,0.34 ppm,21.67 kg/ha,25.14 %
+Kumarkhod,87.83,26.47,"Fluvial, calcareous",5.89,7.54 %,1.29 %,0.06 %,1.02 ppm,19.33 kg/ha,57.09 %
+Sharanamati,87.88,26.53,Fluvial non calcareous,5.77,12.42 %,2.03 %,0.1 %,0.74 ppm,40.15 kg/ha,43.87 %
+Rajgadh,87.93,26.48,Fluvial non calcareous,5.52,12.52 %,1.49 %,0.08 %,3.79 ppm,42.81 kg/ha,37.68 %
+Pathariya,87.98,26.42,Fluvial non calcareous,5.54,16.8 %,2.16 %,0.09 %,2.28 ppm,45.46 kg/ha,32.73 %
+{rithvinagar,88.07,26.47,Fluvial non calcareous,5.51,15.6 %,2.47 %,0.13 %,3.61 ppm,77.03 kg/ha,47.9 %
+Bhadrapur,88.08,26.53,Fluvial non calcareous,5.48,15.51 %,2.28 %,0.12 %,4.12 ppm,66.16 kg/ha,47.5 %
+Goldnap,87.95,26.53,Fluvial non calcareous,5.41,8.86 %,1.5 %,0.08 %,3.64 ppm,37.82 kg/ha,50.75 %
+Garamahi,87.95,26.58,Fluvial non calcareous,5.41,11.5 %,1.92 %,0.1 %,2.38 ppm,54.11 kg/ha,53.66 %
+Birat,81.97,29.42,"Gneiss, migmatite",6.06,11.6 %,3.89 %,0.2 %,0.3 ppm,38.87 kg/ha,58.99 %
+Malikabota,82.07,29.42,"Gneiss, migmatite",6.54,10.42 %,5.16 %,0.24 %,0.18 ppm,66.37 kg/ha,56.9 %
+Bumramadincahur,82.15,29.38,"Gneiss, migmatite",6.36,8.04 %,5.96 %,0.25 %,0.29 ppm,84.62 kg/ha,56.2 %
+Dillicahur,82.32,29.4,"Gneiss, migmatite",6.34,9.65 %,4.42 %,0.2 %,0.47 ppm,131.38 kg/ha,55.21 %
+Patarasi,82.45,29.32,"Gneiss, migmatite",7.05,11.51 %,4.36 %,0.21 %,0.5 ppm,125.85 kg/ha,53.81 %
+Narakot,82.0,29.33,"Gneiss, migmatite",6.12,8.8 %,5.4 %,0.19 %,0.3 ppm,55.86 kg/ha,61.64 %
+Chandranath,82.15,29.3,"Gneiss, migmatite",6.07,10.25 %,4.03 %,0.2 %,0.22 ppm,35.66 kg/ha,61.29 %
+Garjyangkot,82.27,29.23,"Gneiss, migmatite",6.13,8.33 %,5.95 %,0.27 %,0.33 ppm,162.3 kg/ha,60.27 %
+Guthichaur,82.4,29.17,"Gneiss, migmatite",6.16,9.93 %,4.95 %,0.21 %,0.47 ppm,58.38 kg/ha,56.78 %
+Hanku,82.2,29.15,"Gneiss, migmatite",6.17,7.92 %,5.21 %,0.2 %,0.66 ppm,129.54 kg/ha,56.46 %
+Tamti,82.1,29.05,"Gneiss, migmatite",6.45,6.98 %,5.43 %,0.19 %,0.62 ppm,157.35 kg/ha,59.84 %
+Malikathanta,82.02,29.15,"Gneiss, migmatite",6.34,7.81 %,4.35 %,0.19 %,0.51 ppm,76.91 kg/ha,58.19 %
+Mahabe,81.87,29.23,"Gneiss, migmatite",6.06,8.63 %,3.43 %,0.17 %,0.27 ppm,34.77 kg/ha,70.59 %
+Badki,81.95,29.3,"Gneiss, migmatite",5.91,10.07 %,3.16 %,0.16 %,0.24 ppm,30.03 kg/ha,64.77 %
+Lamla,82.08,29.25,"Gneiss, migmatite",6.4,9.13 %,3.7 %,0.19 %,0.32 ppm,48.32 kg/ha,66.17 %
+Sanigaon,82.08,29.33,"Gneiss, migmatite",6.01,10.23 %,4.14 %,0.19 %,0.53 ppm,33.29 kg/ha,57.18 %
+Dharpa,81.95,29.35,"Gneiss, migmatite",6.35,8.2 %,4.64 %,0.18 %,0.4 ppm,121.42 kg/ha,60.97 %
+Sahajpur,80.58,29.0,"Sandstone, greywacke, arkose",6.55,19.57 %,2.96 %,0.14 %,1.13 ppm,90.46 kg/ha,48.78 %
+Dudhetola,80.58,28.92,"Sandstone, greywacke, arkose",6.59,21.48 %,3.35 %,0.16 %,1.26 ppm,164.18 kg/ha,50.75 %
+Malakheti,80.55,28.83,Fluvial non calcareous,7.46,11.04 %,2.34 %,0.11 %,0.14 ppm,43.5 kg/ha,30.08 %
+Aattariya,80.6,28.78,Fluvial non calcareous,7.6,8.52 %,2.4 %,0.12 %,0.3 ppm,38.28 kg/ha,39.69 %
+Hasanpyr,80.6,28.7,Fluvial non calcareous,7.83,19.95 %,1.6 %,0.08 %,0.34 ppm,48.42 kg/ha,28.96 %
+Nigali,80.72,28.97,"Sandstone, greywacke, arkose",6.48,16.4 %,3.94 %,0.18 %,1.09 ppm,95.49 kg/ha,53.2 %
+Katunje,80.85,28.9,"Sandstone, greywacke, arkose",6.61,18.5 %,3.66 %,0.16 %,1.15 ppm,106.8 kg/ha,51.5 %
+pandaun,80.97,28.87,"Sandstone, greywacke, arkose",6.7,17.51 %,3.61 %,0.17 %,1.41 ppm,140.09 kg/ha,48.67 %
+Khairala,80.75,28.85,"Sandstone, greywacke, arkose",6.78,21.57 %,2.99 %,0.14 %,1.64 ppm,116.82 kg/ha,45.76 %
+Kailali,80.88,28.82,"Sandstone, greywacke, arkose",6.83,21.01 %,2.95 %,0.13 %,2.07 ppm,90.94 kg/ha,45.66 %
+Chaumala,80.75,28.75,Fluvial non calcareous,7.25,28.6 %,2.29 %,0.12 %,0.44 ppm,83.89 kg/ha,25.44 %
+Urma,80.7,28.68,Fluvial non calcareous,6.93,22.66 %,2.24 %,0.11 %,0.67 ppm,63.51 kg/ha,32.79 %
+Phulbari,80.7,28.62,Fluvial non calcareous,7.49,9.2 %,1.9 %,0.1 %,0.57 ppm,48.21 kg/ha,31.03 %
+Basauti,80.8,28.6,Fluvial non calcareous,7.86,4.89 %,2.08 %,0.1 %,0.24 ppm,45.65 kg/ha,32.63 %
+Baliya,81.18,28.63,Fluvial non calcareous,7.1,9.02 %,2.46 %,0.12 %,1.45 ppm,66.53 kg/ha,43.18 %
+Pratappur,81.07,28.6,Fluvial non calcareous,7.19,18.05 %,1.81 %,0.1 %,4.39 ppm,61.63 kg/ha,34.66 %
+Tikapur,81.1,28.5,Fluvial non calcareous,7.26,14.89 %,1.63 %,0.09 %,3.11 ppm,63.0 kg/ha,37.76 %
+Bhajani,80.97,28.48,"Fluvial, calcareous",7.96,18.94 %,1.39 %,0.08 %,0.58 ppm,35.04 kg/ha,32.15 %
+Boniya,81.03,28.58,Fluvial non calcareous,7.52,23.12 %,1.8 %,0.09 %,4.54 ppm,63.35 kg/ha,29.34 %
+Dholagohe,81.8,29.4,"Gneiss, migmatite",6.46,7.53 %,3.55 %,0.15 %,0.56 ppm,47.29 kg/ha,61.1 %
+Kheen,81.88,29.37,"Gneiss, migmatite",6.49,7.36 %,4.69 %,0.17 %,0.35 ppm,89.01 kg/ha,61.41 %
+Mumrakot,81.58,29.32,"Gneiss, migmatite",6.25,7.94 %,4.56 %,0.21 %,0.39 ppm,80.9 kg/ha,61.02 %
+Phulkot,81.65,29.28,"Gneiss, migmatite",6.32,10.78 %,3.49 %,0.16 %,0.65 ppm,42.28 kg/ha,62.4 %
+Thirpu,81.78,29.27,"Gneiss, migmatite",6.6,7.38 %,4.36 %,0.21 %,0.55 ppm,137.22 kg/ha,61.55 %
+Rupsa,81.52,29.23,"Gneiss, migmatite",6.29,9.11 %,3.16 %,0.13 %,0.57 ppm,59.63 kg/ha,62.67 %
+Sipkhana,81.62,29.25,"Gneiss, migmatite",6.21,8.89 %,2.98 %,0.16 %,0.5 ppm,47.16 kg/ha,61.94 %
+Malkot,81.5,29.18,"Gneiss, migmatite",6.44,10.86 %,2.8 %,0.12 %,0.78 ppm,46.74 kg/ha,59.88 %
+Manma,81.6,29.13,"Gneiss, migmatite",6.47,11.61 %,2.66 %,0.12 %,0.72 ppm,50.63 kg/ha,67.51 %
+Badalkot,81.65,29.18,"Gneiss, migmatite",6.31,8.98 %,3.04 %,0.14 %,0.61 ppm,80.88 kg/ha,61.25 %
+Chhapre,81.75,29.17,"Gneiss, migmatite",6.21,8.52 %,3.09 %,0.14 %,1.02 ppm,55.94 kg/ha,63.98 %
+Gela,81.7,29.07,"Gneiss, migmatite",6.59,12.92 %,2.56 %,0.12 %,0.87 ppm,146.66 kg/ha,60.15 %
+Ranchuli,81.85,29.15,"Gneiss, migmatite",6.42,7.93 %,3.51 %,0.16 %,0.59 ppm,112.79 kg/ha,62.08 %
+Chilkhaya,81.83,29.08,"Gneiss, migmatite",6.35,8.54 %,2.97 %,0.13 %,0.77 ppm,118.93 kg/ha,63.19 %
+Odanaku,81.82,29.17,"Gneiss, migmatite",6.22,9.64 %,3.22 %,0.16 %,0.49 ppm,44.64 kg/ha,63.09 %
+Raikawar,80.48,28.77,Fluvial non calcareous,6.96,26.34 %,2.51 %,0.11 %,0.68 ppm,69.5 kg/ha,34.31 %
+Baisi Bichawa,80.48,28.7,Fluvial non calcareous,7.21,24.15 %,1.71 %,0.09 %,0.68 ppm,39.73 kg/ha,34.56 %
+Punarbas,80.47,28.65,Fluvial non calcareous,7.72,30.17 %,1.83 %,0.09 %,0.53 ppm,73.61 kg/ha,33.28 %
+Betaun,80.35,28.68,Fluvial non calcareous,7.76,35.76 %,1.82 %,0.09 %,0.36 ppm,67.85 kg/ha,32.11 %
+Rampur Bilaspur,80.3,28.72,Fluvial non calcareous,7.66,31.47 %,1.92 %,0.09 %,0.89 ppm,79.84 kg/ha,32.18 %
+Beldandi,80.25,28.77,Fluvial non calcareous,7.81,37.52 %,1.56 %,0.08 %,0.73 ppm,90.26 kg/ha,31.33 %
+Sankarpur,80.37,28.75,Fluvial non calcareous,7.41,35.94 %,1.98 %,0.1 %,0.54 ppm,63.47 kg/ha,34.41 %
+Dekhatbhuli,80.38,28.82,Fluvial non calcareous,7.89,44.29 %,1.57 %,0.08 %,0.98 ppm,57.69 kg/ha,31.08 %
+Jhalari,80.32,28.83,Fluvial non calcareous,7.12,28.0 %,2.29 %,0.1 %,0.69 ppm,67.15 kg/ha,34.22 %
+Pipaladi,80.32,28.87,Fluvial non calcareous,7.31,28.44 %,1.9 %,0.09 %,0.31 ppm,45.45 kg/ha,38.97 %
+Krishnapur,80.43,28.9,Fluvial non calcareous,7.64,30.17 %,2.18 %,0.11 %,0.32 ppm,32.81 kg/ha,32.26 %
+Jhalaripipaladi,80.38,28.95,Fluvial non calcareous,7.63,22.33 %,1.94 %,0.1 %,0.22 ppm,44.97 kg/ha,42.1 %
+Mahendranagar,80.28,28.93,Fluvial non calcareous,7.42,30.18 %,1.75 %,0.09 %,0.22 ppm,39.98 kg/ha,39.22 %
+Daijee,80.28,28.98,Fluvial non calcareous,7.09,24.26 %,1.73 %,0.09 %,0.32 ppm,70.85 kg/ha,40.97 %
+Bhimdatta,80.15,28.98,Fluvial non calcareous,7.45,29.3 %,1.76 %,0.08 %,0.26 ppm,44.74 kg/ha,38.68 %
+Chadani,80.08,28.92,Fluvial non calcareous,7.61,38.9 %,1.75 %,0.08 %,0.44 ppm,61.5 kg/ha,31.87 %
+Dodhara,80.08,28.92,Fluvial non calcareous,7.61,38.9 %,1.75 %,0.08 %,0.44 ppm,61.5 kg/ha,31.87 %
+Bachhuwa,80.23,28.82,Fluvial non calcareous,7.1,30.64 %,2.89 %,0.13 %,0.78 ppm,111.12 kg/ha,33.55 %
+Nigalihawa,83.1,27.62,Fluvial non calcareous,7.22,20.21 %,2.5 %,0.11 %,1.78 ppm,69.75 kg/ha,37.23 %
+Temple,83.13,27.62,Fluvial non calcareous,7.45,14.16 %,2.25 %,0.11 %,1.37 ppm,54.4 kg/ha,34.67 %
+Asoka Pillar,83.08,27.58,Fluvial non calcareous,7.39,14.71 %,1.75 %,0.09 %,2.79 ppm,34.96 kg/ha,27.97 %
+Tilaurakot,83.08,27.57,Fluvial non calcareous,6.85,21.39 %,1.78 %,0.09 %,2.5 ppm,29.4 kg/ha,30.14 %
+Jahari,83.12,27.58,Fluvial non calcareous,7.31,13.96 %,2.22 %,0.11 %,2.53 ppm,44.35 kg/ha,31.03 %
+Kapilbastu,83.03,27.55,Fluvial non calcareous,6.72,33.83 %,1.54 %,0.08 %,8.57 ppm,25.47 kg/ha,19.46 %
+Dohani,83.08,27.52,Fluvial non calcareous,6.7,15.35 %,1.51 %,0.07 %,4.31 ppm,18.58 kg/ha,18.96 %
+Kuda,83.02,27.52,Fluvial non calcareous,6.92,29.44 %,1.65 %,0.08 %,8.35 ppm,28.53 kg/ha,20.87 %
+Kothihawa,83.02,27.5,Fluvial non calcareous,6.99,20.93 %,1.63 %,0.08 %,6.73 ppm,28.09 kg/ha,23.25 %
+Kakusandah Buddha,83.0,27.52,Fluvial non calcareous,7.31,32.2 %,1.76 %,0.09 %,9.88 ppm,37.08 kg/ha,25.19 %
+Tauleswor,83.05,27.53,Fluvial non calcareous,6.68,25.08 %,1.66 %,0.08 %,7.66 ppm,25.8 kg/ha,19.93 %
+Dharampaniha,83.08,27.55,Fluvial non calcareous,6.7,11.37 %,1.28 %,0.06 %,0.84 ppm,15.22 kg/ha,30.13 %
+Taulihawa,83.07,27.53,Fluvial non calcareous,6.56,15.32 %,1.48 %,0.08 %,3.97 ppm,20.21 kg/ha,18.02 %
+Lamtiha,83.05,27.52,Fluvial non calcareous,6.8,21.73 %,1.82 %,0.09 %,5.91 ppm,26.09 kg/ha,26.26 %
+Hudacenter,83.1,27.57,Fluvial non calcareous,7.04,9.69 %,1.55 %,0.08 %,1.51 ppm,21.47 kg/ha,33.83 %
+Ghandruk,83.82,28.45,"Gneiss, migmatite",6.67,8.7 %,2.45 %,0.1 %,2.48 ppm,203.09 kg/ha,42.46 %
+Lwagghalel,83.88,28.43,"Gneiss, migmatite",6.62,8.85 %,2.33 %,0.11 %,2.2 ppm,191.71 kg/ha,41.6 %
+Lumle,83.82,28.37,"Gneiss, migmatite",5.93,9.61 %,3.33 %,0.16 %,0.59 ppm,75.36 kg/ha,46.03 %
+Bansing,83.75,28.35,"Gneiss, migmatite",5.85,11.26 %,4.01 %,0.17 %,0.71 ppm,86.3 kg/ha,45.16 %
+Salyan,83.78,28.27,Quartzite,5.88,10.99 %,3.03 %,0.14 %,0.57 ppm,60.14 kg/ha,46.06 %
+Dhampus,83.83,28.3,Quartzite,5.74,11.6 %,3.22 %,0.17 %,0.8 ppm,37.82 kg/ha,47.08 %
+Lahachok,83.92,28.3,Quartzite,5.89,11.82 %,3.22 %,0.16 %,0.4 ppm,35.8 kg/ha,45.52 %
+Hemja,83.93,28.27,Quartzite,5.94,11.33 %,3.11 %,0.15 %,0.7 ppm,67.59 kg/ha,47.51 %
+Kaskikot,83.9,28.25,Quartzite,5.83,10.91 %,3.0 %,0.15 %,0.57 ppm,61.02 kg/ha,46.35 %
+Valam,84.0,28.25,Fluvial non calcareous,5.88,11.37 %,2.98 %,0.14 %,0.65 ppm,46.56 kg/ha,46.83 %
+Pokhara,83.98,28.2,Fluvial non calcareous,6.28,15.26 %,2.7 %,0.13 %,0.84 ppm,80.34 kg/ha,45.27 %
+Pumdibhumdi,83.88,28.2,Quartzite,6.18,12.07 %,3.39 %,0.16 %,0.83 ppm,75.73 kg/ha,41.94 %
+Kalika,84.07,28.22,Quartzite,5.96,12.77 %,3.29 %,0.18 %,0.9 ppm,54.35 kg/ha,41.0 %
+Lekhnath,84.07,28.13,Fluvial non calcareous,6.36,14.04 %,2.4 %,0.12 %,1.08 ppm,29.6 kg/ha,41.07 %
+Rupakot,84.12,28.13,Quartzite,6.31,13.91 %,2.82 %,0.16 %,0.87 ppm,34.69 kg/ha,38.23 %
+Deurali,84.13,28.12,Quartzite,6.74,13.66 %,2.87 %,0.15 %,0.91 ppm,37.72 kg/ha,35.69 %
+Thumki,84.18,28.15,Quartzite,5.86,14.53 %,3.54 %,0.17 %,0.92 ppm,45.01 kg/ha,40.64 %
+Bhorletar,84.22,28.15,Fluvial non calcareous,5.76,14.03 %,2.9 %,0.16 %,0.78 ppm,24.19 kg/ha,42.44 %
+Bhachok,84.15,28.23,Quartzite,5.91,11.31 %,2.7 %,0.15 %,0.82 ppm,30.42 kg/ha,39.28 %
+Mijuredanda,84.17,28.3,"Gneiss, migmatite",6.01,12.51 %,4.04 %,0.2 %,0.72 ppm,99.08 kg/ha,48.35 %
+Chaimale,85.25,27.58,"slate, phyllite",5.84,12.53 %,2.61 %,0.16 %,1.12 ppm,102.13 kg/ha,63.98 %
+Dakshinkali,85.25,27.62,"slate, phyllite",5.81,10.19 %,3.76 %,0.16 %,1.02 ppm,105.26 kg/ha,72.56 %
+Sikali,85.27,27.63,"slate, phyllite",5.94,10.07 %,3.32 %,0.14 %,1.1 ppm,84.13 kg/ha,70.27 %
+Kritipur,85.27,27.65,Fluvial non calcareous,5.88,11.96 %,3.18 %,0.13 %,0.95 ppm,93.42 kg/ha,72.13 %
+Chandragiri,85.22,27.68,Quartzite,5.96,11.59 %,3.21 %,0.17 %,1.04 ppm,146.18 kg/ha,57.44 %
+Kalanki,85.27,27.68,Fluvial non calcareous,6.04,15.67 %,2.55 %,0.12 %,0.86 ppm,204.59 kg/ha,53.24 %
+Balaju,85.28,27.72,"slate, phyllite",6.15,16.29 %,2.56 %,0.13 %,1.01 ppm,186.19 kg/ha,49.78 %
+Kathmandu,85.5,27.73,"slate, phyllite",5.67,12.84 %,2.36 %,0.1 %,0.87 ppm,302.23 kg/ha,59.21 %
+Tokha,85.32,27.77,Fluvial non calcareous,5.9,15.67 %,2.35 %,0.11 %,0.91 ppm,201.53 kg/ha,50.48 %
+Santidhan,85.3,27.78,Fluvial non calcareous,5.85,16.88 %,2.76 %,0.13 %,0.92 ppm,190.02 kg/ha,52.3 %
+Jhormahakal,85.33,27.8,Fluvial non calcareous,5.75,12.12 %,2.88 %,0.13 %,0.91 ppm,204.37 kg/ha,56.92 %
+Tarebhir,85.38,27.77,Quartzite,5.75,12.27 %,2.88 %,0.14 %,0.79 ppm,253.25 kg/ha,56.43 %
+Kappan,85.35,27.73,Fluvial non calcareous,6.25,18.12 %,2.36 %,0.13 %,1.14 ppm,281.32 kg/ha,50.12 %
+Mulpani,85.38,27.7,Fluvial non calcareous,6.06,18.62 %,2.06 %,0.12 %,0.95 ppm,397.43 kg/ha,52.47 %
+Sundarijal,85.42,27.78,"slate, phyllite",5.81,12.25 %,3.32 %,0.15 %,0.98 ppm,250.88 kg/ha,56.64 %
+Jarsingpauwa,85.47,27.75,"slate, phyllite",5.72,13.09 %,2.94 %,0.13 %,0.85 ppm,258.8 kg/ha,55.91 %
+Naglebhare,85.52,27.77,"slate, phyllite",5.92,13.53 %,2.5 %,0.08 %,0.76 ppm,168.24 kg/ha,46.46 %
+Sakhu,85.45,27.72,"slate, phyllite",5.65,15.06 %,2.02 %,0.1 %,0.79 ppm,241.21 kg/ha,53.97 %
+Chandanimandan,85.63,27.7,"slate, phyllite",5.92,18.85 %,1.66 %,0.06 %,1.02 ppm,107.67 kg/ha,47.36 %
+Deupur,85.55,27.72,"slate, phyllite",6.02,17.11 %,2.06 %,0.08 %,0.82 ppm,130.7 kg/ha,43.62 %
+Anaikot,85.58,27.67,Quartzite,6.04,16.68 %,1.69 %,0.08 %,0.89 ppm,193.17 kg/ha,42.65 %
+Kuntabesi,85.6,27.7,"slate, phyllite",6.09,18.62 %,1.92 %,0.08 %,1.04 ppm,121.07 kg/ha,44.41 %
+Nala,85.5,27.67,"slate, phyllite",5.71,12.97 %,2.26 %,0.09 %,0.86 ppm,224.5 kg/ha,63.46 %
+Sanga,85.47,27.62,"slate, phyllite",5.65,10.22 %,3.05 %,0.1 %,1.03 ppm,54.82 kg/ha,75.63 %
+Banepa,85.52,27.63,Fluvial non calcareous,5.98,15.81 %,2.36 %,0.12 %,0.97 ppm,157.75 kg/ha,59.51 %
+Dhulikhel,85.55,27.62,Fluvial non calcareous,5.87,15.53 %,2.17 %,0.1 %,0.87 ppm,85.99 kg/ha,55.77 %
+Panchkhal,85.62,27.65,Fluvial non calcareous,6.29,18.81 %,1.86 %,0.08 %,1.03 ppm,135.33 kg/ha,43.16 %
+Dolalghat,85.7,27.62,"slate, phyllite",6.15,18.64 %,1.32 %,0.05 %,0.95 ppm,53.17 kg/ha,46.1 %
+Patlekhet,85.6,27.58,"slate, phyllite",6.19,14.41 %,1.96 %,0.08 %,0.96 ppm,27.89 kg/ha,50.58 %
+Panauti,85.5,27.58,"slate, phyllite",5.66,8.59 %,3.29 %,0.09 %,0.85 ppm,35.59 kg/ha,77.94 %
+Namobuddha,85.57,27.57,Quartzite,5.88,10.95 %,3.01 %,0.12 %,1.09 ppm,37.1 kg/ha,69.01 %
+Chalal,85.48,27.53,Quartzite,5.89,9.17 %,3.36 %,0.1 %,1.11 ppm,35.41 kg/ha,79.34 %
+Dhunkharka,85.48,27.5,Quartzite,5.97,13.42 %,3.14 %,0.18 %,1.04 ppm,113.35 kg/ha,74.62 %
+Chamrabesi,85.45,27.47,Quartzite,5.97,10.8 %,3.35 %,0.16 %,0.95 ppm,54.48 kg/ha,76.66 %
+Bethanchok,85.48,27.48,Quartzite,5.96,12.04 %,3.57 %,0.17 %,1.05 ppm,122.94 kg/ha,74.73 %
+SikharAmbote,85.58,27.47,Quartzite,6.12,12.14 %,3.32 %,0.16 %,1.01 ppm,73.47 kg/ha,51.15 %
+Phalametar,85.5,27.43,Quartzite,5.88,8.22 %,4.01 %,0.1 %,0.92 ppm,30.36 kg/ha,84.12 %
+Salmechakala,85.5,27.37,"Sandstone, greywacke, arkose",5.95,10.92 %,2.32 %,0.09 %,0.8 ppm,23.43 kg/ha,66.74 %
+Ghartichap,85.58,27.37,Quartzite,6.0,12.08 %,3.14 %,0.12 %,0.95 ppm,27.5 kg/ha,64.49 %
+Banakhu,85.65,27.37,Quartzite,6.34,13.68 %,3.04 %,0.12 %,0.96 ppm,20.91 kg/ha,43.77 %
+Buddha Laxmi,85.67,27.42,Quartzite,6.26,10.46 %,2.81 %,0.14 %,0.91 ppm,16.57 kg/ha,47.08 %
+Bhimkhori,85.75,27.42,Quartzite,6.28,13.54 %,3.14 %,0.18 %,0.95 ppm,41.99 kg/ha,40.43 %
+Kushadevi,85.48,27.58,"slate, phyllite",5.74,8.56 %,3.24 %,0.1 %,0.88 ppm,27.62 kg/ha,78.67 %
+Aiselukharka,86.75,27.37,"slate, phyllite",5.77,11.83 %,5.09 %,0.15 %,0.75 ppm,88.25 kg/ha,61.77 %
+Sungdel,86.87,27.38,"Gneiss, migmatite",5.75,11.35 %,4.67 %,0.15 %,0.74 ppm,103.87 kg/ha,64.69 %
+Dubekodanda,86.72,27.32,Quartzite,5.94,14.07 %,3.12 %,0.11 %,0.9 ppm,153.53 kg/ha,56.34 %
+Satteswor,86.78,27.32,Quartzite,5.93,13.84 %,3.25 %,0.11 %,0.78 ppm,136.11 kg/ha,58.5 %
+Khartangcha,86.88,27.3,"Gneiss, migmatite",5.98,13.15 %,3.7 %,0.13 %,0.76 ppm,100.69 kg/ha,61.25 %
+Pattekha,86.87,27.27,"Gneiss, migmatite",5.88,12.15 %,3.54 %,0.14 %,0.8 ppm,76.01 kg/ha,66.0 %
+Kubinde,86.72,27.27,Quartzite,6.07,14.18 %,3.03 %,0.12 %,0.78 ppm,128.95 kg/ha,58.33 %
+Lamidanda,86.65,27.23,Quartzite,6.19,15.2 %,3.08 %,0.13 %,0.81 ppm,89.25 kg/ha,55.81 %
+Diktel,86.78,27.22,"slate, phyllite",6.03,16.58 %,3.64 %,0.17 %,0.95 ppm,102.93 kg/ha,54.48 %
+Nibanidanda,86.88,27.22,Quartzite,6.06,13.6 %,3.68 %,0.18 %,0.9 ppm,73.51 kg/ha,59.76 %
+Mattimbirta,86.83,27.15,"slate, phyllite",6.33,15.88 %,2.94 %,0.14 %,0.89 ppm,73.32 kg/ha,59.27 %
+Burchim,86.58,27.15,Fluvial non calcareous,6.72,21.79 %,2.08 %,0.09 %,1.92 ppm,115.13 kg/ha,49.56 %
+Dikuwa,86.5,27.13,Quartzite,6.33,17.57 %,2.53 %,0.1 %,0.93 ppm,75.48 kg/ha,54.04 %
+Dhitun,86.65,27.15,"slate, phyllite",6.38,21.52 %,2.16 %,0.09 %,1.01 ppm,87.55 kg/ha,53.45 %
+Suntare,86.78,27.92,"Gneiss, migmatite",6.88,8.51 %,6.07 %,0.16 %,1.65 ppm,296.77 kg/ha,51.81 %
+Khotang Bazar,86.83,27.03,"slate, phyllite",6.47,22.34 %,3.01 %,0.12 %,0.93 ppm,54.27 kg/ha,59.17 %
+Rajapani,86.72,27.15,Quartzite,6.25,20.52 %,2.94 %,0.12 %,1.03 ppm,93.13 kg/ha,54.05 %
+Khotang,86.77,27.2,"slate, phyllite",6.0,14.95 %,3.07 %,0.13 %,0.89 ppm,82.4 kg/ha,59.81 %
+Phedi,86.92,27.32,"Gneiss, migmatite",5.89,11.28 %,4.64 %,0.15 %,0.78 ppm,89.02 kg/ha,65.94 %
+Khidima,86.9,27.13,Quartzite,5.97,13.26 %,3.59 %,0.18 %,0.92 ppm,93.62 kg/ha,61.41 %
+Lalitpur,85.32,27.65,Fluvial non calcareous,6.25,17.47 %,2.43 %,0.12 %,0.96 ppm,286.38 kg/ha,50.43 %
+Godawari,85.37,27.58,Quartzite,5.86,12.65 %,3.71 %,0.18 %,1.1 ppm,72.16 kg/ha,73.87 %
+Muktinath Lalitpur,85.35,27.62,Fluvial non calcareous,5.89,14.18 %,2.36 %,0.11 %,0.82 ppm,143.04 kg/ha,60.99 %
+Karyabinayak,85.3,27.58,"slate, phyllite",5.85,10.87 %,2.64 %,0.12 %,1.02 ppm,77.4 kg/ha,70.37 %
+Lele,85.32,27.57,"slate, phyllite",5.83,11.97 %,2.77 %,0.11 %,0.98 ppm,62.58 kg/ha,72.52 %
+Husel,85.32,27.53,Quartzite,5.96,11.59 %,3.24 %,0.16 %,1.02 ppm,63.63 kg/ha,75.82 %
+Malta,85.3,27.5,Quartzite,5.9,10.65 %,2.97 %,0.11 %,0.99 ppm,82.61 kg/ha,66.21 %
+Bhattedanda,85.28,27.5,Quartzite,5.95,11.06 %,3.07 %,0.16 %,1.0 ppm,101.09 kg/ha,64.09 %
+gotikhel,85.38,27.48,Quartzite,6.03,11.93 %,3.51 %,0.17 %,1.07 ppm,83.71 kg/ha,74.64 %
+Kaleswor,85.42,27.5,Quartzite,5.86,11.77 %,3.43 %,0.14 %,1.03 ppm,68.39 kg/ha,80.36 %
+Manikhel,85.4,27.53,Quartzite,5.68,12.8 %,3.15 %,0.16 %,1.0 ppm,85.56 kg/ha,76.36 %
+Piutan,85.27,27.45,"Sandstone, greywacke, arkose",6.05,11.77 %,2.68 %,0.11 %,0.93 ppm,97.89 kg/ha,63.45 %
+Asran,85.3,27.45,"Fluvial, calcareous",6.09,11.49 %,3.33 %,0.12 %,1.07 ppm,84.77 kg/ha,61.68 %
+Cimdi,85.35,27.43,"Fluvial, calcareous",6.09,10.9 %,3.23 %,0.11 %,1.0 ppm,65.98 kg/ha,67.46 %
+Kapiram,85.4,27.4,"Sandstone, greywacke, arkose",6.09,11.85 %,2.59 %,0.12 %,0.91 ppm,72.68 kg/ha,64.81 %
+Khudi,84.32,28.38,"Gneiss, migmatite",6.14,10.81 %,3.69 %,0.16 %,0.84 ppm,144.65 kg/ha,47.4 %
+Bahundanda,84.43,28.33,"Gneiss, migmatite",5.86,8.84 %,4.03 %,0.13 %,0.44 ppm,182.62 kg/ha,44.3 %
+salleri,84.57,28.35,"Gneiss, migmatite",6.61,8.54 %,3.86 %,0.17 %,3.22 ppm,248.27 kg/ha,45.65 %
+Dudhpokhari,84.62,28.25,"Gneiss, migmatite",5.95,10.54 %,3.39 %,0.17 %,0.86 ppm,112.6 kg/ha,47.41 %
+Bichaur,84.58,28.2,"slate, phyllite",5.74,10.77 %,3.39 %,0.18 %,0.75 ppm,61.45 kg/ha,49.24 %
+Lamjung,84.35,28.28,"slate, phyllite",5.93,11.1 %,3.87 %,0.13 %,0.4 ppm,136.42 kg/ha,45.77 %
+Pasgaon,84.22,28.28,Quartzite,5.85,10.68 %,3.72 %,0.17 %,0.65 ppm,36.33 kg/ha,51.09 %
+Tanje,84.53,28.28,"Gneiss, migmatite",5.85,9.8 %,3.65 %,0.18 %,0.62 ppm,84.26 kg/ha,49.73 %
+Nautha,84.47,28.22,Quartzite,5.97,11.56 %,3.32 %,0.17 %,0.73 ppm,87.23 kg/ha,47.52 %
+Udipur,84.42,28.17,Quartzite,5.84,12.96 %,3.14 %,0.15 %,0.8 ppm,85.84 kg/ha,40.9 %
+Ghorletar,84.22,28.15,Fluvial non calcareous,5.76,14.03 %,2.9 %,0.16 %,0.78 ppm,24.19 kg/ha,42.44 %
+Madhenepal,84.23,28.08,Quartzite,5.82,15.12 %,2.83 %,0.15 %,1.0 ppm,29.17 kg/ha,41.59 %
+Durdanda,84.35,28.15,Fluvial non calcareous,5.81,13.99 %,3.09 %,0.15 %,1.07 ppm,41.91 kg/ha,41.88 %
+Tarkhughat,84.45,28.1,Fluvial non calcareous,5.87,15.74 %,2.88 %,0.14 %,0.81 ppm,40.21 kg/ha,41.52 %
+Chiti,84.42,28.2,Quartzite,5.75,11.32 %,3.06 %,0.15 %,0.67 ppm,105.23 kg/ha,42.51 %
+Hilebazar,84.43,28.23,"slate, phyllite",5.88,11.34 %,3.33 %,0.15 %,0.69 ppm,91.34 kg/ha,44.75 %
+Siurung,84.37,28.32,"Gneiss, migmatite",5.91,8.98 %,3.89 %,0.16 %,0.53 ppm,120.6 kg/ha,45.94 %
+Daduwa,84.25,28.2,Quartzite,5.86,12.89 %,3.64 %,0.18 %,0.93 ppm,132.09 kg/ha,42.25 %
+Bankechure,85.82,27.15,"Sandstone, greywacke, arkose",6.02,13.08 %,2.78 %,0.12 %,0.8 ppm,53.86 kg/ha,55.58 %
+Bardibas,85.87,27.03,Fluvial non calcareous,5.96,9.37 %,1.72 %,0.09 %,2.08 ppm,47.94 kg/ha,56.8 %
+Gauribas,85.92,27.05,"Sandstone, greywacke, arkose",6.03,13.11 %,2.46 %,0.12 %,1.03 ppm,57.55 kg/ha,57.27 %
+Goletoal,85.82,27.1,"Sandstone, greywacke, arkose",5.86,12.98 %,2.33 %,0.12 %,0.61 ppm,41.88 kg/ha,61.15 %
+Tuteswor,85.78,27.0,Fluvial non calcareous,6.19,10.52 %,2.7 %,0.13 %,1.15 ppm,94.47 kg/ha,48.9 %
+Laxminiha,85.75,26.97,Fluvial non calcareous,6.07,13.2 %,1.96 %,0.1 %,2.06 ppm,85.29 kg/ha,46.2 %
+Dhalkebar,85.78,26.93,"Fluvial, calcareous",6.54,8.66 %,1.66 %,0.1 %,0.57 ppm,35.53 kg/ha,61.09 %
+Kisannagar,85.88,26.93,"Fluvial, calcareous",5.43,7.73 %,1.34 %,0.08 %,0.45 ppm,39.58 kg/ha,58.15 %
+Bijalpura,85.85,26.9,Fluvial non calcareous,5.83,11.51 %,1.29 %,0.09 %,0.57 ppm,31.34 kg/ha,54.12 %
+Gaushala,85.78,26.9,Fluvial non calcareous,6.33,11.86 %,1.83 %,0.1 %,0.51 ppm,29.73 kg/ha,46.57 %
+Khairbanni,85.7,26.85,Fluvial non calcareous,6.39,8.97 %,3.37 %,0.26 %,0.18 ppm,21.01 kg/ha,77.43 %
+Khopi,85.77,26.82,Fluvial non calcareous,6.42,8.34 %,2.52 %,0.2 %,0.18 ppm,18.09 kg/ha,82.98 %
+Sigihahi,85.83,26.82,Fluvial non calcareous,6.06,7.87 %,1.15 %,0.07 %,0.32 ppm,11.67 kg/ha,56.04 %
+Bagada,85.87,26.78,Fluvial non calcareous,6.53,18.96 %,1.0 %,0.07 %,0.39 ppm,19.82 kg/ha,46.78 %
+Banauta,85.8,26.77,Fluvial non calcareous,6.34,14.61 %,1.06 %,0.06 %,0.21 ppm,22.62 kg/ha,54.24 %
+Manara,85.75,26.73,Fluvial non calcareous,6.68,12.84 %,1.07 %,0.07 %,0.25 ppm,38.56 kg/ha,46.87 %
+Mahottari,85.82,26.68,Fluvial non calcareous,6.4,39.64 %,1.02 %,0.05 %,0.25 ppm,47.13 kg/ha,18.76 %
+Banauli Danauli,85.87,26.68,Fluvial non calcareous,7.25,37.11 %,0.99 %,0.05 %,0.33 ppm,46.74 kg/ha,16.87 %
+Jaleswor,85.78,26.63,,6.3,34.95 %,1.12 %,0.06 %,0.34 ppm,65.89 kg/ha,34.89 %
+Manhari,84.77,27.55,"Fluvial, calcareous",5.85,16.59 %,2.59 %,0.15 %,1.08 ppm,103.46 kg/ha,48.07 %
+Handikhola,84.87,27.42,"Sandstone, greywacke, arkose",5.84,13.41 %,2.65 %,0.11 %,0.96 ppm,58.28 kg/ha,55.68 %
+Churiyamai,84.98,27.37,"Sandstone, greywacke, arkose",5.82,14.65 %,2.87 %,0.13 %,1.04 ppm,42.08 kg/ha,53.28 %
+Basmadi,84.97,27.47,"Sandstone, greywacke, arkose",5.82,16.06 %,2.72 %,0.13 %,0.91 ppm,87.29 kg/ha,52.92 %
+Khairang,84.83,27.65,Quartzite,6.12,10.76 %,2.62 %,0.15 %,0.98 ppm,78.97 kg/ha,54.36 %
+Agara,85.0,27.68,"slate, phyllite",5.84,15.0 %,2.7 %,0.12 %,1.08 ppm,135.58 kg/ha,46.72 %
+Padmapokhari,84.98,27.57,Quartzite,5.99,12.19 %,2.64 %,0.13 %,1.01 ppm,127.44 kg/ha,52.86 %
+Charikhet,84.88,27.52,"Sandstone, greywacke, arkose",6.04,13.19 %,2.56 %,0.13 %,0.95 ppm,63.87 kg/ha,52.99 %
+Kulekhani,85.15,27.57,Quartzite,5.88,9.8 %,2.44 %,0.17 %,1.04 ppm,94.78 kg/ha,58.66 %
+Chitlang,85.17,27.63,"slate, phyllite",5.73,10.91 %,3.0 %,0.14 %,1.07 ppm,118.12 kg/ha,58.58 %
+Hetauda,85.0,27.42,"Colluvial, calcareous",5.89,15.9 %,2.57 %,0.11 %,1.03 ppm,129.88 kg/ha,48.14 %
+Makwanur gadi,85.12,27.42,Quartzite,6.0,15.64 %,2.77 %,0.12 %,0.99 ppm,57.35 kg/ha,48.71 %
+Shreepur Chatwan,85.2,27.3,"Sandstone, greywacke, arkose",6.61,18.7 %,2.25 %,0.1 %,0.76 ppm,129.66 kg/ha,44.14 %
+Thaparban,85.37,27.3,"Sandstone, greywacke, arkose",5.94,14.64 %,2.34 %,0.11 %,0.87 ppm,82.19 kg/ha,49.95 %
+Raigaon,85.45,27.2,"Sandstone, greywacke, arkose",6.0,16.71 %,2.31 %,0.12 %,0.82 ppm,86.6 kg/ha,46.37 %
+Tistung,85.07,27.68,Quartzite,6.37,12.4 %,3.02 %,0.15 %,1.15 ppm,111.32 kg/ha,51.81 %
+Makwanpur,85.02,27.55,"slate, phyllite",5.77,11.16 %,2.17 %,0.13 %,1.05 ppm,192.34 kg/ha,52.0 %
+Khansar,83.88,28.68,"Gneiss, migmatite",6.73,10.62 %,5.39 %,0.2 %,1.09 ppm,257.34 kg/ha,50.62 %
+Tachibagar,84.32,28.57,"Gneiss, migmatite",6.71,6.62 %,5.2 %,0.19 %,2.2 ppm,228.18 kg/ha,46.21 %
+Nache,84.37,28.5,"Gneiss, migmatite",6.54,7.03 %,5.33 %,0.12 %,0.31 ppm,215.01 kg/ha,39.56 %
+Chame,84.22,28.52,"Fluvial, calcareous",6.6,7.44 %,5.57 %,0.21 %,1.25 ppm,238.34 kg/ha,44.36 %
+Thoche,84.47,28.63,GG,6.85,7.3 %,5.76 %,0.18 %,0.95 ppm,224.13 kg/ha,48.11 %
+Dharapani,84.48,28.48,"Gneiss, migmatite",6.74,6.24 %,5.64 %,0.19 %,2.5 ppm,233.79 kg/ha,45.08 %
+Singhadevi,87.47,26.83,Quartzite,5.9,19.81 %,4.42 %,0.24 %,0.52 ppm,134.93 kg/ha,47.52 %
+Ramtikhola,87.58,26.82,Quartzite,5.85,18.8 %,4.56 %,0.24 %,0.44 ppm,83.41 kg/ha,48.12 %
+Jante,87.55,26.73,Fluvial non calcareous,6.4,25.13 %,2.63 %,0.15 %,0.39 ppm,113.3 kg/ha,41.94 %
+Urlabari,87.6,26.65,Fluvial non calcareous,6.09,9.78 %,1.77 %,0.09 %,0.67 ppm,22.37 kg/ha,37.66 %
+Hasandaha,86.57,26.57,Fluvial non calcareous,6.29,17.94 %,1.0 %,0.08 %,0.4 ppm,19.28 kg/ha,40.91 %
+Kaseni,87.4,26.57,Fluvial non calcareous,6.0,8.27 %,2.31 %,0.12 %,1.59 ppm,86.86 kg/ha,44.03 %
+Tankisinuwari,87.27,26.52,Fluvial non calcareous,6.36,24.18 %,1.72 %,0.09 %,1.03 ppm,48.23 kg/ha,24.13 %
+Kathamaha,87.37,26.45,Fluvial non calcareous,7.18,5.51 %,1.53 %,0.08 %,0.93 ppm,21.7 kg/ha,25.86 %
+Biratnagar,87.25,26.45,"Fluvial, calcareous",7.41,33.56 %,1.47 %,0.08 %,0.22 ppm,36.7 kg/ha,22.49 %
+Buddhanagar,87.3,26.38,Fluvial non calcareous,5.75,7.15 %,1.18 %,0.06 %,0.83 ppm,14.3 kg/ha,25.19 %
+Jhurkiya,87.63,26.42,Fluvial non calcareous,5.85,12.98 %,1.41 %,0.07 %,1.28 ppm,16.4 kg/ha,32.04 %
+Belbari,87.42,26.65,Fluvial non calcareous,6.5,4.84 %,2.25 %,0.11 %,0.6 ppm,22.52 kg/ha,42.23 %
+Kerabari,87.4,26.75,Fluvial non calcareous,6.89,22.84 %,2.34 %,0.11 %,0.57 ppm,81.27 kg/ha,40.72 %
+Rangeli,87.5,26.45,Fluvial non calcareous,7.53,14.12 %,2.28 %,0.13 %,0.67 ppm,32.8 kg/ha,53.32 %
+Amardaha,87.55,26.52,Fluvial non calcareous,6.56,10.97 %,4.21 %,0.18 %,0.62 ppm,141.73 kg/ha,57.93 %
+bahuni,87.43,26.58,Fluvial non calcareous,5.86,10.44 %,2.12 %,0.1 %,0.94 ppm,68.95 kg/ha,35.7 %
+Tandi,87.62,26.78,Fluvial non calcareous,6.71,18.76 %,2.77 %,0.13 %,0.54 ppm,75.67 kg/ha,50.46 %
+Rara,82.07,29.53,"Gneiss, migmatite",6.68,9.03 %,5.47 %,0.25 %,0.36 ppm,203.76 kg/ha,56.29 %
+Ghumtha,81.87,29.48,"Gneiss, migmatite",6.5,6.99 %,5.21 %,0.22 %,0.29 ppm,135.23 kg/ha,60.21 %
+Gima,82.0,29.62,"Gneiss, migmatite",7.08,11.73 %,4.07 %,0.26 %,0.17 ppm,145.2 kg/ha,52.74 %
+Rugha,82.18,29.62,"Gneiss, migmatite",6.84,11.23 %,4.03 %,0.21 %,0.23 ppm,59.85 kg/ha,53.69 %
+Pulu,82.4,29.57,"Gneiss, migmatite",6.93,12.66 %,3.03 %,0.22 %,0.14 ppm,89.95 kg/ha,51.61 %
+Dolphu,82.6,29.52,"Gneiss, migmatite",7.38,11.42 %,5.16 %,0.26 %,0.64 ppm,240.02 kg/ha,52.6 %
+Seri,81.97,29.53,"Gneiss, migmatite",6.72,9.25 %,5.39 %,0.26 %,0.25 ppm,92.82 kg/ha,54.47 %
+Pina,82.13,29.47,"Gneiss, migmatite",6.21,11.65 %,4.24 %,0.22 %,0.34 ppm,62.27 kg/ha,57.01 %
+Photu,82.02,29.7,"Gneiss, migmatite",6.57,12.12 %,2.52 %,0.26 %,0.16 ppm,77.55 kg/ha,51.83 %
+Salsalla,82.03,29.73,"Gneiss, migmatite",6.94,9.78 %,4.7 %,0.28 %,0.19 ppm,134.64 kg/ha,49.96 %
+Chonhup,83.92,29.28,"Fluvial, calcareous",7.4,16.46 %,4.32 %,0.24 %,0.58 ppm,102.19 kg/ha,51.55 %
+Lomanthang,83.85,29.18,"Gneiss, migmatite",7.47,17.62 %,4.66 %,0.22 %,0.85 ppm,206.31 kg/ha,53.06 %
+Surkhang,84.03,28.95,"Gneiss, migmatite",8.04,16.6 %,4.44 %,0.23 %,0.85 ppm,142.78 kg/ha,54.47 %
+Sanboche,83.82,28.98,"Gneiss, migmatite",7.89,18.33 %,4.5 %,0.21 %,0.66 ppm,100.39 kg/ha,53.82 %
+Chusang,83.77,28.92,"Gneiss, migmatite",7.99,17.13 %,4.32 %,0.22 %,0.97 ppm,123.36 kg/ha,55.85 %
+Marpha,83.63,28.82,"Gneiss, migmatite",6.96,6.61 %,5.46 %,0.19 %,1.77 ppm,323.03 kg/ha,50.55 %
+Kagbeni,83.77,28.82,"Fluvial, calcareous",7.98,21.1 %,5.4 %,0.21 %,0.92 ppm,146.3 kg/ha,54.16 %
+Jomsom,83.77,28.75,"Fluvial, calcareous",7.84,14.77 %,5.41 %,0.22 %,0.6 ppm,102.49 kg/ha,56.86 %
+Muktinath,83.85,28.78,"Fluvial, calcareous",7.69,12.05 %,5.12 %,0.21 %,1.02 ppm,139.02 kg/ha,53.75 %
+Khowang,83.55,28.65,"Gneiss, migmatite",6.79,4.79 %,4.94 %,0.18 %,2.65 ppm,261.03 kg/ha,46.98 %
+Kunjo,83.67,28.62,"Gneiss, migmatite",6.52,5.21 %,4.97 %,0.13 %,1.71 ppm,193.79 kg/ha,46.24 %
+Lete,83.58,28.6,"Gneiss, migmatite",6.74,5.6 %,4.77 %,0.17 %,3.27 ppm,206.47 kg/ha,44.56 %
+Gunjakhani,83.17,28.67,"Gneiss, migmatite",6.38,3.8 %,5.34 %,0.18 %,2.7 ppm,295.46 kg/ha,48.75 %
+Mudi,83.37,28.63,"Gneiss, migmatite",6.67,6.11 %,4.37 %,0.11 %,1.71 ppm,199.75 kg/ha,41.71 %
+Lulang,83.2,28.52,"Gneiss, migmatite",6.21,7.57 %,3.05 %,0.1 %,1.74 ppm,224.39 kg/ha,41.14 %
+Muna,83.27,28.53,"Gneiss, migmatite",5.88,4.88 %,3.6 %,0.1 %,0.57 ppm,165.75 kg/ha,36.24 %
+Takan,83.35,28.45,"Gneiss, migmatite",5.83,6.77 %,4.66 %,0.05 %,0.14 ppm,374.98 kg/ha,28.8 %
+Tawang,83.4,28.4,"Gneiss, migmatite",6.18,6.62 %,2.37 %,0.05 %,0.36 ppm,271.61 kg/ha,33.82 %
+Beni,83.53,28.37,"Gneiss, migmatite",6.02,10.4 %,3.56 %,0.08 %,0.94 ppm,309.13 kg/ha,25.62 %
+Chimkhola,83.52,28.52,"Gneiss, migmatite",6.26,5.73 %,3.23 %,0.08 %,0.45 ppm,228.61 kg/ha,37.52 %
+Tatopani,83.62,28.48,"Gneiss, migmatite",6.35,7.47 %,4.02 %,0.08 %,0.35 ppm,262.11 kg/ha,40.03 %
+Dana,83.62,28.52,"Gneiss, migmatite",6.31,6.36 %,4.08 %,0.1 %,0.59 ppm,227.05 kg/ha,38.22 %
+Narchyang,83.73,28.58,"Gneiss, migmatite",7.08,7.02 %,5.44 %,0.2 %,2.86 ppm,189.41 kg/ha,46.64 %
+Annapurna Dakshin,83.75,28.53,"Gneiss, migmatite",6.61,7.47 %,4.73 %,0.17 %,0.5 ppm,200.04 kg/ha,44.89 %
+Sikha,83.68,28.43,"Gneiss, migmatite",6.13,6.54 %,2.81 %,0.05 %,0.3 ppm,240.18 kg/ha,35.13 %
+Ghodepani,83.7,28.4,"Gneiss, migmatite",5.82,7.51 %,2.7 %,0.1 %,0.94 ppm,119.01 kg/ha,22.73 %
+Ramche,83.63,28.37,"Gneiss, migmatite",5.78,9.9 %,4.19 %,0.13 %,0.57 ppm,148.05 kg/ha,39.72 %
+Niskot,83.37,28.38,"Gneiss, migmatite",6.23,10.57 %,2.81 %,0.07 %,0.68 ppm,259.2 kg/ha,22.79 %
+Marang,83.38,28.48,"Gneiss, migmatite",6.15,5.93 %,4.55 %,0.07 %,0.22 ppm,350.61 kg/ha,32.51 %
+Dedgaon,84.1,27.83,Quartzite,6.71,17.06 %,2.06 %,0.12 %,1.06 ppm,44.43 kg/ha,39.97 %
+Bulintar,84.18,27.8,Quartzite,6.46,16.76 %,3.0 %,0.14 %,1.1 ppm,45.69 kg/ha,47.95 %
+Narang,84.05,27.78,Quartzite,6.35,21.03 %,3.57 %,0.2 %,1.07 ppm,43.39 kg/ha,43.9 %
+Hupsekot,83.98,27.72,"Sandstone, greywacke, arkose",6.39,15.41 %,3.04 %,0.16 %,1.11 ppm,29.13 kg/ha,44.41 %
+Dechuli,84.18,27.7,"Colluvial, calcareous",6.16,19.81 %,2.38 %,0.12 %,1.04 ppm,56.14 kg/ha,45.45 %
+Kawasoti,84.12,27.63,"Colluvial, calcareous",5.84,0.82 %,1.93 %,0.1 %,1.56 ppm,28.14 kg/ha,47.79 %
+Nawalpur District,84.05,27.67,"Colluvial, calcareous",5.91,17.23 %,2.1 %,0.1 %,0.99 ppm,25.73 kg/ha,43.03 %
+Chanauli,84.03,27.57,"Fluvial, calcareous",6.45,0.71 %,2.01 %,0.11 %,1.2 ppm,23.27 kg/ha,43.92 %
+Dumkibas,83.85,27.58,"Sandstone, greywacke, arkose",6.64,9.8 %,3.56 %,0.11 %,1.12 ppm,33.48 kg/ha,72.39 %
+Rakchuli,83.9,27.7,"Sandstone, greywacke, arkose",6.42,16.0 %,2.95 %,0.16 %,1.09 ppm,29.13 kg/ha,49.23 %
+Sardi Bagaicha,83.83,27.65,"Sandstone, greywacke, arkose",6.73,12.79 %,2.74 %,0.11 %,1.15 ppm,55.02 kg/ha,60.69 %
+Tamaspur,83.93,27.55,"Fluvial, calcareous",6.72,15.56 %,2.32 %,0.11 %,1.38 ppm,57.28 kg/ha,55.07 %
+Tribeni,83.9,27.45,Fluvial non calcareous,7.66,27.15 %,1.54 %,0.08 %,0.92 ppm,50.52 kg/ha,34.13 %
+Baguban,83.92,27.55,"Sandstone, greywacke, arkose",6.67,13.92 %,3.54 %,0.11 %,1.33 ppm,56.33 kg/ha,58.71 %
+Jyamire,83.85,27.57,"Sandstone, greywacke, arkose",6.54,13.07 %,3.65 %,0.11 %,1.13 ppm,33.42 kg/ha,67.95 %
+Bharatipur,84.13,27.82,"slate, phyllite",6.61,16.21 %,2.12 %,0.12 %,0.99 ppm,41.84 kg/ha,40.71 %
+Rajahar,84.23,27.73,"Sandstone, greywacke, arkose",5.77,14.51 %,3.01 %,0.17 %,0.84 ppm,22.88 kg/ha,50.51 %
+Kintan,85.05,28.17,"Gneiss, migmatite",5.96,9.49 %,3.77 %,0.11 %,0.45 ppm,163.56 kg/ha,44.39 %
+Balche,85.12,28.03,"Gneiss, migmatite",5.8,14.0 %,4.05 %,0.18 %,1.07 ppm,182.3 kg/ha,47.06 %
+Kaule,85.12,28.0,Quartzite,5.88,12.79 %,3.05 %,0.11 %,0.66 ppm,134.62 kg/ha,45.1 %
+Deurali,85.13,27.97,"slate, phyllite",5.76,15.06 %,3.17 %,0.11 %,1.0 ppm,107.31 kg/ha,44.14 %
+Gerkhu,85.2,27.95,"slate, phyllite",5.81,16.77 %,2.65 %,0.11 %,1.08 ppm,102.93 kg/ha,47.15 %
+Kharanitar,85.3,27.92,Fluvial non calcareous,5.88,15.06 %,2.74 %,0.12 %,0.78 ppm,111.43 kg/ha,46.22 %
+Bidur,85.13,27.9,"slate, phyllite",6.01,19.21 %,2.04 %,0.12 %,0.9 ppm,58.63 kg/ha,43.18 %
+Samari,85.03,27.95,"slate, phyllite",5.91,14.62 %,3.01 %,0.14 %,0.87 ppm,127.58 kg/ha,44.54 %
+Taruka,85.0,27.87,"slate, phyllite",6.0,17.92 %,2.1 %,0.12 %,1.1 ppm,55.99 kg/ha,44.85 %
+Ratmate,85.02,27.83,Fluvial non calcareous,6.23,17.2 %,2.47 %,0.12 %,2.3 ppm,43.38 kg/ha,45.4 %
+Duipai,85.08,27.82,"slate, phyllite",5.96,19.72 %,2.86 %,0.16 %,2.59 ppm,138.26 kg/ha,43.2 %
+Kumari,85.13,27.77,"slate, phyllite",6.04,18.15 %,2.14 %,0.1 %,1.1 ppm,139.75 kg/ha,45.28 %
+Melkot,85.15,27.82,Quartzite,6.06,13.8 %,3.7 %,0.16 %,1.7 ppm,155.81 kg/ha,52.92 %
+Kakani,85.23,27.82,"slate, phyllite",5.92,12.53 %,3.3 %,0.17 %,1.03 ppm,141.6 kg/ha,53.92 %
+Thansing,85.27,27.87,"slate, phyllite",6.06,18.02 %,2.29 %,0.1 %,2.64 ppm,59.15 kg/ha,42.83 %
+Samundratar,85.37,27.93,"slate, phyllite",5.86,13.57 %,3.18 %,0.13 %,0.6 ppm,145.89 kg/ha,49.37 %
+Gaurikharka,85.45,27.93,Quartzite,5.7,9.75 %,4.02 %,0.13 %,0.57 ppm,169.14 kg/ha,48.31 %
+Sikharbesi,85.38,27.98,"Gneiss, migmatite",5.75,10.36 %,4.3 %,0.17 %,0.68 ppm,156.52 kg/ha,46.63 %
+Ghyanfedi,85.47,28.0,"Gneiss, migmatite",6.02,10.4 %,5.05 %,0.13 %,1.0 ppm,198.85 kg/ha,44.12 %
+Mahakali,85.37,27.87,"slate, phyllite",5.81,13.1 %,2.93 %,0.13 %,0.63 ppm,166.97 kg/ha,49.17 %
+Chhap,85.4,27.82,Quartzite,5.97,12.88 %,3.48 %,0.14 %,0.96 ppm,227.62 kg/ha,45.8 %
+Talakhu,85.43,27.85,"slate, phyllite",5.76,13.02 %,2.75 %,0.09 %,0.76 ppm,144.62 kg/ha,52.62 %
+Rawadolu,86.35,27.5,"Gneiss, migmatite",5.63,9.88 %,4.13 %,0.1 %,0.62 ppm,110.92 kg/ha,61.06 %
+Khiiji,86.32,27.45,"slate, phyllite",5.67,10.71 %,3.79 %,0.09 %,0.72 ppm,103.35 kg/ha,63.56 %
+Khiji Phalate,86.37,27.4,"Gneiss, migmatite",5.88,12.13 %,4.13 %,0.08 %,0.85 ppm,84.01 kg/ha,59.8 %
+Patle,86.42,27.43,"Gneiss, migmatite",5.86,11.2 %,4.19 %,0.14 %,0.89 ppm,120.92 kg/ha,60.36 %
+Jantarkhani,86.48,27.4,"Gneiss, migmatite",5.75,12.06 %,5.3 %,0.14 %,0.79 ppm,72.73 kg/ha,61.71 %
+Baraneswor,86.47,27.33,"slate, phyllite",5.97,11.99 %,3.77 %,0.11 %,0.85 ppm,97.26 kg/ha,59.23 %
+Pokali,86.27,27.42,"slate, phyllite",5.8,13.02 %,3.41 %,0.1 %,0.7 ppm,129.06 kg/ha,60.42 %
+Yasam,86.27,27.37,Quartzite,6.09,12.33 %,3.61 %,0.13 %,0.98 ppm,78.9 kg/ha,59.09 %
+Singhadevi,86.23,27.33,Quartzite,6.38,13.87 %,2.58 %,0.1 %,0.77 ppm,74.07 kg/ha,52.25 %
+Palapu,86.25,27.27,Quartzite,6.38,15.02 %,2.69 %,0.1 %,0.9 ppm,82.37 kg/ha,55.21 %
+Phulbari,86.28,27.32,Quartzite,6.32,14.0 %,2.66 %,0.1 %,0.83 ppm,71.12 kg/ha,56.58 %
+Fediguth,86.32,27.28,Quartzite,6.14,13.12 %,4.31 %,0.18 %,0.88 ppm,83.6 kg/ha,56.23 %
+Balakhu,86.3,27.25,Quartzite,6.4,13.59 %,2.66 %,0.12 %,0.93 ppm,67.18 kg/ha,56.46 %
+Sisneri,86.37,27.23,Quartzite,6.26,16.36 %,2.75 %,0.11 %,1.02 ppm,78.98 kg/ha,52.01 %
+Katunje,86.38,27.32,Quartzite,5.91,11.69 %,3.92 %,0.16 %,0.84 ppm,69.08 kg/ha,57.35 %
+Okhaldhunga,86.5,27.32,"slate, phyllite",6.03,13.71 %,3.88 %,0.13 %,0.89 ppm,65.93 kg/ha,59.71 %
+Moli,86.52,27.22,"slate, phyllite",6.25,17.07 %,3.1 %,0.11 %,1.01 ppm,86.2 kg/ha,55.12 %
+Thakele,86.43,27.15,Fluvial non calcareous,6.58,19.91 %,2.59 %,0.1 %,0.92 ppm,112.01 kg/ha,52.76 %
+Taluwa,86.57,27.23,Quartzite,6.44,20.34 %,2.86 %,0.11 %,1.35 ppm,102.45 kg/ha,52.34 %
+Pokhare,86.65,27.3,"slate, phyllite",6.02,15.4 %,3.08 %,0.12 %,0.85 ppm,116.42 kg/ha,57.68 %
+Chahara,83.37,27.87,"slate, phyllite",6.39,13.94 %,3.92 %,0.17 %,1.07 ppm,63.97 kg/ha,54.36 %
+Dhovan,83.47,27.75,"Sandstone, greywacke, arkose",6.35,12.57 %,2.76 %,0.11 %,0.86 ppm,48.16 kg/ha,56.45 %
+Madanpokhara,83.55,27.8,Quartzite,6.83,15.24 %,2.65 %,0.11 %,1.03 ppm,61.0 kg/ha,45.48 %
+Tansen,83.53,27.85,Quartzite,6.57,13.93 %,2.71 %,0.12 %,1.12 ppm,54.49 kg/ha,45.03 %
+Devinagar,83.68,27.8,"slate, phyllite",6.43,16.97 %,3.73 %,0.17 %,0.99 ppm,27.89 kg/ha,45.19 %
+Birkot,83.77,27.85,Quartzite,6.8,18.44 %,2.81 %,0.14 %,1.02 ppm,23.22 kg/ha,39.02 %
+Lampur,83.9,27.85,Quartzite,6.75,17.94 %,2.0 %,0.12 %,1.02 ppm,34.5 kg/ha,37.53 %
+Mityl,83.9,27.73,"Sandstone, greywacke, arkose",6.48,14.53 %,2.7 %,0.12 %,1.0 ppm,29.88 kg/ha,46.35 %
+Gothadi,83.63,27.72,"Sandstone, greywacke, arkose",6.4,16.3 %,3.3 %,0.17 %,0.99 ppm,37.25 kg/ha,52.54 %
+Koldanda,83.55,27.75,"Sandstone, greywacke, arkose",6.36,14.54 %,3.36 %,0.15 %,0.97 ppm,49.65 kg/ha,55.98 %
+Palpa,83.62,27.82,Fluvial non calcareous,6.78,12.89 %,2.59 %,0.12 %,0.98 ppm,68.29 kg/ha,44.74 %
+Rupse,83.63,27.8,"slate, phyllite",6.54,15.96 %,3.11 %,0.15 %,1.03 ppm,43.27 kg/ha,43.22 %
+Fek,83.37,27.82,Quartzite,6.25,14.1 %,3.75 %,0.14 %,1.03 ppm,38.44 kg/ha,60.79 %
+Satyawatu,83.25,27.8,"Sandstone, greywacke, arkose",5.9,8.73 %,2.98 %,0.09 %,0.88 ppm,20.74 kg/ha,85.8 %
+Baldengadhi,83.32,27.77,"Sandstone, greywacke, arkose",6.06,12.45 %,3.17 %,0.14 %,0.99 ppm,67.55 kg/ha,67.24 %
+Falaicha,88.0,27.3,"Gneiss, migmatite",5.89,8.16 %,3.78 %,0.17 %,0.75 ppm,127.49 kg/ha,65.13 %
+Chyangthapu,87.93,27.27,Quartzite,5.96,9.83 %,3.5 %,0.14 %,0.88 ppm,117.0 kg/ha,66.84 %
+Memeng,87.95,27.2,"slate, phyllite",6.03,12.7 %,3.64 %,0.19 %,0.86 ppm,134.09 kg/ha,62.44 %
+Oyam,87.88,27.25,Quartzite,6.0,13.11 %,3.28 %,0.14 %,0.84 ppm,129.46 kg/ha,61.61 %
+Nagi,87.82,27.25,"slate, phyllite",5.89,11.82 %,3.34 %,0.16 %,0.9 ppm,130.48 kg/ha,61.24 %
+Shubhang,87.75,27.2,Quartzite,6.06,15.56 %,2.48 %,0.14 %,0.97 ppm,94.46 kg/ha,55.65 %
+Amarpur,87.73,27.25,Quartzite,6.06,13.89 %,2.9 %,0.14 %,1.04 ppm,164.72 kg/ha,55.97 %
+Yangnam,87.85,27.15,"slate, phyllite",6.03,13.98 %,3.45 %,0.18 %,0.8 ppm,96.94 kg/ha,60.2 %
+Ekteen,87.87,27.2,Quartzite,6.05,14.57 %,3.24 %,0.15 %,0.86 ppm,113.06 kg/ha,58.77 %
+Prangbung,87.95,27.15,Quartzite,6.04,14.28 %,3.93 %,0.2 %,1.04 ppm,128.84 kg/ha,62.17 %
+Chhinthapu,87.9,27.08,"Gneiss, migmatite",5.99,14.2 %,3.92 %,0.2 %,1.45 ppm,192.3 kg/ha,54.95 %
+Panchthar,87.8,27.12,"slate, phyllite",6.04,14.57 %,3.39 %,0.16 %,5.06 ppm,92.32 kg/ha,62.47 %
+Ranitar,87.82,27.07,"slate, phyllite",6.05,14.01 %,4.1 %,0.18 %,1.47 ppm,113.35 kg/ha,64.15 %
+Phidim,87.77,27.12,"slate, phyllite",6.13,16.27 %,3.28 %,0.15 %,1.61 ppm,73.01 kg/ha,62.19 %
+Ranigaon,87.63,27.08,"slate, phyllite",6.32,17.95 %,3.01 %,0.16 %,1.02 ppm,91.27 kg/ha,59.81 %
+Phaktep,87.72,27.02,"slate, phyllite",6.0,17.53 %,3.25 %,0.17 %,1.14 ppm,73.54 kg/ha,61.73 %
+Syabarunba,87.58,27.07,"slate, phyllite",6.62,20.15 %,2.27 %,0.12 %,1.09 ppm,74.1 kg/ha,57.77 %
+Aangna,87.57,27.02,"slate, phyllite",6.56,23.56 %,2.3 %,0.1 %,1.13 ppm,83.21 kg/ha,56.21 %
+Okale,87.62,26.97,Quartzite,6.22,18.96 %,3.71 %,0.21 %,0.85 ppm,84.81 kg/ha,63.53 %
+Mouwa,87.52,26.97,Quartzite,6.64,24.95 %,2.25 %,0.1 %,1.08 ppm,82.66 kg/ha,55.62 %
+Durdimba,87.53,26.92,Quartzite,6.62,20.58 %,2.91 %,0.15 %,0.97 ppm,52.85 kg/ha,66.6 %
+Limba,87.6,26.87,Quartzite,6.13,19.37 %,4.53 %,0.21 %,0.75 ppm,81.15 kg/ha,64.79 %
+Aarubot,87.62,26.92,Quartzite,6.18,20.99 %,3.31 %,0.15 %,1.75 ppm,53.26 kg/ha,61.53 %
+Tribeni,83.65,28.02,Quartzite,6.61,13.54 %,3.1 %,0.14 %,1.0 ppm,88.5 kg/ha,41.92 %
+Bbaccha,83.6,28.08,Quartzite,6.54,10.84 %,3.55 %,0.17 %,0.86 ppm,84.48 kg/ha,46.51 %
+Lunkhudeurali,83.67,28.1,Quartzite,6.09,12.89 %,3.73 %,0.19 %,0.91 ppm,94.88 kg/ha,44.45 %
+Behadiranipani,83.57,28.03,Quartzite,6.78,11.47 %,3.43 %,0.16 %,0.82 ppm,145.79 kg/ha,49.97 %
+Urampokhara,83.62,28.05,Quartzite,6.59,13.34 %,3.11 %,0.13 %,0.86 ppm,68.49 kg/ha,39.82 %
+Bhorla,83.68,28.07,"slate, phyllite",6.31,13.18 %,2.95 %,0.14 %,0.8 ppm,40.59 kg/ha,40.58 %
+Palebhaj,83.63,28.15,Quartzite,6.59,9.97 %,3.24 %,0.15 %,0.6 ppm,74.8 kg/ha,46.05 %
+Thapathana,83.72,28.17,"slate, phyllite",6.15,13.46 %,2.78 %,0.13 %,0.76 ppm,72.83 kg/ha,37.3 %
+Panchase,83.78,28.22,Quartzite,5.79,11.87 %,3.66 %,0.18 %,0.77 ppm,52.03 kg/ha,49.36 %
+Pakuwa,83.72,28.22,"slate, phyllite",5.75,11.83 %,2.79 %,0.12 %,0.43 ppm,67.59 kg/ha,43.82 %
+Kusma,83.68,28.23,Quartzite,5.76,11.82 %,2.86 %,0.13 %,0.61 ppm,50.87 kg/ha,47.11 %
+Khurkot,83.65,28.25,Fluvial non calcareous,5.68,14.7 %,2.88 %,0.13 %,0.46 ppm,53.99 kg/ha,38.77 %
+Mallaj,83.57,28.35,"Gneiss, migmatite",5.78,12.53 %,4.35 %,0.1 %,0.22 ppm,257.64 kg/ha,38.95 %
+Kyang,83.67,28.3,Quartzite,5.58,13.05 %,2.97 %,0.16 %,0.72 ppm,64.47 kg/ha,39.04 %
+Ghodepani,83.68,28.38,"Gneiss, migmatite",5.91,10.41 %,3.09 %,0.13 %,1.14 ppm,157.21 kg/ha,34.27 %
+Deupur,83.73,28.28,Quartzite,5.82,11.05 %,2.87 %,0.13 %,0.55 ppm,78.9 kg/ha,47.03 %
+Bhuktangle,83.7,28.35,"Gneiss, migmatite",5.87,10.73 %,3.05 %,0.16 %,0.75 ppm,104.53 kg/ha,42.89 %
+Mainpur,84.73,27.02,Fluvial non calcareous,6.44,17.88 %,1.15 %,0.08 %,1.7 ppm,28.97 kg/ha,35.04 %
+Birjung,84.87,27.03,Fluvial non calcareous,6.46,16.43 %,1.17 %,0.08 %,1.56 ppm,26.79 kg/ha,42.49 %
+Mahuwan,84.78,27.1,Fluvial non calcareous,6.1,14.99 %,1.46 %,0.08 %,1.21 ppm,29.93 kg/ha,37.42 %
+Jitpur,84.72,27.17,Fluvial non calcareous,5.82,34.13 %,1.73 %,0.12 %,1.07 ppm,25.12 kg/ha,26.84 %
+Gadi,84.8,27.2,Fluvial non calcareous,5.82,30.87 %,1.34 %,0.11 %,0.67 ppm,37.38 kg/ha,23.3 %
+Biruwaguthi,84.9,28.5,"Gneiss, migmatite",6.59,7.67 %,5.7 %,0.22 %,2.0 ppm,217.82 kg/ha,47.25 %
+parsa National park,84.85,27.33,"Colluvial, calcareous",6.41,11.9 %,2.45 %,0.12 %,1.1 ppm,42.3 kg/ha,52.16 %
+Nepalbasti,84.65,27.3,Fluvial non calcareous,6.66,16.75 %,1.82 %,0.09 %,1.34 ppm,60.92 kg/ha,47.03 %
+Thori,84.57,27.37,"Colluvial, calcareous",6.65,13.9 %,2.3 %,0.11 %,1.29 ppm,60.68 kg/ha,48.46 %
+Ghodamasan,84.78,27.37,"Sandstone, greywacke, arkose",6.49,12.86 %,2.73 %,0.12 %,1.03 ppm,55.62 kg/ha,53.97 %
+Pyuthan Khalanga,82.87,28.08,"slate, phyllite",6.87,6.8 %,2.94 %,0.07 %,0.88 ppm,172.38 kg/ha,43.72 %
+Pyuthan,82.85,28.1,Fluvial non calcareous,7.27,4.83 %,2.6 %,0.1 %,0.87 ppm,150.26 kg/ha,44.16 %
+Dakhakwadi,82.8,28.08,Fluvial non calcareous,7.76,4.85 %,2.47 %,0.08 %,0.93 ppm,170.02 kg/ha,38.59 %
+Bijaynagar,82.82,28.12,Quartzite,7.08,4.68 %,2.8 %,0.07 %,0.88 ppm,148.13 kg/ha,40.71 %
+Majhakot,82.85,28.13,Quartzite,6.85,6.28 %,2.97 %,0.07 %,0.79 ppm,152.61 kg/ha,40.75 %
+Dharmawati,82.88,28.13,Quartzite,6.94,6.24 %,2.84 %,0.12 %,0.85 ppm,236.73 kg/ha,43.51 %
+bakula,82.88,28.12,Fluvial non calcareous,7.18,3.71 %,2.75 %,0.09 %,0.75 ppm,150.28 kg/ha,42.2 %
+Maranthana,82.9,28.1,Quartzite,6.66,4.36 %,3.0 %,0.08 %,0.83 ppm,150.15 kg/ha,43.44 %
+Shiva mandir,82.9,28.08,"slate, phyllite",6.89,8.19 %,2.73 %,0.07 %,0.88 ppm,200.3 kg/ha,50.76 %
+Jhhurmikanda,82.8,28.15,Quartzite,6.84,8.2 %,3.01 %,0.08 %,0.77 ppm,152.22 kg/ha,43.81 %
+Bethan,85.8,27.48,Quartzite,6.66,20.24 %,1.23 %,0.04 %,0.94 ppm,61.49 kg/ha,44.32 %
+Diamba,85.92,27.5,Quartzite,5.98,13.99 %,3.39 %,0.11 %,0.88 ppm,79.21 kg/ha,56.08 %
+Khadadevi,85.93,27.48,Quartzite,6.11,12.05 %,3.14 %,0.1 %,0.95 ppm,70.16 kg/ha,50.2 %
+Gaylu,86.07,27.43,Quartzite,6.27,19.22 %,1.71 %,0.08 %,0.89 ppm,148.69 kg/ha,49.57 %
+Sanosailung,85.87,27.58,Quartzite,5.93,13.21 %,3.27 %,0.09 %,0.92 ppm,82.79 kg/ha,51.97 %
+Tokalpur,85.9,27.55,Quartzite,5.87,12.12 %,3.63 %,0.09 %,0.9 ppm,77.44 kg/ha,58.8 %
+Pinkhuri,85.98,27.45,Quartzite,6.21,15.44 %,2.31 %,0.08 %,0.89 ppm,87.34 kg/ha,49.81 %
+Bhirpani,85.93,27.4,Quartzite,6.82,18.96 %,1.27 %,0.05 %,1.01 ppm,58.96 kg/ha,42.23 %
+baluwajor,86.02,27.33,Quartzite,6.42,18.1 %,1.69 %,0.08 %,0.96 ppm,75.36 kg/ha,49.77 %
+Ramechhap,86.1,27.32,"slate, phyllite",6.3,14.27 %,2.95 %,0.13 %,1.03 ppm,60.22 kg/ha,51.81 %
+Rampur,86.15,27.27,Quartzite,6.29,17.87 %,2.75 %,0.11 %,0.99 ppm,69.06 kg/ha,53.04 %
+Saghutar,86.2,27.35,Quartzite,6.45,18.44 %,2.38 %,0.09 %,0.93 ppm,127.26 kg/ha,47.7 %
+Manthali,86.05,27.38,Fluvial non calcareous,6.67,19.13 %,2.01 %,0.1 %,1.24 ppm,132.89 kg/ha,44.69 %
+Saipu,86.22,27.43,Quartzite,5.87,12.17 %,3.5 %,0.09 %,0.87 ppm,131.23 kg/ha,56.35 %
+Namadi,86.18,27.48,Quartzite,5.73,12.53 %,3.99 %,0.09 %,0.85 ppm,82.51 kg/ha,61.86 %
+Betali,86.15,27.53,Quartzite,5.82,13.38 %,2.81 %,0.07 %,0.82 ppm,153.45 kg/ha,54.25 %
+Gupteswor,86.23,27.5,"slate, phyllite",5.69,11.64 %,4.61 %,0.12 %,0.77 ppm,94.34 kg/ha,58.91 %
+Those,86.25,27.57,"slate, phyllite",5.8,7.35 %,4.39 %,0.11 %,0.78 ppm,126.76 kg/ha,60.27 %
+Kyama,86.42,27.63,"Gneiss, migmatite",5.83,8.03 %,7.22 %,0.11 %,0.75 ppm,153.13 kg/ha,62.56 %
+Chuchure,86.33,27.65,"Gneiss, migmatite",5.62,7.16 %,6.51 %,0.11 %,0.51 ppm,98.34 kg/ha,65.78 %
+Gundel,86.47,27.7,"Gneiss, migmatite",5.91,7.89 %,6.85 %,0.11 %,1.09 ppm,147.93 kg/ha,54.75 %
+Bhorley,85.23,27.98,"slate, phyllite",5.86,13.43 %,2.9 %,0.1 %,0.78 ppm,119.46 kg/ha,48.39 %
+yarsa,85.3,27.98,"Gneiss, migmatite",5.68,12.4 %,4.25 %,0.16 %,1.01 ppm,193.34 kg/ha,47.01 %
+Ramche,85.22,28.03,"Gneiss, migmatite",5.73,12.25 %,3.96 %,0.15 %,0.84 ppm,183.59 kg/ha,43.97 %
+haku,85.23,28.1,"Gneiss, migmatite",5.81,10.82 %,3.91 %,0.11 %,0.67 ppm,215.35 kg/ha,41.67 %
+Dhunche,85.28,28.1,"Gneiss, migmatite",5.96,9.34 %,4.16 %,0.11 %,0.3 ppm,223.18 kg/ha,39.57 %
+Syafru,85.45,28.12,"Gneiss, migmatite",6.37,5.69 %,5.81 %,0.19 %,2.54 ppm,315.19 kg/ha,47.48 %
+Thulosyafru,85.35,28.13,"Gneiss, migmatite",6.3,7.68 %,4.5 %,0.12 %,0.82 ppm,220.98 kg/ha,41.05 %
+Safrubesi,85.32,28.17,"Gneiss, migmatite",6.02,9.09 %,4.53 %,0.13 %,0.2 ppm,201.62 kg/ha,41.31 %
+thuman,85.33,28.25,"Gneiss, migmatite",6.41,6.72 %,5.51 %,0.13 %,0.75 ppm,255.83 kg/ha,41.3 %
+Gompa,85.48,28.2,"Gneiss, migmatite",6.47,6.86 %,5.49 %,0.15 %,1.11 ppm,247.88 kg/ha,46.46 %
+Lantang,85.62,28.2,"Gneiss, migmatite",6.63,11.39 %,5.26 %,0.18 %,1.27 ppm,219.7 kg/ha,49.45 %
+Rajdevi,85.32,26.77,"Fluvial, calcareous",6.51,11.5 %,1.57 %,0.09 %,0.59 ppm,48.96 kg/ha,38.07 %
+Rajpur,85.23,26.82,Fluvial non calcareous,6.48,9.32 %,2.49 %,0.21 %,0.35 ppm,38.1 kg/ha,77.43 %
+Pataura,85.2,26.92,Fluvial non calcareous,6.28,8.87 %,2.05 %,0.09 %,0.5 ppm,33.86 kg/ha,74.75 %
+Bariyarpur,85.35,26.93,Fluvial non calcareous,8.0,37.23 %,1.65 %,0.09 %,0.16 ppm,44.26 kg/ha,27.86 %
+Samanpur,85.38,26.98,Fluvial non calcareous,7.64,35.21 %,1.59 %,0.09 %,0.32 ppm,39.21 kg/ha,31.64 %
+Simara,85.3,27.03,Fluvial non calcareous,7.63,38.63 %,1.2 %,0.06 %,0.33 ppm,38.94 kg/ha,27.97 %
+Bisrampur,85.4,27.05,Fluvial non calcareous,7.16,39.6 %,1.99 %,0.1 %,0.4 ppm,67.09 kg/ha,27.83 %
+Santapur,85.33,27.07,Fluvial non calcareous,6.62,50.7 %,1.66 %,0.08 %,0.23 ppm,43.29 kg/ha,25.23 %
+Sanakpur,85.23,27.08,"Fluvial, calcareous",7.78,20.44 %,1.64 %,0.1 %,0.76 ppm,61.91 kg/ha,56.86 %
+Ashrang,85.3,27.1,Fluvial non calcareous,7.1,22.01 %,2.19 %,0.1 %,0.59 ppm,74.19 kg/ha,46.89 %
+Paurai,85.43,27.13,Fluvial non calcareous,7.34,19.34 %,1.43 %,0.08 %,0.4 ppm,54.08 kg/ha,49.14 %
+Chandrapur,85.37,27.17,Fluvial non calcareous,7.25,23.99 %,1.81 %,0.1 %,0.47 ppm,43.83 kg/ha,38.27 %
+Bandevi,85.27,27.2,Fluvial non calcareous,7.06,17.34 %,2.01 %,0.1 %,0.57 ppm,47.35 kg/ha,46.0 %
+Masina,82.57,28.15,"slate, phyllite",6.91,16.28 %,2.37 %,0.07 %,0.98 ppm,152.76 kg/ha,41.14 %
+Nuwagaon,82.48,28.23,Quartzite,6.76,18.02 %,2.46 %,0.08 %,0.73 ppm,207.49 kg/ha,40.61 %
+Kubine,82.38,28.32,"slate, phyllite",6.67,15.41 %,2.79 %,0.1 %,0.72 ppm,197.65 kg/ha,44.58 %
+Gairigaon,82.52,28.3,"slate, phyllite",6.75,16.87 %,2.49 %,0.07 %,0.78 ppm,187.12 kg/ha,41.51 %
+Talaban,82.5,28.42,"slate, phyllite",6.82,20.38 %,2.5 %,0.06 %,0.83 ppm,149.56 kg/ha,46.99 %
+Rolpa,82.63,28.38,Quartzite,6.31,15.82 %,2.32 %,0.05 %,0.67 ppm,151.29 kg/ha,53.55 %
+Thawang,82.72,28.48,"Gneiss, migmatite",6.19,12.68 %,2.39 %,0.07 %,0.66 ppm,129.88 kg/ha,46.84 %
+Guwa,82.78,28.45,"Gneiss, migmatite",6.15,14.35 %,2.45 %,0.04 %,0.98 ppm,153.25 kg/ha,44.08 %
+Gaam,82.88,28.37,"Gneiss, migmatite",5.97,12.23 %,1.95 %,0.06 %,0.69 ppm,349.17 kg/ha,48.52 %
+Sirpa,82.8,28.23,Quartzite,6.69,16.36 %,2.45 %,0.09 %,0.84 ppm,211.52 kg/ha,41.94 %
+Fagam,82.73,28.32,Quartzite,6.48,17.14 %,2.68 %,0.07 %,0.77 ppm,177.29 kg/ha,43.95 %
+Mirul,82.67,28.43,"Gneiss, migmatite",6.33,13.92 %,2.04 %,0.08 %,0.76 ppm,218.48 kg/ha,47.71 %
+Bubaring,82.43,28.17,Quartzite,6.52,16.81 %,3.31 %,0.13 %,0.91 ppm,189.7 kg/ha,42.61 %
+Bijayaswori,82.22,28.62,"slate, phyllite",6.2,12.71 %,1.34 %,0.07 %,0.97 ppm,88.88 kg/ha,66.35 %
+Nuwakot,82.32,28.27,Quartzite,6.54,17.08 %,3.02 %,0.13 %,0.93 ppm,142.37 kg/ha,47.31 %
+Kholagaon,82.28,28.62,Quartzite,6.56,18.56 %,1.43 %,0.07 %,1.09 ppm,160.32 kg/ha,61.45 %
+Simle,82.33,28.65,"Gneiss, migmatite",6.45,17.58 %,2.07 %,0.1 %,0.89 ppm,168.42 kg/ha,61.01 %
+Muru,82.4,28.57,Quartzite,6.74,18.04 %,1.88 %,0.08 %,0.92 ppm,84.15 kg/ha,63.21 %
+Rugha,82.42,28.53,Quartzite,6.25,15.39 %,2.56 %,0.09 %,0.8 ppm,187.0 kg/ha,49.14 %
+Bhalakcha,82.45,28.58,"slate, phyllite",6.57,20.37 %,1.86 %,0.07 %,0.85 ppm,102.65 kg/ha,57.79 %
+Musikot,82.53,28.58,"Gneiss, migmatite",6.29,14.7 %,2.73 %,0.14 %,0.8 ppm,197.48 kg/ha,56.87 %
+Musikot Khalanga,82.48,28.62,"slate, phyllite",6.25,15.04 %,2.87 %,0.14 %,0.77 ppm,92.59 kg/ha,61.05 %
+Duli,82.37,28.7,"Gneiss, migmatite",6.34,10.15 %,3.12 %,0.16 %,0.74 ppm,208.45 kg/ha,52.39 %
+Ghetma,82.3,28.72,"Gneiss, migmatite",6.44,16.68 %,2.96 %,0.15 %,0.81 ppm,164.11 kg/ha,55.9 %
+Barfikot,82.48,28.7,"Gneiss, migmatite",6.66,13.11 %,3.28 %,0.17 %,0.62 ppm,150.4 kg/ha,62.15 %
+Pipal,82.57,28.68,"Gneiss, migmatite",6.38,8.16 %,3.41 %,0.12 %,0.53 ppm,188.83 kg/ha,48.53 %
+Syalkhali,82.53,28.77,"Gneiss, migmatite",6.38,3.25 %,4.36 %,0.16 %,0.39 ppm,280.71 kg/ha,56.75 %
+Gautamkot,82.58,28.9,"Gneiss, migmatite",6.32,2.89 %,5.5 %,0.17 %,0.52 ppm,189.77 kg/ha,54.91 %
+Piprahawa,83.28,27.37,Fluvial non calcareous,7.26,19.12 %,1.91 %,0.11 %,2.92 ppm,60.6 kg/ha,26.22 %
+Bhagwanpur,83.28,27.43,Fluvial non calcareous,6.95,13.94 %,1.91 %,0.09 %,1.26 ppm,49.44 kg/ha,23.76 %
+Lumbini,83.25,27.45,Fluvial non calcareous,6.91,11.87 %,1.73 %,0.09 %,1.18 ppm,30.47 kg/ha,25.81 %
+Kamahariya,83.33,27.52,Fluvial non calcareous,6.75,16.37 %,1.91 %,0.1 %,0.76 ppm,72.2 kg/ha,30.78 %
+Siddharthanagar,83.42,27.5,Fluvial non calcareous,6.68,18.61 %,1.79 %,0.09 %,1.81 ppm,62.02 kg/ha,26.22 %
+Gangolia,83.52,27.55,Fluvial non calcareous,6.72,20.99 %,1.75 %,0.1 %,2.19 ppm,76.54 kg/ha,28.9 %
+Tilotamma,83.47,27.62,Fluvial non calcareous,6.39,19.2 %,2.0 %,0.1 %,1.16 ppm,66.26 kg/ha,34.78 %
+Shankharnagar,83.47,27.65,Fluvial non calcareous,6.29,16.07 %,2.15 %,0.11 %,0.73 ppm,80.64 kg/ha,42.02 %
+Butwal,83.42,27.68,"Fluvial, calcareous",7.2,17.94 %,1.59 %,0.09 %,0.93 ppm,60.68 kg/ha,42.23 %
+Saljhundi,83.23,27.7,Fluvial non calcareous,6.22,12.49 %,2.78 %,0.13 %,1.02 ppm,124.03 kg/ha,47.96 %
+Rudrapur,83.23,27.62,Fluvial non calcareous,6.63,18.74 %,1.57 %,0.09 %,0.69 ppm,56.66 kg/ha,35.39 %
+Suryapur,83.3,27.58,Fluvial non calcareous,6.85,17.63 %,1.95 %,0.1 %,0.81 ppm,68.96 kg/ha,34.3 %
+Devdaha,83.57,27.65,Fluvial non calcareous,6.41,14.69 %,1.57 %,0.08 %,1.16 ppm,60.66 kg/ha,39.31 %
+Kavrechaur,81.78,28.35,"Sandstone, greywacke, arkose",6.84,18.33 %,3.0 %,0.13 %,1.16 ppm,111.09 kg/ha,49.56 %
+Kalimatikalche,81.93,28.3,"Sandstone, greywacke, arkose",7.02,18.58 %,2.85 %,0.15 %,1.22 ppm,142.44 kg/ha,49.36 %
+Kalimati Rampur,81.97,28.22,"Sandstone, greywacke, arkose",6.81,13.37 %,2.75 %,0.13 %,0.98 ppm,91.33 kg/ha,54.88 %
+Nigalchuwa,82.0,28.37,Quartzite,6.69,13.64 %,3.48 %,0.14 %,1.12 ppm,182.21 kg/ha,50.12 %
+Sharda,82.13,28.37,Quartzite,6.41,15.96 %,3.08 %,0.17 %,0.8 ppm,204.29 kg/ha,48.89 %
+Kavra,82.18,28.27,"slate, phyllite",6.73,21.45 %,3.32 %,0.16 %,0.94 ppm,194.61 kg/ha,50.28 %
+Tribeni,82.28,28.3,"slate, phyllite",6.8,16.4 %,2.78 %,0.13 %,0.84 ppm,155.33 kg/ha,48.06 %
+Tamachaur,82.33,28.38,Quartzite,6.39,17.45 %,3.27 %,0.13 %,0.75 ppm,174.79 kg/ha,46.76 %
+Tharmare,82.27,28.45,"slate, phyllite",6.27,17.32 %,2.51 %,0.09 %,0.98 ppm,116.85 kg/ha,47.56 %
+Kalagaon,82.18,28.6,"slate, phyllite",6.29,16.48 %,1.61 %,0.1 %,0.96 ppm,158.4 kg/ha,52.03 %
+bame,82.03,28.58,Quartzite,6.52,15.77 %,2.6 %,0.12 %,1.19 ppm,173.73 kg/ha,49.59 %
+Sarpanigarpa,82.38,28.22,"slate, phyllite",6.69,17.33 %,3.15 %,0.14 %,0.91 ppm,162.6 kg/ha,43.83 %
+Sinwang,82.35,28.28,"slate, phyllite",6.59,19.63 %,2.77 %,0.11 %,0.91 ppm,198.19 kg/ha,41.59 %
+Suikot,82.13,28.57,"slate, phyllite",6.44,14.93 %,2.34 %,0.11 %,1.2 ppm,283.12 kg/ha,50.42 %
+Siddheswar,82.2,28.45,"slate, phyllite",6.32,16.58 %,3.23 %,0.13 %,1.0 ppm,185.55 kg/ha,45.92 %
+Khalanga,82.17,28.35,Quartzite,6.63,18.75 %,3.1 %,0.15 %,0.91 ppm,211.36 kg/ha,48.75 %
+Mamling,87.3,27.22,"slate, phyllite",6.2,13.97 %,2.77 %,0.15 %,1.07 ppm,82.85 kg/ha,56.49 %
+Chainpur,87.23,27.25,"slate, phyllite",6.08,14.16 %,2.6 %,0.12 %,1.03 ppm,83.24 kg/ha,54.95 %
+Sabhapokhari,87.4,27.43,"Gneiss, migmatite",5.75,9.54 %,4.52 %,0.16 %,0.79 ppm,148.01 kg/ha,63.99 %
+Khadbari,87.2,27.38,"slate, phyllite",6.07,11.9 %,3.64 %,0.12 %,0.9 ppm,135.62 kg/ha,60.02 %
+Bala,87.07,27.5,"Gneiss, migmatite",5.69,10.98 %,4.15 %,0.12 %,0.66 ppm,149.99 kg/ha,62.63 %
+Pathibhara,87.3,27.6,"Gneiss, migmatite",5.9,9.39 %,4.46 %,0.16 %,0.66 ppm,121.3 kg/ha,67.48 %
+Num,87.35,27.52,"Gneiss, migmatite",5.65,10.02 %,4.73 %,0.14 %,0.62 ppm,107.42 kg/ha,67.07 %
+Pauwakhola,87.43,27.62,"Gneiss, migmatite",5.83,10.33 %,5.56 %,0.12 %,0.79 ppm,166.48 kg/ha,62.87 %
+Chepuwa,87.52,27.75,"Gneiss, migmatite",6.32,7.46 %,6.22 %,0.14 %,1.01 ppm,204.69 kg/ha,54.92 %
+Kimathanka,87.38,27.82,"Gneiss, migmatite",6.21,9.84 %,5.94 %,0.13 %,1.28 ppm,171.81 kg/ha,55.97 %
+Tamaphok,87.38,27.17,Quartzite,6.06,11.98 %,3.68 %,0.19 %,0.87 ppm,122.9 kg/ha,64.24 %
+Tumlingtar,87.2,27.3,Fluvial non calcareous,6.25,15.77 %,3.07 %,0.12 %,1.17 ppm,139.4 kg/ha,55.05 %
+Nundhaki,87.47,27.32,"Gneiss, migmatite",5.86,12.12 %,4.35 %,0.15 %,0.73 ppm,130.44 kg/ha,64.11 %
+Susuwakhola,87.0,27.48,"Gneiss, migmatite",5.86,8.98 %,4.42 %,0.13 %,0.92 ppm,174.76 kg/ha,64.52 %
+Nargho,86.67,26.48,Fluvial non calcareous,6.14,21.12 %,1.26 %,0.08 %,0.58 ppm,34.41 kg/ha,34.4 %
+Aato,86.6,26.5,Fluvial non calcareous,6.28,20.08 %,1.1 %,0.08 %,0.39 ppm,28.63 kg/ha,36.79 %
+Kachan,86.55,26.55,Fluvial non calcareous,6.24,18.38 %,1.1 %,0.07 %,0.45 ppm,25.31 kg/ha,41.39 %
+Dhangadhi,86.55,26.6,Fluvial non calcareous,6.36,17.55 %,1.02 %,0.07 %,0.41 ppm,22.67 kg/ha,41.37 %
+Kalyanpur,86.62,26.63,Fluvial non calcareous,6.07,17.12 %,0.97 %,0.07 %,0.31 ppm,16.5 kg/ha,44.57 %
+Kushaha,86.57,26.68,"Sandstone, greywacke, arkose",6.6,14.3 %,1.25 %,0.08 %,0.49 ppm,31.07 kg/ha,53.69 %
+hardiya,86.53,26.75,"Fluvial, calcareous",6.65,17.13 %,1.03 %,0.08 %,0.57 ppm,36.74 kg/ha,49.08 %
+Kataiya,86.68,26.57,Fluvial non calcareous,5.89,15.53 %,1.06 %,0.07 %,0.47 ppm,24.31 kg/ha,42.73 %
+Sitapur,86.77,26.62,Fluvial non calcareous,5.86,23.68 %,1.21 %,0.07 %,1.05 ppm,44.19 kg/ha,28.58 %
+Bakdhawa,86.82,26.67,"Sandstone, greywacke, arkose",6.42,17.76 %,2.53 %,0.13 %,0.91 ppm,74.08 kg/ha,48.58 %
+Kancharup,86.87,26.63,Fluvial non calcareous,6.21,26.66 %,1.09 %,0.05 %,1.05 ppm,112.3 kg/ha,45.23 %
+Fatepur,86.92,26.72,Fluvial non calcareous,6.34,21.41 %,2.47 %,0.12 %,1.37 ppm,91.79 kg/ha,42.49 %
+Bhardha,86.92,26.53,"Fluvial, calcareous",6.53,22.89 %,1.65 %,0.11 %,0.87 ppm,91.8 kg/ha,44.9 %
+Inaruwa,86.83,26.5,Fluvial non calcareous,6.22,23.96 %,1.15 %,0.07 %,0.72 ppm,36.27 kg/ha,28.31 %
+Bishaharia,86.77,26.48,Fluvial non calcareous,6.3,21.28 %,1.24 %,0.08 %,0.59 ppm,35.11 kg/ha,33.55 %
+Rajbiraj,86.75,26.53,Fluvial non calcareous,6.06,17.13 %,1.12 %,0.07 %,0.63 ppm,28.32 kg/ha,38.42 %
+Malbari,85.4,26.78,,6.76,17.66 %,1.7 %,0.09 %,0.86 ppm,66.58 kg/ha,40.0 %
+Ramnagar,85.37,26.83,Fluvial non calcareous,6.62,14.76 %,1.5 %,0.09 %,0.86 ppm,105.34 kg/ha,39.09 %
+Simara,85.47,26.8,Fluvial non calcareous,6.7,15.25 %,1.93 %,0.15 %,0.53 ppm,48.26 kg/ha,56.23 %
+Godeta,85.47,26.85,Fluvial non calcareous,7.0,19.09 %,2.34 %,0.2 %,0.36 ppm,43.38 kg/ha,61.13 %
+Manpur,85.4,26.92,"Fluvial, calcareous",7.05,17.45 %,1.34 %,0.08 %,0.36 ppm,36.13 kg/ha,43.88 %
+Dhangadha,85.45,26.92,Fluvial non calcareous,7.24,19.86 %,2.33 %,0.19 %,0.9 ppm,69.23 kg/ha,59.9 %
+Jamunia,85.53,26.93,Fluvial non calcareous,6.61,13.81 %,1.86 %,0.12 %,0.24 ppm,20.41 kg/ha,63.15 %
+Brahmapuri,85.58,26.88,Fluvial non calcareous,6.77,16.73 %,2.18 %,0.19 %,0.3 ppm,37.6 kg/ha,62.44 %
+Malnagwa,85.55,26.85,Fluvial non calcareous,6.68,14.18 %,1.97 %,0.16 %,0.34 ppm,36.04 kg/ha,57.1 %
+Parsa,85.62,26.88,,6.59,13.74 %,2.75 %,0.24 %,0.39 ppm,46.67 kg/ha,69.36 %
+Haripura,85.65,26.88,Fluvial non calcareous,6.35,9.95 %,2.59 %,0.21 %,0.28 ppm,26.43 kg/ha,76.28 %
+Basantapur,85.68,26.92,Fluvial non calcareous,6.48,8.77 %,2.52 %,0.14 %,0.2 ppm,18.84 kg/ha,63.76 %
+Bhaktipur,85.65,26.95,Fluvial non calcareous,6.78,13.85 %,2.09 %,0.1 %,0.3 ppm,28.08 kg/ha,39.65 %
+Ishorpur,85.63,26.98,Fluvial non calcareous,7.04,9.92 %,1.73 %,0.08 %,0.19 ppm,17.32 kg/ha,44.93 %
+Atrauli,85.6,27.12,"Sandstone, greywacke, arkose",6.94,16.75 %,1.72 %,0.1 %,0.44 ppm,36.33 kg/ha,45.19 %
+Hariwon,85.57,27.08,Fluvial non calcareous,6.67,10.22 %,1.76 %,0.09 %,0.69 ppm,28.26 kg/ha,29.16 %
+Dhugrekhola,85.5,27.1,Fluvial non calcareous,7.13,13.25 %,2.01 %,0.1 %,0.61 ppm,34.87 kg/ha,29.38 %
+Parwanipur,85.73,27.12,"Sandstone, greywacke, arkose",6.19,15.0 %,2.46 %,0.12 %,0.68 ppm,66.68 kg/ha,56.92 %
+Narayankhola,85.72,27.17,"Sandstone, greywacke, arkose",6.05,15.18 %,2.39 %,0.1 %,0.76 ppm,58.09 kg/ha,56.96 %
+Pipalmadi,85.48,27.27,"Fluvial, calcareous",6.31,18.99 %,1.95 %,0.09 %,0.76 ppm,124.07 kg/ha,49.39 %
+Hariharpurgadhi,85.48,27.32,"Sandstone, greywacke, arkose",5.87,14.94 %,2.48 %,0.12 %,0.82 ppm,42.35 kg/ha,57.06 %
+Mahendrajhayadi,85.57,27.28,"Sandstone, greywacke, arkose",5.94,15.77 %,2.4 %,0.12 %,0.84 ppm,94.46 kg/ha,54.03 %
+Kapilakot,85.63,27.27,"Fluvial, calcareous",6.15,17.08 %,2.31 %,0.1 %,0.91 ppm,150.17 kg/ha,53.85 %
+Kalpabrishyak,85.7,27.22,"Sandstone, greywacke, arkose",6.2,15.03 %,2.74 %,0.13 %,0.93 ppm,90.6 kg/ha,53.31 %
+Dandigurashe,85.82,27.2,"Sandstone, greywacke, arkose",6.34,13.84 %,2.58 %,0.12 %,0.91 ppm,63.5 kg/ha,53.03 %
+Santaswori,85.72,27.35,Quartzite,6.28,12.65 %,2.85 %,0.13 %,0.91 ppm,30.05 kg/ha,45.46 %
+Dumja,85.82,27.42,Quartzite,6.31,19.41 %,2.0 %,0.12 %,0.89 ppm,46.69 kg/ha,47.57 %
+Amale,85.85,27.33,Quartzite,6.21,12.54 %,3.84 %,0.15 %,0.92 ppm,48.68 kg/ha,51.39 %
+Sitalpati,85.93,27.35,Quartzite,6.58,17.06 %,2.12 %,0.11 %,0.89 ppm,67.09 kg/ha,44.57 %
+Bhimeswor,85.98,27.32,Quartzite,6.54,19.23 %,2.04 %,0.12 %,0.92 ppm,88.81 kg/ha,47.19 %
+Tinkanya,86.05,27.22,Quartzite,6.23,13.16 %,3.36 %,0.16 %,0.99 ppm,64.43 kg/ha,54.08 %
+belghari,86.03,27.1,"Sandstone, greywacke, arkose",6.31,15.71 %,2.78 %,0.14 %,0.93 ppm,72.8 kg/ha,56.77 %
+Nipane,86.12,27.0,"Sandstone, greywacke, arkose",6.52,17.28 %,2.3 %,0.11 %,0.93 ppm,50.25 kg/ha,52.22 %
+tandi,86.23,26.93,"Sandstone, greywacke, arkose",6.32,15.88 %,2.01 %,0.11 %,0.77 ppm,63.25 kg/ha,53.39 %
+Dudhauli,86.27,26.97,"Fluvial, calcareous",6.63,19.84 %,1.92 %,0.09 %,0.85 ppm,92.12 kg/ha,46.67 %
+Arunthakur,86.27,27.07,Quartzite,6.33,17.06 %,3.17 %,0.13 %,1.0 ppm,51.54 kg/ha,60.07 %
+Ratnawati,86.32,27.13,Quartzite,6.27,12.95 %,3.44 %,0.15 %,1.03 ppm,79.95 kg/ha,56.83 %
+Khangsang,86.27,27.22,Quartzite,6.44,18.49 %,2.47 %,0.12 %,0.89 ppm,71.67 kg/ha,51.37 %
+Balajhor,86.12,27.17,Quartzite,6.29,13.89 %,3.23 %,0.13 %,0.93 ppm,54.34 kg/ha,55.43 %
+Thokarpa,85.77,27.67,Quartzite,5.74,14.38 %,2.03 %,0.05 %,0.69 ppm,92.41 kg/ha,52.51 %
+Tauthali,85.9,27.72,Quartzite,5.77,9.83 %,3.95 %,0.12 %,0.48 ppm,166.5 kg/ha,55.37 %
+Barabise,85.9,27.78,Quartzite,6.01,10.48 %,4.89 %,0.17 %,0.69 ppm,227.47 kg/ha,47.89 %
+Listikot,85.88,27.92,"Gneiss, migmatite",5.88,8.96 %,5.95 %,0.12 %,0.68 ppm,216.29 kg/ha,43.81 %
+Tatopani,85.92,27.97,"Gneiss, migmatite",6.34,9.53 %,6.08 %,0.11 %,1.02 ppm,219.48 kg/ha,43.81 %
+Chautara,85.7,27.77,"slate, phyllite",5.89,15.49 %,2.66 %,0.09 %,1.1 ppm,124.36 kg/ha,48.2 %
+Melamchi,85.57,27.82,"slate, phyllite",6.06,15.04 %,2.46 %,0.08 %,0.74 ppm,134.56 kg/ha,42.89 %
+helambu,85.5,28.05,"Gneiss, migmatite",6.33,7.24 %,5.27 %,0.11 %,1.18 ppm,238.76 kg/ha,42.25 %
+Ghotang,85.67,28.03,"Gneiss, migmatite",6.22,8.33 %,5.02 %,0.11 %,0.97 ppm,231.28 kg/ha,41.71 %
+Gumba,85.82,28.05,"Gneiss, migmatite",6.57,7.19 %,5.72 %,0.17 %,1.84 ppm,303.37 kg/ha,47.13 %
+Thanpalkot,85.65,27.93,"Gneiss, migmatite",5.75,11.78 %,4.59 %,0.14 %,0.49 ppm,191.33 kg/ha,51.22 %
+Syaulebazar,85.68,27.82,"slate, phyllite",5.85,10.49 %,3.76 %,0.09 %,0.86 ppm,188.48 kg/ha,51.35 %
+Sangachok,85.7,27.67,Quartzite,6.13,18.89 %,1.19 %,0.04 %,0.85 ppm,68.82 kg/ha,45.61 %
+Sukute,85.75,27.7,Quartzite,6.04,16.74 %,2.01 %,0.07 %,0.76 ppm,116.82 kg/ha,46.86 %
+Bansbari,85.55,27.8,Quartzite,6.08,16.55 %,2.19 %,0.08 %,0.85 ppm,132.21 kg/ha,43.43 %
+Thakani,85.47,27.83,"slate, phyllite",5.89,12.69 %,2.3 %,0.07 %,0.71 ppm,166.02 kg/ha,49.88 %
+Eichok,85.5,27.92,"slate, phyllite",5.73,11.12 %,4.7 %,0.13 %,0.7 ppm,204.49 kg/ha,45.34 %
+Golche,85.75,28.0,"Gneiss, migmatite",6.27,6.96 %,5.97 %,0.12 %,0.82 ppm,228.06 kg/ha,43.09 %
+Madar,86.17,26.62,Fluvial non calcareous,6.7,19.37 %,1.19 %,0.07 %,0.54 ppm,32.58 kg/ha,39.1 %
+Aurahi,86.28,26.62,Fluvial non calcareous,6.9,21.73 %,1.1 %,0.08 %,0.64 ppm,28.69 kg/ha,37.0 %
+Barirpatti,86.33,26.62,,6.65,17.06 %,0.97 %,0.09 %,0.43 ppm,18.11 kg/ha,41.13 %
+Tulsipur,86.32,26.65,Fluvial non calcareous,6.86,16.95 %,1.1 %,0.09 %,0.51 ppm,19.45 kg/ha,40.4 %
+Bhagwanpur,86.47,26.58,Fluvial non calcareous,6.44,19.45 %,1.01 %,0.08 %,0.5 ppm,19.2 kg/ha,41.02 %
+Laxmipur Pattari,86.38,26.67,Fluvial non calcareous,6.53,19.07 %,0.93 %,0.09 %,0.46 ppm,19.84 kg/ha,44.83 %
+Sukhipur,86.33,26.7,Fluvial non calcareous,6.81,16.96 %,1.19 %,0.11 %,0.5 ppm,29.5 kg/ha,46.4 %
+Dhangadhi,86.4,26.75,Fluvial non calcareous,6.99,18.55 %,1.03 %,0.13 %,0.28 ppm,31.42 kg/ha,56.08 %
+Lahan,86.47,26.72,Fluvial non calcareous,7.05,16.34 %,0.95 %,0.11 %,0.32 ppm,18.61 kg/ha,48.85 %
+Dhodhana,86.48,26.77,Fluvial non calcareous,6.74,16.11 %,1.04 %,0.09 %,0.47 ppm,24.02 kg/ha,47.16 %
+Govindapur,86.52,26.8,"Sandstone, greywacke, arkose",6.41,17.52 %,1.51 %,0.1 %,0.7 ppm,40.99 kg/ha,51.13 %
+Muksar,86.38,26.82,Fluvial non calcareous,6.88,13.71 %,0.97 %,0.08 %,0.3 ppm,20.25 kg/ha,53.95 %
+Phulbariya,86.27,26.85,Fluvial non calcareous,6.27,9.17 %,0.83 %,0.06 %,0.24 ppm,14.15 kg/ha,52.0 %
+Karjanha,86.2,26.85,Fluvial non calcareous,7.04,14.66 %,0.99 %,0.07 %,0.3 ppm,22.53 kg/ha,41.82 %
+bandipur,86.15,26.88,Fluvial non calcareous,6.6,11.37 %,1.21 %,0.07 %,0.44 ppm,28.51 kg/ha,49.34 %
+Media,86.17,26.78,Fluvial non calcareous,6.75,12.89 %,1.24 %,0.1 %,0.44 ppm,20.86 kg/ha,49.61 %
+Betunja,86.35,26.72,Fluvial non calcareous,7.07,18.36 %,1.05 %,0.12 %,0.5 ppm,19.22 kg/ha,46.73 %
+Hanumannagar,86.25,26.68,Fluvial non calcareous,6.81,18.35 %,1.03 %,0.09 %,0.44 ppm,29.28 kg/ha,42.03 %
+Hakpara,86.25,26.65,Fluvial non calcareous,6.76,20.3 %,1.01 %,0.09 %,0.69 ppm,30.24 kg/ha,38.82 %
+Salyansolu,86.6,27.37,"Gneiss, migmatite",5.96,12.52 %,4.74 %,0.13 %,0.83 ppm,127.27 kg/ha,59.46 %
+panchan,86.65,27.38,"Gneiss, migmatite",6.18,12.6 %,3.29 %,0.1 %,0.98 ppm,181.06 kg/ha,60.72 %
+garma,86.58,27.45,"Gneiss, migmatite",5.55,10.35 %,5.73 %,0.11 %,0.56 ppm,121.99 kg/ha,63.6 %
+Tapting,86.45,27.47,"Gneiss, migmatite",5.77,8.37 %,6.19 %,0.14 %,0.84 ppm,168.83 kg/ha,53.19 %
+Goli,86.42,27.53,"Gneiss, migmatite",5.73,8.36 %,6.36 %,0.11 %,0.65 ppm,114.63 kg/ha,63.13 %
+Bhakanje,86.45,27.58,"Gneiss, migmatite",5.64,10.06 %,7.01 %,0.1 %,0.63 ppm,115.3 kg/ha,62.72 %
+Phera,86.58,27.55,"Gneiss, migmatite",5.65,9.57 %,6.52 %,0.09 %,0.7 ppm,105.54 kg/ha,62.01 %
+Beni,86.53,27.62,"Gneiss, migmatite",5.8,7.6 %,7.18 %,0.1 %,1.23 ppm,152.11 kg/ha,55.04 %
+Lukla,86.72,27.67,"Gneiss, migmatite",5.77,9.11 %,7.97 %,0.12 %,0.73 ppm,179.55 kg/ha,66.26 %
+Benkar,86.7,27.75,"Gneiss, migmatite",6.17,7.55 %,7.75 %,0.13 %,0.95 ppm,197.32 kg/ha,56.14 %
+Namchebazar,86.7,27.8,"Gneiss, migmatite",6.38,7.65 %,6.85 %,0.15 %,1.43 ppm,188.4 kg/ha,60.53 %
+Jumbing,86.72,26.6,Fluvial non calcareous,5.82,17.2 %,1.15 %,0.07 %,0.7 ppm,22.16 kg/ha,44.77 %
+Kaku,86.65,27.5,"Gneiss, migmatite",5.54,10.15 %,5.9 %,0.14 %,0.67 ppm,159.5 kg/ha,64.44 %
+Sautang,86.78,27.47,"Gneiss, migmatite",5.8,8.5 %,5.21 %,0.13 %,0.67 ppm,167.82 kg/ha,66.48 %
+Gudel,86.85,27.48,"Gneiss, migmatite",5.66,6.77 %,5.2 %,0.1 %,0.51 ppm,119.87 kg/ha,66.15 %
+Bung,86.83,27.62,"Gneiss, migmatite",6.26,7.33 %,6.36 %,0.17 %,1.35 ppm,227.24 kg/ha,53.92 %
+Dudhkunda,86.55,27.57,"Gneiss, migmatite",5.73,8.37 %,7.25 %,0.1 %,0.8 ppm,114.31 kg/ha,61.22 %
+Haripur,86.85,26.52,Fluvial non calcareous,6.28,26.24 %,1.36 %,0.08 %,0.86 ppm,42.42 kg/ha,26.29 %
+Madhuban,87.05,26.63,"Fluvial, calcareous",6.37,2.25 %,1.87 %,0.1 %,1.12 ppm,61.66 kg/ha,36.18 %
+Inaruwa,87.15,26.6,Fluvial non calcareous,6.47,14.79 %,1.44 %,0.09 %,0.73 ppm,63.09 kg/ha,36.56 %
+Diwanganj,87.13,26.45,Fluvial non calcareous,7.18,20.34 %,1.28 %,0.06 %,0.1 ppm,36.5 kg/ha,43.74 %
+Chhitaha,87.18,26.52,Fluvial non calcareous,5.53,38.02 %,2.04 %,0.1 %,0.27 ppm,48.23 kg/ha,22.79 %
+Dhuwabi,87.27,26.55,Fluvial non calcareous,6.66,23.2 %,1.76 %,0.09 %,0.67 ppm,80.68 kg/ha,32.03 %
+Khanar,87.27,26.62,Fluvial non calcareous,6.31,20.08 %,1.54 %,0.09 %,0.57 ppm,45.55 kg/ha,34.24 %
+Itahari,87.27,26.65,Fluvial non calcareous,6.49,7.7 %,1.75 %,0.1 %,0.8 ppm,40.52 kg/ha,36.29 %
+Bakalauri,87.22,26.7,Fluvial non calcareous,6.81,1.61 %,1.99 %,0.1 %,0.95 ppm,41.89 kg/ha,32.86 %
+Mahendranagar,87.1,26.73,Fluvial non calcareous,6.34,19.01 %,2.38 %,0.11 %,1.05 ppm,88.72 kg/ha,45.35 %
+Bharaul,87.18,26.77,Fluvial non calcareous,6.44,14.41 %,2.04 %,0.1 %,0.89 ppm,43.91 kg/ha,39.71 %
+baharachetra,87.17,26.82,"Fluvial, calcareous",6.59,20.04 %,2.33 %,0.11 %,0.85 ppm,62.58 kg/ha,47.29 %
+Bisnupatuka,87.23,26.85,Quartzite,6.61,21.0 %,3.07 %,0.15 %,0.54 ppm,88.12 kg/ha,58.33 %
+Panchkanya,87.32,26.82,"Sandstone, greywacke, arkose",6.74,17.4 %,3.88 %,0.17 %,0.45 ppm,128.13 kg/ha,57.24 %
+Dharan,87.27,26.8,Fluvial non calcareous,6.54,22.8 %,2.85 %,0.14 %,0.62 ppm,82.45 kg/ha,46.57 %
+Bhadgaon,87.2,26.67,Fluvial non calcareous,6.14,1.16 %,1.54 %,0.09 %,1.0 ppm,44.53 kg/ha,32.81 %
+Rakam,81.98,28.5,"slate, phyllite",6.51,14.67 %,2.97 %,0.12 %,1.05 ppm,186.72 kg/ha,49.15 %
+Gumi,81.85,28.47,Quartzite,6.91,10.94 %,3.14 %,0.15 %,1.02 ppm,69.44 kg/ha,45.54 %
+Manarani,81.92,28.33,"Sandstone, greywacke, arkose",6.81,16.8 %,3.07 %,0.14 %,1.33 ppm,108.52 kg/ha,48.26 %
+Neta,81.83,28.5,Quartzite,6.78,13.36 %,3.09 %,0.16 %,1.18 ppm,115.55 kg/ha,46.33 %
+Birendranagar,81.6,28.57,"Lacustrine, non calcareous",7.39,7.76 %,2.65 %,0.13 %,1.05 ppm,71.49 kg/ha,43.12 %
+Paranga,81.4,28.63,"Sandstone, greywacke, arkose",6.6,18.94 %,3.72 %,0.17 %,1.08 ppm,84.34 kg/ha,51.68 %
+tatopani,81.32,28.72,"Sandstone, greywacke, arkose",6.68,23.67 %,3.63 %,0.18 %,1.84 ppm,73.76 kg/ha,46.2 %
+Gutu,81.3,28.87,"Sandstone, greywacke, arkose",6.46,18.04 %,4.17 %,0.22 %,1.22 ppm,71.78 kg/ha,45.72 %
+lagam,81.05,28.92,"Sandstone, greywacke, arkose",6.33,21.2 %,3.94 %,0.19 %,1.27 ppm,113.88 kg/ha,48.38 %
+Ranibas,81.87,28.62,"slate, phyllite",6.33,14.99 %,3.5 %,0.16 %,0.96 ppm,126.48 kg/ha,46.08 %
+Agragaon,81.98,28.58,"slate, phyllite",6.84,15.81 %,2.44 %,0.14 %,1.01 ppm,206.72 kg/ha,48.83 %
+Akanadevi,83.52,27.95,Quartzite,6.81,13.21 %,3.03 %,0.11 %,1.05 ppm,93.23 kg/ha,33.4 %
+mirmee,83.57,27.97,"slate, phyllite",6.79,20.18 %,2.18 %,0.11 %,0.95 ppm,99.94 kg/ha,29.83 %
+Malunga,83.63,27.9,Quartzite,6.93,14.3 %,2.01 %,0.09 %,0.87 ppm,54.98 kg/ha,37.45 %
+Galyanbazar,83.67,27.93,Quartzite,7.14,18.32 %,1.64 %,0.06 %,0.91 ppm,36.39 kg/ha,32.5 %
+Kapwadi,83.73,27.92,Quartzite,6.8,15.72 %,1.86 %,0.08 %,1.13 ppm,35.01 kg/ha,35.53 %
+Waling,83.77,27.97,Quartzite,6.5,13.12 %,2.57 %,0.12 %,0.87 ppm,43.18 kg/ha,37.37 %
+Sworek,83.75,28.02,"slate, phyllite",6.28,14.17 %,2.66 %,0.11 %,0.94 ppm,61.7 kg/ha,33.0 %
+Manakamana,83.87,27.98,Quartzite,6.22,16.12 %,2.41 %,0.1 %,0.91 ppm,60.21 kg/ha,33.86 %
+Orasle,83.9,28.05,Quartzite,6.14,13.28 %,3.05 %,0.13 %,0.87 ppm,61.01 kg/ha,39.01 %
+Kyakmi,83.93,27.93,"slate, phyllite",6.36,16.86 %,2.66 %,0.12 %,0.87 ppm,45.7 kg/ha,33.79 %
+Sekham,83.87,27.92,"slate, phyllite",6.45,16.52 %,2.71 %,0.11 %,1.04 ppm,61.74 kg/ha,34.89 %
+Maljhuwa,83.92,27.87,Fluvial non calcareous,6.9,17.27 %,1.98 %,0.1 %,1.0 ppm,41.89 kg/ha,36.84 %
+Chapakot,83.82,27.88,Fluvial non calcareous,6.62,17.34 %,1.96 %,0.1 %,1.03 ppm,49.13 kg/ha,35.09 %
+Putalibazar,83.85,28.1,Quartzite,6.11,12.12 %,2.87 %,0.14 %,0.73 ppm,57.33 kg/ha,39.98 %
+Taksar,83.97,28.12,Quartzite,6.28,13.08 %,3.52 %,0.19 %,0.83 ppm,75.01 kg/ha,41.63 %
+Phedikhola,83.88,28.15,Quartzite,6.06,13.14 %,2.88 %,0.14 %,0.82 ppm,75.16 kg/ha,39.4 %
+Setidhovan,83.82,28.15,"slate, phyllite",6.12,11.99 %,2.95 %,0.14 %,0.67 ppm,76.08 kg/ha,39.8 %
+Aruncharu,83.72,28.12,Quartzite,6.22,11.8 %,3.71 %,0.17 %,0.91 ppm,104.77 kg/ha,44.7 %
+Arunchautari,83.75,28.08,Quartzite,6.28,11.48 %,3.25 %,0.16 %,0.92 ppm,88.94 kg/ha,43.42 %
+Darsing Dahathum,83.78,28.03,Fluvial non calcareous,6.43,14.95 %,2.55 %,0.1 %,0.9 ppm,96.43 kg/ha,42.21 %
+Gajarkot,83.98,27.88,Quartzite,6.49,17.6 %,2.34 %,0.13 %,1.31 ppm,50.34 kg/ha,40.23 %
+Ghiringsundhara,84.02,27.9,"slate, phyllite",6.26,17.13 %,2.17 %,0.11 %,1.02 ppm,53.28 kg/ha,40.12 %
+Kihun,83.97,27.93,Quartzite,6.26,15.58 %,2.56 %,0.13 %,1.02 ppm,54.6 kg/ha,40.31 %
+Arunodaya,84.0,27.97,"slate, phyllite",6.18,13.84 %,2.69 %,0.12 %,0.86 ppm,53.58 kg/ha,34.81 %
+Ranipokhari,84.13,27.95,Quartzite,6.46,10.7 %,2.84 %,0.15 %,1.14 ppm,94.81 kg/ha,48.39 %
+Ramkjhakot,84.13,27.87,Quartzite,6.7,14.12 %,2.35 %,0.13 %,1.29 ppm,70.28 kg/ha,40.7 %
+Khalte,84.28,27.82,Quartzite,6.65,11.06 %,2.55 %,0.14 %,1.11 ppm,78.01 kg/ha,46.37 %
+Pota,84.33,27.77,"Fluvial, calcareous",5.64,17.38 %,2.97 %,0.15 %,0.78 ppm,80.46 kg/ha,44.16 %
+Devghat,84.38,27.78,Quartzite,6.04,11.2 %,2.78 %,0.13 %,0.89 ppm,91.84 kg/ha,52.75 %
+Chimkeswori,84.47,27.83,Quartzite,5.96,11.09 %,3.15 %,0.16 %,1.01 ppm,54.37 kg/ha,51.95 %
+Bandipur,84.4,27.92,Quartzite,6.0,16.05 %,2.78 %,0.15 %,1.15 ppm,36.56 kg/ha,36.76 %
+Dumre,84.4,27.95,Quartzite,6.06,19.87 %,4.36 %,0.21 %,1.25 ppm,51.64 kg/ha,42.36 %
+Pulkot,84.45,28.07,"slate, phyllite",5.78,18.11 %,2.48 %,0.13 %,1.27 ppm,18.85 kg/ha,38.02 %
+Merlung,84.38,28.07,Quartzite,5.79,16.81 %,2.76 %,0.14 %,1.1 ppm,24.19 kg/ha,40.4 %
+Byas,84.27,27.98,Fluvial non calcareous,6.36,16.21 %,2.63 %,0.12 %,1.51 ppm,80.16 kg/ha,42.26 %
+Manpang,84.15,28.02,Quartzite,6.19,15.61 %,2.97 %,0.15 %,1.23 ppm,73.24 kg/ha,40.38 %
+Dulegauda,84.08,28.07,Quartzite,6.22,13.75 %,2.73 %,0.14 %,1.15 ppm,33.57 kg/ha,37.85 %
+Raipur,83.97,28.05,"slate, phyllite",6.25,14.0 %,2.92 %,0.14 %,0.82 ppm,59.15 kg/ha,39.73 %
+Kahu Shivapur,84.23,27.92,Quartzite,6.44,7.43 %,3.37 %,0.16 %,0.93 ppm,111.37 kg/ha,56.02 %
+Sangu,87.5,27.32,"Gneiss, migmatite",5.85,11.39 %,5.01 %,0.16 %,0.79 ppm,134.09 kg/ha,61.58 %
+Hangpang,87.6,27.28,"slate, phyllite",6.13,14.65 %,3.75 %,0.19 %,0.8 ppm,114.24 kg/ha,62.51 %
+Khokling,87.63,27.38,"Gneiss, migmatite",5.76,9.71 %,3.67 %,0.12 %,0.7 ppm,201.69 kg/ha,62.1 %
+Sinam,87.82,27.3,Quartzite,5.88,8.19 %,3.87 %,0.14 %,0.49 ppm,79.16 kg/ha,66.23 %
+Yamfudin,87.98,27.5,"Gneiss, migmatite",6.16,9.29 %,5.03 %,0.12 %,0.95 ppm,214.88 kg/ha,55.43 %
+Tapethok,87.82,27.5,"Gneiss, migmatite",5.84,7.77 %,4.89 %,0.13 %,0.67 ppm,154.39 kg/ha,68.33 %
+Papung,87.6,27.52,"Gneiss, migmatite",5.69,9.6 %,5.1 %,0.12 %,0.63 ppm,131.2 kg/ha,68.6 %
+Surumakhim,87.95,27.38,"Gneiss, migmatite",5.68,8.91 %,3.68 %,0.16 %,0.68 ppm,121.19 kg/ha,66.55 %
+Taplejung,87.77,27.62,"Gneiss, migmatite",6.21,9.33 %,5.76 %,0.12 %,1.59 ppm,197.4 kg/ha,53.54 %
+Panchakanya Pokhari,87.47,26.98,Quartzite,6.53,25.87 %,2.39 %,0.11 %,1.4 ppm,94.62 kg/ha,54.53 %
+Phakchamara,87.5,27.02,"slate, phyllite",6.15,22.52 %,2.9 %,0.12 %,1.11 ppm,108.08 kg/ha,50.16 %
+Okhare,87.5,27.05,"slate, phyllite",6.17,23.28 %,3.01 %,0.14 %,0.96 ppm,93.42 kg/ha,49.08 %
+Sudap,87.47,27.08,"slate, phyllite",6.1,15.71 %,2.88 %,0.16 %,1.25 ppm,78.5 kg/ha,58.23 %
+Jirikhuimti,87.48,27.15,Quartzite,6.06,13.28 %,3.9 %,0.15 %,0.95 ppm,66.22 kg/ha,61.19 %
+Basantaput,87.4,27.13,"slate, phyllite",6.16,13.22 %,4.2 %,0.17 %,0.92 ppm,74.35 kg/ha,60.74 %
+Jaljale,87.57,27.13,"slate, phyllite",6.31,15.92 %,2.82 %,0.14 %,0.91 ppm,74.05 kg/ha,58.25 %
+Moharang,87.48,27.2,Quartzite,6.27,13.26 %,3.9 %,0.17 %,0.95 ppm,122.51 kg/ha,61.91 %
+Shreejung,87.5,27.25,"slate, phyllite",6.07,11.71 %,3.56 %,0.16 %,0.88 ppm,91.67 kg/ha,58.56 %
+Samdu,87.57,27.23,Quartzite,6.13,11.59 %,3.36 %,0.17 %,0.87 ppm,75.65 kg/ha,60.72 %
+Chuhandanda,87.68,27.15,"slate, phyllite",6.44,15.75 %,2.27 %,0.12 %,1.23 ppm,66.38 kg/ha,53.43 %
+Hwaku,87.65,27.25,"slate, phyllite",5.99,13.48 %,3.25 %,0.15 %,0.95 ppm,121.79 kg/ha,56.52 %
+Chhatedhunga,87.73,27.2,"slate, phyllite",6.23,13.65 %,2.78 %,0.13 %,1.13 ppm,84.35 kg/ha,51.66 %
+Mainamihani,87.12,26.87,"Sandstone, greywacke, arkose",6.25,20.86 %,3.19 %,0.16 %,0.55 ppm,93.08 kg/ha,57.08 %
+Rampur Thoksila,87.07,26.78,"Fluvial, calcareous",6.26,19.53 %,2.3 %,0.11 %,0.97 ppm,98.28 kg/ha,45.7 %
+Tapeswori,86.98,26.75,Fluvial non calcareous,6.37,16.72 %,2.52 %,0.12 %,0.88 ppm,75.1 kg/ha,40.58 %
+Chaudandi,86.93,26.87,"Sandstone, greywacke, arkose",6.19,18.77 %,3.21 %,0.17 %,0.71 ppm,119.63 kg/ha,55.2 %
+Hariya,86.83,26.77,"Colluvial, calcareous",6.35,21.76 %,1.93 %,0.09 %,0.95 ppm,86.79 kg/ha,46.68 %
+Gaighat,86.68,26.78,"Colluvial, calcareous",6.36,21.24 %,1.68 %,0.09 %,0.88 ppm,92.37 kg/ha,44.16 %
+Saune,86.77,26.85,"Sandstone, greywacke, arkose",6.57,19.48 %,3.04 %,0.16 %,0.92 ppm,82.97 kg/ha,46.42 %
+Salle,86.7,26.97,Quartzite,6.36,16.11 %,3.19 %,0.14 %,0.95 ppm,59.87 kg/ha,57.8 %
+Pachchawati,86.52,26.9,"Sandstone, greywacke, arkose",6.52,17.35 %,2.79 %,0.13 %,0.81 ppm,45.65 kg/ha,54.37 %
+Barai,86.55,26.98,Quartzite,6.43,18.54 %,3.99 %,0.15 %,0.86 ppm,91.48 kg/ha,61.39 %
+Rampur,86.55,27.08,Quartzite,6.47,17.29 %,2.91 %,0.13 %,0.94 ppm,85.86 kg/ha,58.93 %
+Rasuwa,86.42,27.07,Quartzite,6.32,16.74 %,3.18 %,0.15 %,0.87 ppm,48.7 kg/ha,59.48 %
+Lekhane,86.38,27.13,Quartzite,6.36,14.79 %,2.78 %,0.12 %,0.85 ppm,62.33 kg/ha,57.14 %
+Patale,86.3,26.9,"Sandstone, greywacke, arkose",6.51,16.52 %,2.01 %,0.11 %,0.71 ppm,55.6 kg/ha,49.46 %
+Risku,86.43,26.95,"Fluvial, calcareous",6.62,17.75 %,2.07 %,0.1 %,0.82 ppm,58.34 kg/ha,49.41 %
+Jogidaha,86.77,26.73,"Sandstone, greywacke, arkose",6.43,22.88 %,2.2 %,0.12 %,0.89 ppm,70.57 kg/ha,50.22 %
+Ghaighat Triyuga,86.63,26.77,"Sandstone, greywacke, arkose",6.59,18.97 %,2.24 %,0.11 %,0.83 ppm,49.55 kg/ha,49.0 %
+Jalpachilaune,86.67,26.87,"Sandstone, greywacke, arkose",6.56,19.51 %,3.17 %,0.14 %,0.72 ppm,61.8 kg/ha,53.5 %
+Ramite,86.68,26.9,Quartzite,6.44,17.98 %,3.56 %,0.16 %,0.63 ppm,81.25 kg/ha,53.1 %
+katari,86.37,26.95,"Sandstone, greywacke, arkose",6.44,18.67 %,2.45 %,0.12 %,0.82 ppm,69.93 kg/ha,50.91 %
+>>>>>>> a948081d218fcefb6e91be954709eaef220fc2cf

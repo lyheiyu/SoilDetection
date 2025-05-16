@@ -1,0 +1,12 @@
+bmi-soilgrids:
+  service_id: phh2o
+  coverage_id: phh2o_0-5cm_mean
+  crs: urn:ogc:def:crs:EPSG::4326
+  west: -9.3
+  south: 36.0
+  east: 3.3
+  north: 43.8
+  width: 400
+  height: 400
+  output: spain_soil_ph.tif
+

@@ -1,0 +1,11 @@
+bmi-soilgrids:
+  service_id: phh2o
+  coverage_id: phh2o_0-5cm_mean
+  crs: urn:ogc:def:crs:EPSG::4326
+  west: -5.1
+  south: 41.3
+  east: 8.3
+  north: 51.2
+  width: 500
+  height: 500
+  output: france_soil_ph.tif

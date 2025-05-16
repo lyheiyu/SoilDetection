@@ -1,0 +1,26 @@
+# 忽略模型文件夹
+llama-3-12b-local/
+llama3_lora_finetuned/
+Meta-Llama-3-8B/
+meta_llama_3_8B2/
+
+#
+offload/
+offload2/
+lora_output/
+lora_output2/
+lora_output3/
+lora_function_calling/
+function_call1/
+function_call2/
+function_call3/
+DeepSeek-R1-Distill-Llama-8B/
+sentinel_download_new_api/S2A_MSIL2A_20250404T115411_N0511_R023_T29UNV_20250404T195214.SAFE
+sentinel_download_new_api/S2A_MSIL2A_20250404T115411_N0511_R023_T29UNV_20250404T195214.SAFE.zip
+sentinel_download_new_api/S2B_MSIL2A_20250404T114349_N0511_R123_T29UNV_20250404T134634.SAFE.zip
+sentinel_download_new_api/S2C_MSIL2A_20250402T115421_N0511_R023_T29UNV_20250402T164216.SAFE.zip
+
+
+
+Datasets/qna-dataset-farmgenie-soil-v2.csv
+sentinel_download_new_api

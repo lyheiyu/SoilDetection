@@ -1,0 +1,11 @@
+bmi-soilgrids:
+  service_id: phh2o
+  coverage_id: phh2o_0-5cm_mean
+  crs: urn:ogc:def:crs:EPSG::4326
+  west: 3.4
+  south: 50.7
+  east: 7.2
+  north: 53.7
+  width: 300
+  height: 300
+  output: netherlands_soil_ph.tif
