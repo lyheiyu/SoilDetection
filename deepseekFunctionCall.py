@@ -52,7 +52,7 @@ from openai import OpenAI
 import json
 
 # DeepSeek API
-client = OpenAI(api_key="sk-58dd597725f34c5ba25a2c9f9f473be4", base_url="https://api.deepseek.com")
+client = OpenAI(api_key="sk-", base_url="https://api.deepseek.com")
 
 # read pH data
 json_file = "ireland_soil_ph_data.json"
