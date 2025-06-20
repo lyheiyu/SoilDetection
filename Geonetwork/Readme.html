@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>GeoNetwork Deployment Guide</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    h1 { color: #2c3e50; }
+    pre {
+      background: #f4f4f4;
+      padding: 15px;
+      border-radius: 5px;
+      overflow-x: auto;
+      border: 1px solid #ccc;
+    }
+    a {
+      display: block;
+      margin-top: 15px;
+      color: #2980b9;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>YAML Configuration (docker-compose.yml)</h1>
+  <pre>
+version: '3.8'
+
+services:
+  my-es-host:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.17.15
+    container_name: my-es-host
+    environment:
+      - discovery.type=single-node
+      - cluster.name=docker-cluster
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms1g -Xmx1g"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    volumes:
+      - esdata:/usr/share/elasticsearch/data
+    ports:
+      - "9200:9200"
+    networks:
+      - geonetwork-net
+
+  geonetwork:
+    image: geonetwork:4.2.4
+    container_name: geonetwork
+    environment:
+      - ES_HOST=my-es-host
+      - ES_PROTOCOL=http
+      - ES_PORT=9200
+    ports:
+      - "8080:8080"
+    depends_on:
+      - my-es-host
+    networks:
+      - geonetwork-net
+
+volumes:
+  esdata:
+
+networks:
+  geonetwork-net:
+  </pre>
+
+  <h1>Docker Compose Commands</h1>
+  <pre>
+# Start services in the background
+docker-compose up -d
+
+# Check container status
+docker ps
+  </pre>
+
+  <h1>Access GeoNetwork</h1>
+  <a href="http://localhost:8080/geonetwork" target="_blank">
+    http://localhost:8080/geonetwork
+  </a>
+
+</body>
+</html>
