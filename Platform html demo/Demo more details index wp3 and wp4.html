@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SOILCRATES – WP3 Baseline Questionnaire & WP5.3 ES Screening</title>
+  <style>
+    :root {
+      --bg: #0b0f1a;
+      --card: #121829;
+      --text: #e6edf7;
+      --muted: #a5b3ce;
+      --accent: #5cc8ff;
+      --accent2: #9bffb7;
+      --line: #1e2a44;
+    }
+    html, body { background: var(--bg); color: var(--text); margin:0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; line-height: 1.6; }
+    .wrap { max-width: 1100px; margin: 40px auto; padding: 0 20px 80px; }
+    header { display:flex; flex-wrap:wrap; gap: 16px; align-items: center; justify-content: space-between; margin-bottom: 24px; }
+    h1 { font-size: clamp(28px, 3.5vw, 40px); line-height: 1.2; margin: 0 0 4px; }
+    .tag { display:inline-block; padding: 6px 10px; border-radius: 999px; background: linear-gradient(90deg, rgba(92,200,255,.15), rgba(155,255,183,.15)); color: var(--accent2); border: 1px solid var(--line); font-weight: 600; }
+    p.lead { color: var(--muted); margin-top: 6px; }
+    .grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 18px; }
+    .card { grid-column: span 12; background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.00)); border: 1px solid var(--line); border-radius: 14px; padding: 18px 20px; box-shadow: 0 8px 24px rgba(0,0,0,.25); }
+    .card h2 { margin-top: 0; font-size: 22px; }
+    .card h3 { margin-top: 18px; font-size: 18px; color: var(--accent); }
+    .muted { color: var(--muted); }
+    .twocol { columns: 2; column-gap: 28px; }
+    .twocol ul, .twocol ol { break-inside: avoid; }
+    .note { font-size: 14px; color: var(--muted); border-left: 3px solid var(--accent); padding-left: 10px; }
+    .sep { height: 1px; background: linear-gradient(90deg, transparent, var(--line), transparent); margin: 24px 0; }
+    details { border: 1px dashed var(--line); border-radius: 10px; padding: 10px 12px; background: rgba(255,255,255,.02); }
+    summary { cursor: pointer; font-weight: 600; color: var(--accent); }
+    code.badge { background: rgba(92,200,255,.15); color: var(--accent); padding: 2px 8px; border-radius: 6px; border: 1px solid var(--line); font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+    .cn { font-style: italic; color: var(--accent2); }
+    .small { font-size: 13px; }
+    .checklist li { margin: 6px 0; }
+    .footer { margin-top: 36px; font-size: 13px; color: var(--muted); }
+    @media (max-width: 900px) { .twocol { columns: 1; } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div>
+        <div class="tag">SOILCRATES</div>
+        <h1>WP3 Baseline Questionnaire & WP5.3 Ecosystem Services Screening</h1>
+        <p class="lead">Integrated, single-file template for field data collection (WP3) and ES screening workflow (WP5.3). <span class="cn">（整合版模板：WP3 问卷 + WP5.3 生态系统服务筛查）</span></p>
+        <p class="note">Note: The prior “Experimental Design” content maps to <code class="badge">WP5.2</code>. This file adds <code class="badge">WP5.3</code> while embedding the WP3 questionnaire.</p>
+      </div>
+    </header>
+
+    <section class="grid">
+      <article class="card" id="wp3">
+        <h2>WP3 Baseline Questionnaire <span class="small muted">(for farmer interviews & yield monitoring)</span></h2>
+        <p class="muted">Purpose: socio-economic impact assessment through mixed methods; align with LL support and ethics/GDPR. <span class="cn">（目的：社会经济影响评估；与 LL 支持和伦理/GDPR 对齐）</span></p>
+
+        <h3>Introduction</h3>
+        <ul>
+          <li>Explain the purpose and confirm voluntary participation; clarify confidentiality and access to aggregated results.</li>
+          <li>State linkage to SOILCRATES WP3; clarify no effect on FSTP support; follow project ethics & data protection.</li>
+        </ul>
+
+        <div class="sep"></div>
+
+        <h3>Farming Practices</h3>
+        <div class="twocol">
+          <h4>General crop information</h4>
+          <ul>
+            <li>Main crops grown; area per crop (ha).</li>
+            <li>Annual crop calendar (planting, maintenance, harvest months).</li>
+            <li>Row spacing / planting density.</li>
+          </ul>
+
+          <h4>Livestock information</h4>
+          <ul>
+            <li>Animal types; number of animals per ha.</li>
+            <li>Dairy: liters/cow; Meat: weight at slaughter.</li>
+          </ul>
+
+          <h4>Crop & variety selection</h4>
+          <ul>
+            <li>Criteria & key factors; satisfaction with last year’s choices and reasons.</li>
+          </ul>
+
+          <h4>Agroecological practices</h4>
+          <ul>
+            <li>Which practices (cover crops, intercropping, reduced tillage, composting, etc.) and why.</li>
+            <li>Since when; details on intercropping patterns; use of cover crops and integration.</li>
+          </ul>
+
+          <h4>Soil inputs</h4>
+          <ul>
+            <li>Amendments used (compost, manure, synthetic fertilizer, mulch, other).</li>
+            <li>Timing, current/planned season usage, estimated costs, rationale.</li>
+          </ul>
+
+          <h4>Irrigation</h4>
+          <ul>
+            <li>Use & system type (drip, manual, other); timing (months); annual cost; rationale.</li>
+          </ul>
+
+          <h4>Pest & disease management</h4>
+          <ul>
+            <li>Chemical or natural; types; timing; annual cost; rationale.</li>
+          </ul>
+
+          <h4>Land preparation & machinery</h4>
+          <ul>
+            <li>Preparation technique; tillage; machinery; rotations; prep time; costs/resources; rationale.</li>
+            <li>Satisfaction reflection: what worked, what didn’t.</li>
+          </ul>
+        </div>
+
+        <h3>Experience of Decisions During the Season</h3>
+        <div class="twocol">
+          <h4>Climate & agronomic challenges</h4>
+          <ul>
+            <li>Drought, waterlogging/flooding, high temperatures, other weather challenges.</li>
+            <li>Greatest challenge this season.</li>
+          </ul>
+          <h4>Pest challenges</h4>
+          <ul>
+            <li>Pests faced; most difficult; alternative preparation.</li>
+          </ul>
+        </div>
+
+        <h3>Perceptions of Agroecology</h3>
+        <ul>
+          <li>Definition (include SOILCRATES definition).</li>
+          <li>Profitability impacts; ambitions for adopting new practices.</li>
+        </ul>
+
+        <h3>Business Model of the Farm</h3>
+        <div class="twocol">
+          <h4>Crop sales & income</h4>
+          <ul>
+            <li>Crops sold; most profitable; sales channels.</li>
+            <li>Average sale prices; total farm income; price trends vs. 2024.</li>
+          </ul>
+          <h4>Agricultural productivity</h4>
+          <ul>
+            <li>Average yields per crop; potential yields; yield gap; storage loss %.</li>
+          </ul>
+          <h4>Farm structure & business model</h4>
+          <ul>
+            <li>Structure (co-op, independent); main income; labels (organic/other); processing.</li>
+            <li>CAPEX (machinery, irrigation); OPEX (seeds, fuel, labour, amendments).</li>
+          </ul>
+          <h4>Profitability & policy</h4>
+          <ul>
+            <li>Profitability of soil health practices; contribution to resilience & yields.</li>
+            <li>Agroecology as contributor; land value impacts.</li>
+            <li>Public/private support: CAP schemes, eco/AE schemes, carbon/biodiversity/ES payments; barriers & market use of SOILCRATES data.</li>
+          </ul>
+        </div>
+
+        <h3>Living Lab Profiling & Impact</h3>
+        <div class="twocol">
+          <h4>Experience with the LL</h4>
+          <ul>
+            <li>Interaction modes; usefulness for decisions; which decisions changed (crop/seed/land prep/inputs/pest).</li>
+            <li>Community sharing.</li>
+          </ul>
+          <h4>Future engagement</h4>
+          <ul>
+            <li>Interest in continued training/support; preferred support types & communication channels.</li>
+          </ul>
+        </div>
+
+        <h3>Demographics</h3>
+        <ul>
+          <li>Name, age, gender, farm/village, phone, GPS, household members.</li>
+        </ul>
+
+        <h3>Conclusion</h3>
+        <ul>
+          <li>Farmer questions/suggestions; next steps; access to deliverables/articles.</li>
+        </ul>
+
+        <details>
+          <summary>Fieldwork Checklist</summary>
+          <ul class="checklist">
+            <li>Consent materials (information sheet, informed consent) ready (GDPR).</li>
+            <li>Pilot-tested questionnaire (Irish LL or local LL).</li>
+            <li>Enumerator training guide & coding book.</li>
+            <li>Data model aligned with WP4/WP5.</li>
+          </ul>
+        </details>
+      </article>
+
+      <article class="card" id="wp53">
+        <h2>WP5.3 Ecosystem Services (ES) Screening & Indicators</h2>
+        <p class="muted">Goal: translate field practices and farm outcomes into ES signals for prioritisation and monitoring. <span class="cn">（目标：将田间实践与产出转化为 ES 信号，用于优先级与监测）</span></p>
+
+        <h3>Scope & Objectives</h3>
+        <ul>
+          <li>Identify priority ES relevant to each Living Lab (LL): provisioning, regulating, cultural, supporting.</li>
+          <li>Map WP3 variables to ES indicators; define data sources, temporal resolution, and spatial scale.</li>
+          <li>Provide a lightweight screening method for design-to-deployment decisions and longitudinal tracking.</li>
+        </ul>
+
+        <h3>ES Categories & Example Indicators</h3>
+        <div class="twocol">
+          <h4>Provisioning</h4>
+          <ul>
+            <li>Food/fiber yield (t/ha), income by crop, storage loss %.</li>
+            <li>Water use productivity (yield per m³ irrigation).</li>
+          </ul>
+          <h4>Regulating</h4>
+          <ul>
+            <li>Soil carbon proxy (practice-based scoring: cover crops, reduced tillage, organic amendments).</li>
+            <li>Erosion control (ground cover %, residue cover, slope risk).</li>
+            <li>Water regulation (infiltration proxy via practices; irrigation timing/efficiency).</li>
+            <li>Pest regulation (IPM adoption; pesticide intensity index).</li>
+          </ul>
+          <h4>Supporting</h4>
+          <ul>
+            <li>Soil health composite (pH in optimal range, organic matter trend, biodiversity-friendly practices).</li>
+            <li>Crop diversity index; rotation length.</li>
+          </ul>
+          <h4>Cultural & Socio-economic</h4>
+          <ul>
+            <li>Training uptake; LL engagement frequency; perceived usefulness.</li>
+            <li>Access to ES payments (carbon/biodiversity/water) and barriers.</li>
+          </ul>
+        </div>
+
+        <h3>Data Sources & Linkages to WP3</h3>
+        <ul>
+          <li><strong>Direct from WP3:</strong> practices (cover, tillage, inputs), yields, costs, irrigation timing/costs, pest control choices, LL engagement, payment schemes.</li>
+          <li><strong>External/WP4:</strong> soil lab tests, remote sensing (cover/NDVI), biodiversity surveys where available.</li>
+          <li><strong>Derived:</strong> scoring indices (e.g., pesticide intensity, management intensity, soil carbon practice score).</li>
+        </ul>
+
+        <h3>Screening Method (WP5.3)</h3>
+        <ol>
+          <li><strong>Define LL ES priorities</strong> (stakeholder workshop or prior WP5.2 outputs).</li>
+          <li><strong>Map indicators</strong> from the WP3 dataset to each priority ES; identify gaps.</li>
+          <li><strong>Score & normalise</strong> indicators to 0–1 scales; specify directionality (higher is better/worse).</li>
+          <li><strong>Weighting</strong> (optional): apply LL-specific weights; document rationale.</li>
+          <li><strong>Aggregate</strong> to ES sub-scores and an overall ES screening index (with uncertainty bands if possible).</li>
+          <li><strong>Classify</strong> (e.g., Red/Amber/Green) to support decision-making in LLs.</li>
+          <li><strong>Report</strong> dashboards and farmer-level feedback; track change over seasons.</li>
+        </ol>
+
+        <h3>Indicator Table (Template)</h3>
+        <table class="small" style="width:100%; border-collapse:collapse;">
+          <thead>
+            <tr style="border-bottom:1px solid var(--line);">
+              <th align="left">ES Category</th>
+              <th align="left">Indicator</th>
+              <th align="left">WP3 Source Field</th>
+              <th align="left">Unit / Scale</th>
+              <th align="left">Direction</th>
+              <th align="left">Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid var(--line);">
+              <td>Regulating</td>
+              <td>Soil carbon practice score</td>
+              <td>Cover crops; reduced tillage; organic amendments</td>
+              <td>0–1 (composite)</td>
+              <td>Higher is better</td>
+              <td>Binary/ordinal scoring per practice; sum & normalise.</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--line);">
+              <td>Provisioning</td>
+              <td>Yield (by crop)</td>
+              <td>Average yields; potential yields</td>
+              <td>t/ha</td>
+              <td>Higher is better</td>
+              <td>Include yield gap (potential – actual)/potential.</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--line);">
+              <td>Regulating</td>
+              <td>Pesticide intensity index</td>
+              <td>Type, timing, annual cost</td>
+              <td>0–1 (normalised)</td>
+              <td>Lower is better</td>
+              <td>Cost & frequency as proxies where actives unknown.</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--line);">
+              <td>Supporting</td>
+              <td>Crop diversity index</td>
+              <td>Main crops; area per crop</td>
+              <td>Shannon/Simpson</td>
+              <td>Higher is better</td>
+              <td>Use area shares to compute.</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--line);">
+              <td>Regulating</td>
+              <td>Residue/ground cover proxy</td>
+              <td>Tillage; cover crops; land prep</td>
+              <td>0–1 (ordinal)</td>
+              <td>Higher is better</td>
+              <td>Practice-based until RS data available.</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--line);">
+              <td>Cultural/Socio-eco</td>
+              <td>LL engagement index</td>
+              <td>Training/support frequency; decision changes</td>
+              <td>0–1 (composite)</td>
+              <td>Higher is better</td>
+              <td>Count of engagements & applied decisions.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>Outputs</h3>
+        <ul>
+          <li>Farmer-level ES screening report (PDF/HTML) with RAG classification and key drivers.</li>
+          <li>LL dashboard showing trends across seasons and comparison across practices.</li>
+          <li>Data package aligned to WP4 schemas for interoperability.</li>
+        </ul>
+
+        <details>
+          <summary>Implementation Notes</summary>
+          <ul>
+            <li>Ensure questionnaire coding matches indicator table field names.</li>
+            <li>Document assumptions when using cost/frequency as proxies.</li>
+            <li>Link to WP5.2 experimental design for context; WP5.3 is screening & early signals.</li>
+          </ul>
+        </details>
+      </article>
+
+      <article class="card" id="meta">
+        <h2>Integration Notes</h2>
+        <ul>
+          <li><strong>WP5.2 → WP5.3:</strong> Experimental design (5.2) informs which ES to screen (5.3). This file focuses on 5.3.</li>
+          <li><strong>WP3 → WP5.3:</strong> Questionnaire fields map directly to indicators; see the Indicator Table.</li>
+          <li><strong>Next:</strong> Add your LL-specific weights/priorities and localise wording if interviewing in local languages.</li>
+        </ul>
+      </article>
+    </section>
+
+    <div class="footer">Rev: 1.0 · Editable single-file HTML. You can copy sections, remove parts, or translate items as needed.</div>
+  </div>
+</body>
+</html>

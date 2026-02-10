@@ -1,0 +1,513 @@
+<!doctype html>
+<html lang="zh">
+<head>
+  <meta charset="utf-8" />
+  <title>SOILCRATES · 数据采集原型（WP3+WP5）</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root{
+      --bg:#0b1220;--card:#12192b;--muted:#90a3b4;--text:#eaf2ff;--accent:#6ee7b7;--accent2:#60a5fa;--danger:#ef4444;
+      --b:#212a3b;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial;
+      color:var(--text);background:linear-gradient(180deg,#0b1220,#0b1220 60%,#111827)}
+    header{padding:20px 24px;border-bottom:1px solid #1f2937;background:#0b1220;position:sticky;top:0;z-index:10}
+    h1{margin:0;font-size:20px;letter-spacing:.2px}
+    .sub{color:var(--muted);font-size:12px;margin-top:6px}
+    main{max-width:1100px;margin:24px auto;padding:0 16px;display:grid;grid-template-columns:260px 1fr;gap:16px}
+    nav{background:var(--card);border:1px solid #1f2937;border-radius:14px;padding:12px;height:max-content;position:sticky;top:88px}
+    .tab{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:10px;color:#c9d6e5;cursor:pointer}
+    .tab.active{background:#1d2436;color:#fff;border:1px solid #293246}
+    .ico{width:18px;height:18px;display:inline-block}
+    section.panel{background:var(--card);border:1px solid #1f2937;border-radius:16px;padding:16px}
+    .row{display:grid;grid-template-columns:repeat(12,1fr);gap:10px}
+    .col-3{grid-column:span 3}.col-4{grid-column:span 4}.col-6{grid-column:span 6}.col-8{grid-column:span 8}.col-12{grid-column:span 12}
+    label{font-size:12px;color:var(--muted);display:block;margin-bottom:6px}
+    input,select,textarea{width:100%;padding:10px 12px;border-radius:10px;border:1px solid #293246;background:#0f1524;color:#eaf2ff}
+    textarea{min-height:72px;resize:vertical}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 12px;border-radius:10px;border:1px solid #2a3548;background:#162036;color:#eaf2ff;
+      cursor:pointer}
+    .btn:hover{filter:brightness(1.1)}
+    .btn.primary{background:linear-gradient(135deg,#2563eb,#10b981);border-color:transparent}
+    .btn.ghost{background:transparent;border-color:#2a3548}
+    .btn.danger{background:#361620;border-color:#4b1d24;color:#fecaca}
+    .bar{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
+    table{width:100%;border-collapse:collapse;margin-top:8px;border-radius:12px;overflow:hidden}
+    th,td{font-size:13px;text-align:left;padding:10px;border-bottom:1px solid #223049}
+    th{color:#a7b6c9;background:#131b2c;position:sticky;top:0;z-index:1}
+    tr:hover td{background:#0f1728}
+    .pill{display:inline-flex;align-items:center;gap:6px;padding:4px 8px;border-radius:999px;font-size:12px;border:1px solid #2a3548;color:#dbe7f6}
+    .hint{color:#94a3b8;font-size:12px}
+    .sep{height:1px;background:#223049;margin:14px 0}
+    footer{max-width:1100px;margin:24px auto;color:#91a4b6;font-size:12px;padding:0 16px}
+  </style>
+</head>
+<body>
+<header>
+  <h1>SOILCRATES · 数据采集原型（WP3 农户 × WP5 实验 × 指标计划）</h1>
+  <div class="sub">单文件 Demo：点击、增删、校验、本地保存（localStorage）、导入/导出（JSON/CSV），可按需扩展为正式系统。</div>
+</header>
+
+<main>
+  <!-- 左侧导航 -->
+  <nav>
+    <div class="tab active" data-target="farmer">
+      <span class="ico">👩‍🌾</span><span>农户问卷（WP3）</span>
+    </div>
+    <div class="tab" data-target="experiment">
+      <span class="ico">🧪</span><span>实验实践（WP5）</span>
+    </div>
+    <div class="tab" data-target="dataplan">
+      <span class="ico">📈</span><span>指标采集计划（Section 4）</span>
+    </div>
+    <div class="tab" data-target="dashboard">
+      <span class="ico">📊</span><span>数据面板 & 导入导出</span>
+    </div>
+  </nav>
+
+  <!-- 右侧内容 -->
+  <div>
+    <!-- 农户问卷 -->
+    <section class="panel" id="panel-farmer">
+      <div class="row">
+        <div class="col-6">
+          <label>Farmer_ID *</label>
+          <input id="f_farmerId" placeholder="例如：IE-F001" />
+        </div>
+        <div class="col-6">
+          <label>Region_ID (NUTS2/3)</label>
+          <input id="f_regionId" placeholder="例如：IE06 / FRK1 ..." />
+        </div>
+        <div class="col-6">
+          <label>主要作物</label>
+          <input id="f_crop" placeholder="如：小麦 / 玉米 / 大麦" />
+        </div>
+        <div class="col-3">
+          <label>作物面积(ha)</label>
+          <input id="f_area" type="number" min="0" step="0.01" />
+        </div>
+        <div class="col-3">
+          <label>是否灌溉</label>
+          <select id="f_irrigation"><option value="">—</option><option>Y</option><option>N</option></select>
+        </div>
+
+        <div class="col-12">
+          <div class="sep"></div>
+          <div class="bar">
+            <span class="pill">Agroecology 实践：Cover crops / Intercrop / Reduced till / Compost …</span>
+          </div>
+        </div>
+
+        <div class="col-4">
+          <label>Practice_ID *</label>
+          <input id="f_practiceId" placeholder="PR001…PR035（来自 D5.1）" />
+        </div>
+        <div class="col-4">
+          <label>Practice 名称</label>
+          <input id="f_practiceName" placeholder="如：Cover cropping" />
+        </div>
+        <div class="col-2">
+          <label>是否采用</label>
+          <select id="f_adopted"><option value="">—</option><option>Y</option><option>N</option></select>
+        </div>
+        <div class="col-2">
+          <label>使用年限</label>
+          <input id="f_years" type="number" min="0" step="1" />
+        </div>
+
+        <div class="col-6">
+          <label>投入成本（€/ha）</label>
+          <input id="f_cost" type="number" min="0" step="0.01" />
+        </div>
+        <div class="col-6">
+          <label>收益/感知（产量/土壤/其他）</label>
+          <input id="f_benefit" placeholder="例如：+5% 产量；SOM 上升；更省工" />
+        </div>
+
+        <div class="col-12">
+          <label>采用/不采用的原因（简述）</label>
+          <textarea id="f_reason" placeholder="为什么采用/不采用？补贴？技术门槛？劳力？市场需求？"></textarea>
+        </div>
+
+        <div class="col-12 bar">
+          <button class="btn primary" id="btnAddFarmer">➕ 添加到列表</button>
+          <button class="btn ghost" id="btnClearFarmerForm">🧽 清空表单</button>
+        </div>
+
+        <div class="col-12">
+          <table id="tblFarmer">
+            <thead><tr>
+              <th>Farmer_ID</th><th>Region</th><th>Crop</th><th>Area(ha)</th><th>Practice_ID</th><th>Name</th><th>Adopted</th><th>Years</th><th>Cost(€/ha)</th><th>Benefit</th><th>Reason</th><th></th>
+            </tr></thead>
+            <tbody></tbody>
+          </table>
+          <div class="hint">提示：点击“删除”可移除；数据会保存在浏览器 localStorage。</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 实验实践 -->
+    <section class="panel" id="panel-experiment" hidden>
+      <div class="row">
+        <div class="col-4"><label>Exp_ID *</label><input id="e_expId" placeholder="如：NL-2" /></div>
+        <div class="col-4"><label>Field_ID</label><input id="e_fieldId" placeholder="如：Field-01" /></div>
+        <div class="col-4"><label>Practice_ID *</label><input id="e_practiceId" placeholder="PR001…PR035" /></div>
+
+        <div class="col-6"><label>参数（rate/timing/method）</label><input id="e_params" placeholder="例：N=50kg/ha；4月中旬播；no-till" /></div>
+        <div class="col-3"><label>起始日期</label><input id="e_start" type="date" /></div>
+        <div class="col-3"><label>结束日期</label><input id="e_end" type="date" /></div>
+
+        <div class="col-12"><label>关联指标（Indicator_IDs, 逗号分隔）</label>
+          <input id="e_inds" placeholder="如：IND001, IND003（SOM, WHC）" />
+        </div>
+
+        <div class="col-12 bar">
+          <button class="btn primary" id="btnAddExp">➕ 添加到实验列表</button>
+          <button class="btn ghost" id="btnClearExpForm">🧽 清空表单</button>
+        </div>
+
+        <div class="col-12">
+          <table id="tblExp">
+            <thead><tr>
+              <th>Exp_ID</th><th>Field_ID</th><th>Practice_ID</th><th>Params</th><th>Start</th><th>End</th><th>Indicators</th><th></th>
+            </tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- 指标采集计划 -->
+    <section class="panel" id="panel-dataplan" hidden>
+      <div class="row">
+        <div class="col-3"><label>Exp_ID *</label><input id="d_expId" placeholder="NL-2" /></div>
+        <div class="col-3"><label>Indicator_ID *</label><input id="d_indId" placeholder="IND001" /></div>
+        <div class="col-6"><label>Indicator 名称</label><input id="d_indName" placeholder="Soil organic matter (SOM)" /></div>
+
+        <div class="col-3"><label>类型</label>
+          <select id="d_type"><option>Biological</option><option>Chemical</option><option>Physical</option><option>Crop</option></select>
+        </div>
+        <div class="col-3"><label>单位</label><input id="d_unit" placeholder="%, t/ha, mg/kg…" /></div>
+        <div class="col-6"><label>时间点</label>
+          <div class="bar" style="padding:0">
+            <label><input type="checkbox" id="d_T0" /> T0</label>
+            <label><input type="checkbox" id="d_T1" /> T1</label>
+            <label><input type="checkbox" id="d_T2" /> T2</label>
+            <label><input type="checkbox" id="d_Tf" /> T_final</label>
+          </div>
+        </div>
+
+        <div class="col-6"><label>时序（秋/春/收获等）</label><input id="d_timing" placeholder="sept/oct, feb/march, at harvest…" /></div>
+        <div class="col-6"><label>采样方法</label><input id="d_method" placeholder="C vs T, 所有重复；土样深度 0–30 cm" /></div>
+
+        <div class="col-12 bar">
+          <button class="btn primary" id="btnAddPlan">➕ 添加到计划</button>
+          <button class="btn ghost" id="btnClearPlanForm">🧽 清空表单</button>
+        </div>
+
+        <div class="col-12">
+          <table id="tblPlan">
+            <thead><tr>
+              <th>Exp_ID</th><th>Indicator_ID</th><th>Name</th><th>Type</th><th>Unit</th>
+              <th>T0</th><th>T1</th><th>T2</th><th>T_final</th><th>Timing</th><th>Method</th><th></th>
+            </tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- 面板：导入/导出 -->
+    <section class="panel" id="panel-dashboard" hidden>
+      <div class="bar">
+        <button class="btn primary" id="btnSave">💾 保存到浏览器</button>
+        <button class="btn" id="btnLoad">📥 读取</button>
+        <button class="btn" id="btnExportJSON">🧾 导出 JSON</button>
+        <button class="btn" id="btnExportCSV">📤 导出 CSV（各表分文件）</button>
+        <button class="btn danger" id="btnClearAll">🗑️ 清空所有数据</button>
+      </div>
+      <div class="sep"></div>
+      <div class="bar">
+        <input type="file" id="fileImport" accept=".json" />
+        <button class="btn" id="btnImport">📤 从 JSON 导入</button>
+      </div>
+      <div class="sep"></div>
+      <div id="stats" class="hint">当前统计：—</div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  小贴士：这是一个演示级别的前端模板。正式版本可改为：字段校验（必填/类型）、选项下拉（从 D5.1 / Section4 指标表加载）、用户权限、后台 API、以及地图/上传附件等。
+</footer>
+
+<script>
+/* ============ 数据存储（内存 + localStorage） ============ */
+const state = {
+  farmer: [],  // 农户问卷行
+  exp: [],     // 实验实践行
+  plan: []     // 指标计划行
+};
+
+const KEY = 'soilcrates_demo_v1';
+
+/* ============ 工具函数 ============ */
+const $ = sel => document.querySelector(sel);
+const $$ = sel => Array.from(document.querySelectorAll(sel));
+
+function required(v){ return v != null && String(v).trim() !== '' }
+function toast(msg){ alert(msg) }
+
+function renderTables(){
+  // Farmer
+  const tbodyF = $('#tblFarmer tbody'); tbodyF.innerHTML = '';
+  state.farmer.forEach((r,i)=>{
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td>${r.Farmer_ID||''}</td>
+      <td>${r.Region_ID||''}</td>
+      <td>${r.Crop||''}</td>
+      <td>${r.Area||''}</td>
+      <td>${r.Practice_ID||''}</td>
+      <td>${r.Practice_Name||''}</td>
+      <td>${r.Adopted||''}</td>
+      <td>${r.Years||''}</td>
+      <td>${r.Cost||''}</td>
+      <td>${r.Benefit||''}</td>
+      <td>${r.Reason||''}</td>
+      <td><button class="btn danger" data-del-farmer="${i}">删除</button></td>
+    `;
+    tbodyF.appendChild(tr);
+  });
+
+  // Experiment
+  const tbodyE = $('#tblExp tbody'); tbodyE.innerHTML = '';
+  state.exp.forEach((r,i)=>{
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td>${r.Exp_ID||''}</td>
+      <td>${r.Field_ID||''}</td>
+      <td>${r.Practice_ID||''}</td>
+      <td>${r.Params||''}</td>
+      <td>${r.Start||''}</td>
+      <td>${r.End||''}</td>
+      <td>${r.Indicators||''}</td>
+      <td><button class="btn danger" data-del-exp="${i}">删除</button></td>
+    `;
+    tbodyE.appendChild(tr);
+  });
+
+  // Plan
+  const tbodyP = $('#tblPlan tbody'); tbodyP.innerHTML = '';
+  state.plan.forEach((r,i)=>{
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td>${r.Exp_ID||''}</td>
+      <td>${r.Indicator_ID||''}</td>
+      <td>${r.Indicator_Name||''}</td>
+      <td>${r.Type||''}</td>
+      <td>${r.Unit||''}</td>
+      <td>${r.T0?'✓':''}</td>
+      <td>${r.T1?'✓':''}</td>
+      <td>${r.T2?'✓':''}</td>
+      <td>${r.Tf?'✓':''}</td>
+      <td>${r.Timing||''}</td>
+      <td>${r.Method||''}</td>
+      <td><button class="btn danger" data-del-plan="${i}">删除</button></td>
+    `;
+    tbodyP.appendChild(tr);
+  });
+
+  // Stats
+  const s = `农户记录 ${state.farmer.length} 条 · 实验记录 ${state.exp.length} 条 · 指标计划 ${state.plan.length} 条`;
+  $('#stats') && ($('#stats').textContent = '当前统计：' + s);
+}
+
+function saveLocal(){
+  localStorage.setItem(KEY, JSON.stringify(state));
+  toast('已保存到浏览器（localStorage）');
+}
+
+function loadLocal(){
+  const raw = localStorage.getItem(KEY);
+  if(!raw){ toast('本地暂无保存'); return }
+  try{
+    const data = JSON.parse(raw);
+    state.farmer = data.farmer || [];
+    state.exp = data.exp || [];
+    state.plan = data.plan || [];
+    renderTables();
+    toast('已从浏览器读取');
+  }catch(e){ toast('读取失败：' + e.message) }
+}
+
+function toCSV(arr){
+  if(!arr.length) return '';
+  const headers = Object.keys(arr[0]);
+  const rows = arr.map(o => headers.map(h => {
+    const v = (o[h] ?? '');
+    // 简单转义
+    if(typeof v === 'string' && (v.includes(',') || v.includes('"') || v.includes('\n'))){
+      return `"${v.replace(/"/g,'""')}"`;
+    }
+    return v;
+  }).join(','));
+  return headers.join(',') + '\n' + rows.join('\n');
+}
+
+function download(filename, text){
+  const blob = new Blob([text], {type: 'text/plain;charset=utf-8'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = filename; a.click();
+  URL.revokeObjectURL(url);
+}
+
+/* ============ 事件：左侧 Tab ============ */
+$$('.tab').forEach(t=>{
+  t.addEventListener('click', ()=>{
+    $$('.tab').forEach(x=>x.classList.remove('active'));
+    t.classList.add('active');
+    const target = t.getAttribute('data-target');
+    ['farmer','experiment','dataplan','dashboard'].forEach(id=>{
+      const el = $('#panel-'+id);
+      if(el) el.hidden = (id!==target);
+    });
+  });
+});
+
+/* ============ 事件：农户表单 ============ */
+$('#btnAddFarmer').addEventListener('click', ()=>{
+  const Farmer_ID = $('#f_farmerId').value.trim();
+  const Region_ID = $('#f_regionId').value.trim();
+  const Crop = $('#f_crop').value.trim();
+  const Area = $('#f_area').value;
+  const Practice_ID = $('#f_practiceId').value.trim();
+  const Practice_Name = $('#f_practiceName').value.trim();
+  const Adopted = $('#f_adopted').value;
+  const Years = $('#f_years').value;
+  const Cost = $('#f_cost').value;
+  const Benefit = $('#f_benefit').value.trim();
+  const Reason = $('#f_reason').value.trim();
+
+  if(!required(Farmer_ID) || !required(Practice_ID)){
+    toast('Farmer_ID 与 Practice_ID 为必填'); return;
+  }
+
+  state.farmer.push({Farmer_ID, Region_ID, Crop, Area, Practice_ID, Practice_Name, Adopted, Years, Cost, Benefit, Reason});
+  renderTables();
+});
+
+$('#btnClearFarmerForm').addEventListener('click', ()=>{
+  ['f_farmerId','f_regionId','f_crop','f_area','f_practiceId','f_practiceName','f_adopted','f_years','f_cost','f_benefit','f_reason']
+    .forEach(id=>{ const el = $('#'+id); if(el.tagName==='SELECT') el.value=''; else el.value=''; });
+});
+
+$('#tblFarmer').addEventListener('click', (e)=>{
+  const btn = e.target.closest('button[data-del-farmer]');
+  if(!btn) return;
+  const idx = +btn.getAttribute('data-del-farmer');
+  state.farmer.splice(idx,1); renderTables();
+});
+
+/* ============ 事件：实验表单 ============ */
+$('#btnAddExp').addEventListener('click', ()=>{
+  const Exp_ID = $('#e_expId').value.trim();
+  const Field_ID = $('#e_fieldId').value.trim();
+  const Practice_ID = $('#e_practiceId').value.trim();
+  if(!required(Exp_ID) || !required(Practice_ID)){ toast('Exp_ID 与 Practice_ID 为必填'); return; }
+  const Params = $('#e_params').value.trim();
+  const Start = $('#e_start').value;
+  const End = $('#e_end').value;
+  const Indicators = $('#e_inds').value.trim();
+  state.exp.push({Exp_ID, Field_ID, Practice_ID, Params, Start, End, Indicators});
+  renderTables();
+});
+
+$('#btnClearExpForm').addEventListener('click', ()=>{
+  ['e_expId','e_fieldId','e_practiceId','e_params','e_start','e_end','e_inds'].forEach(id=>$('#'+id).value='');
+});
+
+$('#tblExp').addEventListener('click', (e)=>{
+  const btn = e.target.closest('button[data-del-exp]');
+  if(!btn) return;
+  state.exp.splice(+btn.getAttribute('data-del-exp'),1); renderTables();
+});
+
+/* ============ 事件：指标计划表单 ============ */
+$('#btnAddPlan').addEventListener('click', ()=>{
+  const Exp_ID = $('#d_expId').value.trim();
+  const Indicator_ID = $('#d_indId').value.trim();
+  if(!required(Exp_ID) || !required(Indicator_ID)){ toast('Exp_ID 与 Indicator_ID 为必填'); return; }
+  const r = {
+    Exp_ID,
+    Indicator_ID,
+    Indicator_Name: $('#d_indName').value.trim(),
+    Type: $('#d_type').value,
+    Unit: $('#d_unit').value.trim(),
+    T0: $('#d_T0').checked,
+    T1: $('#d_T1').checked,
+    T2: $('#d_T2').checked,
+    Tf: $('#d_Tf').checked,
+    Timing: $('#d_timing').value.trim(),
+    Method: $('#d_method').value.trim()
+  };
+  state.plan.push(r); renderTables();
+});
+
+$('#btnClearPlanForm').addEventListener('click', ()=>{
+  ['d_expId','d_indId','d_indName','d_unit','d_timing','d_method'].forEach(id=>$('#'+id).value='');
+  ['d_T0','d_T1','d_T2','d_Tf'].forEach(id=>$('#'+id).checked=false);
+});
+
+$('#tblPlan').addEventListener('click', (e)=>{
+  const btn = e.target.closest('button[data-del-plan]');
+  if(!btn) return;
+  state.plan.splice(+btn.getAttribute('data-del-plan'),1); renderTables();
+});
+
+/* ============ 事件：导入/导出/存储 ============ */
+$('#btnSave').addEventListener('click', saveLocal);
+$('#btnLoad').addEventListener('click', loadLocal);
+
+$('#btnExportJSON').addEventListener('click', ()=>{
+  const text = JSON.stringify(state, null, 2);
+  download('soilcrates_data.json', text);
+});
+
+$('#btnExportCSV').addEventListener('click', ()=>{
+  if(state.farmer.length) download('farmer.csv', toCSV(state.farmer));
+  if(state.exp.length) download('experiment.csv', toCSV(state.exp));
+  if(state.plan.length) download('dataplan.csv', toCSV(state.plan));
+  if(!state.farmer.length && !state.exp.length && !state.plan.length) toast('暂无数据可导出');
+});
+
+$('#btnClearAll').addEventListener('click', ()=>{
+  if(confirm('确认清空所有数据？此操作不可撤销。')){
+    state.farmer = []; state.exp = []; state.plan = [];
+    localStorage.removeItem(KEY); renderTables();
+  }
+});
+
+$('#btnImport').addEventListener('click', ()=>{
+  const f = $('#fileImport').files[0];
+  if(!f){ toast('请选择一个 JSON 文件'); return; }
+  const reader = new FileReader();
+  reader.onload = e=>{
+    try{
+      const data = JSON.parse(e.target.result);
+      state.farmer = data.farmer || [];
+      state.exp = data.exp || [];
+      state.plan = data.plan || [];
+      renderTables(); toast('导入成功');
+    }catch(err){ toast('导入失败：' + err.message) }
+  };
+  reader.readAsText(f);
+});
+
+/* 初始渲染 */
+renderTables();
+</script>
+</body>
+</html>

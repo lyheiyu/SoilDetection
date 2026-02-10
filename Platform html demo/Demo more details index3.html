@@ -1,0 +1,492 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>SOILCRATES · Trials, Plots & Sampling Results</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root{ --bg:#0b1220;--card:#12192b;--muted:#90a3b4;--text:#eaf2ff;--accent:#6ee7b7;--accent2:#60a5fa;--danger:#ef4444; }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial;color:var(--text);background:linear-gradient(180deg,#0b1220,#0b1220 60%,#111827)}
+    header{padding:20px 24px;border-bottom:1px solid #1f2937;background:#0b1220;position:sticky;top:0;z-index:10}
+    h1{margin:0;font-size:20px;letter-spacing:.2px}
+    .sub{color:var(--muted);font-size:12px;margin-top:6px}
+    main{max-width:1200px;margin:24px auto;padding:0 16px;display:grid;grid-template-columns:260px 1fr;gap:16px}
+    nav{background:#12192b;border:1px solid #1f2937;border-radius:14px;padding:12px;height:max-content;position:sticky;top:88px}
+    .tab{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:10px;color:#c9d6e5;cursor:pointer}
+    .tab.active{background:#1d2436;color:#fff;border:1px solid #293246}
+    section.panel{background:#12192b;border:1px solid #1f2937;border-radius:16px;padding:16px}
+    .row{display:grid;grid-template-columns:repeat(12,1fr);gap:10px}
+    .col-2{grid-column:span 2}.col-3{grid-column:span 3}.col-4{grid-column:span 4}.col-5{grid-column:span 5}.col-6{grid-column:span 6}.col-8{grid-column:span 8}.col-12{grid-column:span 12}
+    label{font-size:12px;color:#90a3b4;display:block;margin-bottom:6px}
+    input,select,textarea{width:100%;padding:10px 12px;border-radius:10px;border:1px solid #293246;background:#0f1524;color:#eaf2ff}
+    input[readonly]{opacity:.85}
+    textarea{min-height:72px;resize:vertical}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 12px;border-radius:10px;border:1px solid #2a3548;background:#162036;color:#eaf2ff;cursor:pointer}
+    .btn:hover{filter:brightness(1.08)}
+    .btn.primary{background:linear-gradient(135deg,#2563eb,#10b981);border-color:transparent}
+    .btn.ghost{background:transparent;border-color:#2a3548}
+    .btn.danger{background:#361620;border-color:#4b1d24;color:#fecaca}
+    .bar{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
+    table{width:100%;border-collapse:collapse;margin-top:8px;border-radius:12px;overflow:hidden}
+    th,td{font-size:13px;text-align:left;padding:10px;border-bottom:1px solid #223049;vertical-align:top}
+    th{color:#a7b6c9;background:#131b2c;position:sticky;top:0;z-index:1}
+    tr.hide{display:none}
+    .pill{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border-radius:999px;font-size:12px;border:1px solid #2a3548;color:#dbe7f6;cursor:pointer}
+    .pill:hover{filter:brightness(1.1)}
+    .pill.active{background:#1e293b}
+    .hint{color:#94a3b8;font-size:12px}
+    .sep{height:1px;background:#223049;margin:14px 0}
+    footer{max-width:1200px;margin:24px auto;color:#91a4b6;font-size:12px;padding:0 16px}
+    .multiselect{height:110px}
+    .error{border-color:#ef4444 !important;box-shadow:0 0 0 2px rgba(239,68,68,.25)}
+    .help{font-size:11px;color:#93c5fd}
+    .grid-ind{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+    .nowrap{white-space:nowrap}
+    .sticky-controls{position:sticky;top:88px;z-index:2;background:#12192b;border-bottom:1px solid #1f2937;padding-bottom:8px;margin:-16px -16px 8px -16px;border-top-left-radius:16px;border-top-right-radius:16px}
+  </style>
+</head>
+<body>
+<header>
+  <h1>SOILCRATES · Trials, Plots & Sampling Results</h1>
+  <div class="sub">Control + T1 + T2 + (T1+T2) plot scheme · 3 replications · Sample results with up to 12 indicators · Import/Export.</div>
+</header>
+
+<main>
+  <!-- NAV -->
+  <nav>
+    <div class="tab active" data-target="experiment">🧪 Trial Practices (WP5)</div>
+    <div class="tab" data-target="plots">🧭 Plot Scheme</div>
+    <div class="tab" data-target="sampling">🧫 Sampling & Results</div>
+    <div class="tab" data-target="dashboard">📊 Dashboard & Import/Export</div>
+  </nav>
+
+  <!-- CONTENT -->
+  <div>
+    <!-- GLOBAL SEARCH / TAGS -->
+    <section class="panel">
+      <div class="row">
+        <div class="col-8">
+          <label>Search / Tags (filters all tables)</label>
+          <input id="q_search" placeholder="Filter by Exp_ID, Plot_ID, Indicator, etc." />
+        </div>
+        <div class="col-4" style="display:flex;align-items:end;gap:8px">
+          <button class="btn" id="btnApplyFilter">🔎 Apply</button>
+          <button class="btn ghost" id="btnClearFilter">✖ Clear</button>
+        </div>
+        <div class="col-12">
+          <div class="bar" id="tagBar"></div>
+          <div class="hint">Click a chip to filter. Chips include practice & indicator IDs. You can also type your own search above.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRIALS (same as before, minimal) -->
+    <section class="panel" id="panel-experiment">
+      <div class="row">
+        <div class="col-4"><label>Exp_ID *</label><input id="e_expId" placeholder="e.g., NL-02" /></div>
+        <div class="col-4"><label>Field_ID</label><input id="e_fieldId" placeholder="e.g., Field-01" /></div>
+        <div class="col-4">
+          <label>Practice *</label>
+          <select id="e_practiceSelect"></select>
+        </div>
+
+        <div class="col-6"><label>Parameters (rate / timing / method)</label><input id="e_params" placeholder="N=50kg/ha; mid-April sowing; no-till" /></div>
+        <div class="col-3"><label>Start date</label><input id="e_start" type="date" /></div>
+        <div class="col-3"><label>End date</label><input id="e_end" type="date" /></div>
+
+        <div class="col-6">
+          <label>Linked indicators (multi-select core list)</label>
+          <select id="e_inds" class="multiselect" multiple></select>
+          <div class="hint">At least one indicator required here or in extra IDs.</div>
+        </div>
+        <div class="col-6">
+          <label>Additional indicator IDs (optional, comma-separated)</label>
+          <input id="e_inds_extra" placeholder="e.g., IND999, IND1000" />
+        </div>
+
+        <div class="col-12 bar">
+          <button class="btn primary" id="btnAddExp">➕ Add to trials</button>
+          <button class="btn" id="btnGenPlots">🧭 Generate standard plots (C, T1, T2, T1+T2)</button>
+          <button class="btn ghost" id="btnClearExpForm">🧽 Clear form</button>
+        </div>
+
+        <div class="col-12">
+          <table id="tblExp">
+            <thead><tr>
+              <th>Exp_ID</th><th>Field_ID</th><th>Practice_ID</th><th>Params</th><th>Start</th><th>End</th><th>Indicators</th><th></th>
+            </tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- PLOTS -->
+    <section class="panel" id="panel-plots" hidden>
+      <div class="row">
+        <div class="col-4">
+          <label>Experiment *</label>
+          <select id="p_exp"></select>
+        </div>
+        <div class="col-3">
+          <label>Plot_ID</label>
+          <select id="p_plotId">
+            <option value="C">C (Control)</option>
+            <option value="T1">T1</option>
+            <option value="T2">T2</option>
+            <option value="T12">T1+T2</option>
+          </select>
+        </div>
+        <div class="col-5">
+          <label>Treatments (label)</label>
+          <input id="p_treat" placeholder="e.g., Control / Treatment 1 / Treatment 2 / T1+T2" />
+        </div>
+        <div class="col-3">
+          <label>Replications</label>
+          <input id="p_reps" type="number" min="1" step="1" value="3"/>
+        </div>
+        <div class="col-9" style="display:flex;align-items:end;gap:8px">
+          <button class="btn primary" id="btnAddPlot">➕ Add plot</button>
+          <button class="btn" id="btnAddStdPlots">🧭 Add C/T1/T2/T1+T2 (3 reps)</button>
+        </div>
+
+        <div class="col-12">
+          <table id="tblPlots">
+            <thead><tr>
+              <th>Exp_ID</th><th>Plot_ID</th><th>Treatments</th><th>Replications</th><th></th>
+            </tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- SAMPLING & RESULTS -->
+    <section class="panel" id="panel-sampling" hidden>
+      <div class="sticky-controls">
+        <div class="row">
+          <div class="col-3"><label>Experiment *</label><select id="s_exp"></select></div>
+          <div class="col-2"><label>Plot *</label><select id="s_plot"></select></div>
+          <div class="col-2"><label>Layer-ID</label><input id="s_layer" placeholder="e.g., 0–30 cm"/></div>
+          <div class="col-2"><label>Replication</label><input id="s_rep" type="number" min="1" step="1" value="1"/></div>
+          <div class="col-3"><label>Sampling date *</label><input id="s_date" type="date"/></div>
+          <div class="col-6"><label>Sample_ID (auto)</label><input id="s_sampleId" readonly/></div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12"><div class="sep"></div></div>
+        <div class="col-12">
+          <label>Indicators for this experiment (from Plan)</label>
+          <div id="s_indGrid" class="grid-ind"></div>
+          <div class="bar">
+            <button class="btn" id="btnClearIndVals">🧽 Clear values</button>
+            <button class="btn" id="btnFillNA">⌀ Fill NA</button>
+          </div>
+        </div>
+        <div class="col-12 bar">
+          <button class="btn primary" id="btnAddSample">➕ Add sample result</button>
+        </div>
+
+        <div class="col-12">
+          <table id="tblSamples">
+            <thead id="tblSamplesHead"></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- DASHBOARD -->
+    <section class="panel" id="panel-dashboard" hidden>
+      <div class="bar">
+        <button class="btn primary" id="btnSave">💾 Save to browser</button>
+        <button class="btn" id="btnLoad">📥 Load</button>
+        <button class="btn" id="btnExportJSON">🧾 Export JSON</button>
+        <button class="btn" id="btnExportCSV">📤 Export CSV (trials/plots/samples)</button>
+        <button class="btn danger" id="btnClearAll">🗑️ Clear all</button>
+      </div>
+      <div class="sep"></div>
+      <div class="bar">
+        <input type="file" id="fileImport" accept=".json" />
+        <button class="btn" id="btnImport">📤 Import from JSON</button>
+      </div>
+      <div class="sep"></div>
+      <div id="stats" class="hint">Stats: —</div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  Plot scheme matches your diagram: one Control, one T1, one T2, and one combined T1+T2. Results table stores up to 12 indicators per experiment (from your Plan).
+</footer>
+
+<script>
+/* ===== Preloaded lists ===== */
+const PRACTICES = [["PR001","Minimum/No tillage"],["PR002","Buffer strips"],["PR003","Agroforestry"],["PR004","Diversified crop rotations"],["PR005","Strip cropping"],["PR006","Cover crops – carbon sequestration (6a)"],["PR007","Cover crops – biological N fixation (6b)"],["PR008","Catch crops – reduce N leaching (6c)"],["PR009","Cover crops – nematode control (6d)"],["PR010","Intercropping"],["PR011","Tagetes for nematode control"],["PR012","Grassland species diversification"],["PR013","Compost (various types)"],["PR014","Bokashi"],["PR015","Biochar"],["PR016","Seaweed products"],["PR017","Digestate"],["PR018","Clay minerals / rocky material"],["PR019","Wood ashes"],["PR020","Gypsum"],["PR021","Microbial biostimulants"],["PR022","Humic acids / humates"],["PR023","Water erosion/runoff control"],["PR024","Wind erosion control (windbreaks)"],["PR025","Low-pressure tyres (compaction)"],["PR026","Deep-rooting crops"],["PR027","Perennial crops"],["PR028","Phytoremediation (soil remediation)"],["PR029","Field inundation"],["PR030","Permanent grassland on poor soils"],["PR031","Integrated Crop Management (ICM)"],["PR032","Irrigation systems"],["PR033","Water catchment infrastructure"],["PR034","Man-made rills (water mgmt/erosion)"],["PR035","Deep ploughing & natural processes"]];
+
+const INDICATORS = [["IND001","Soil organic matter (SOM)"],["IND002","Organic carbon (TOC)"],["IND003","Total nitrogen (TN)"],["IND004","Available phosphorus (P)"],["IND005","Potassium (K)"],["IND006","Soil pH"],["IND007","Electrical conductivity (EC)"],["IND008","C/N ratio (TOC/TON)"],["IND009","CEC & exchangeable cations"],["IND010","Bulk density"],["IND011","Aggregate stability / MWD"],["IND012","Texture / particle size"],["IND013","Water holding capacity (WHC)"],["IND014","Soil moisture (field)"],["IND015","Soil respiration"],["IND016","GHG fluxes (CO2, N2O, CH4)"],["IND017","Heavy metals"],["IND018","PFAS / PAHs (pollutants)"],["IND019","Microbial biomass C"],["IND020","Enzyme activity (dehydrogenase)"],["IND021","Microbial diversity (bac/arch/fungi)"],["IND022","Earthworm count"],["IND023","Yield"],["IND024","NDVI / NPP / LAI"],["IND025","Albedo / LST"],["IND026","Soil sealing / bare soil index"]];
+
+/* ===== State + storage ===== */
+const state = { exp: [], plots: [], plan: [], samples: [] };
+const KEY = 'soilcrates_plots_sampling_v1';
+
+/* ===== Helpers ===== */
+const $ = s => document.querySelector(s);
+const $$ = s => Array.from(document.querySelectorAll(s));
+const required = v => v != null && String(v).trim() !== '';
+const toast = m => alert(m);
+function setErr(el, on){ if(!el) return; on ? el.classList.add('error') : el.classList.remove('error'); }
+function scrollFirstError(){ const el = document.querySelector('.error'); if(el) el.scrollIntoView({behavior:'smooth', block:'center'}); }
+
+/* ===== Populate dropdowns, tags ===== */
+function populateDropdowns(){
+  // practices
+  const practiceOpts = PRACTICES.map(([id, name]) => `<option value="${id}">${id} — ${name}</option>`).join('');
+  $('#e_practiceSelect').innerHTML = `<option value="">— select —</option>` + practiceOpts;
+
+  // indicators
+  const indOpts = INDICATORS.map(([id, name]) => `<option value="${id}">${id} — ${name}</option>`).join('');
+  $('#e_inds').innerHTML = indOpts;
+
+  // tag chips
+  const tagBar = $('#tagBar');
+  const chips = [ ...PRACTICES.map(([id]) => id), ...INDICATORS.map(([id]) => id), 'C','T1','T2','T12' ];
+  tagBar.innerHTML = '';
+  chips.forEach(tag=>{ const span=document.createElement('span'); span.className='pill'; span.textContent=tag; span.dataset.tag=tag; span.addEventListener('click', ()=>{ span.classList.toggle('active'); applyFilter(); }); tagBar.appendChild(span); });
+
+  refreshExpSelects();
+}
+
+function refreshExpSelects(){
+  const opts = state.exp.map(r=>`<option value="${r.Exp_ID}">${r.Exp_ID}</option>`).join('');
+  $('#p_exp').innerHTML = `<option value="">— select —</option>` + opts;
+  $('#s_exp').innerHTML = `<option value="">— select —</option>` + opts;
+  refreshPlotOptionsForSampling();
+}
+
+/* ===== Render tables ===== */
+function renderTables(){
+  // Trials table
+  const tbE = $('#tblExp tbody'); tbE.innerHTML = '';
+  state.exp.forEach((r,i)=>{
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td>${r.Exp_ID||''}</td>
+      <td>${r.Field_ID||''}</td>
+      <td>${r.Practice_ID||''}</td>
+      <td>${r.Params||''}</td>
+      <td>${r.Start||''}</td>
+      <td>${r.End||''}</td>
+      <td>${r.Indicators||''}</td>
+      <td><button class="btn danger" data-del-exp="${i}">Delete</button></td>
+    `;
+    tbE.appendChild(tr);
+  });
+
+  // Plots table
+  const tbP = $('#tblPlots tbody'); tbP.innerHTML = '';
+  state.plots.forEach((r,i)=>{
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td>${r.Exp_ID}</td>
+      <td>${r.Plot_ID}</td>
+      <td>${r.Treatments||''}</td>
+      <td class="nowrap">${r.Reps||1}</td>
+      <td><button class="btn danger" data-del-plot="${i}">Delete</button></td>
+    `;
+    tbP.appendChild(tr);
+  });
+
+  // Samples table (dynamic headers)
+  renderSamplesTable();
+
+  $('#stats').textContent = `Stats: trials ${state.exp.length} · plots ${state.plots.length} · samples ${state.samples.length}`;
+
+  applyFilter();
+  refreshExpSelects();
+}
+
+function allSampleIndicatorHeaders(){
+  const set = new Set();
+  state.samples.forEach(s=>{ Object.keys(s.Results||{}).forEach(k=>set.add(k)); });
+  return Array.from(set).sort();
+}
+
+function renderSamplesTable(){
+  const head = $('#tblSamplesHead'); const body=$('#tblSamples tbody');
+  const indHeaders = allSampleIndicatorHeaders();
+  head.innerHTML = '';
+  const trh = document.createElement('tr');
+  const base = ['Sample_ID','Exp_ID','Plot_ID','Layer_ID','Replicate','Date'];
+  base.forEach(h=>{ const th=document.createElement('th'); th.textContent=h; trh.appendChild(th); });
+  indHeaders.forEach(id=>{ const th=document.createElement('th'); th.textContent=id; trh.appendChild(th); });
+  const thDel = document.createElement('th'); thDel.textContent=''; trh.appendChild(thDel);
+  head.appendChild(trh);
+
+  body.innerHTML = '';
+  state.samples.forEach((s,i)=>{
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td>${s.Sample_ID}</td>
+      <td>${s.Exp_ID}</td>
+      <td>${s.Plot_ID}</td>
+      <td>${s.Layer_ID||''}</td>
+      <td>${s.Replicate||''}</td>
+      <td>${s.Date||''}</td>
+      ${indHeaders.map(h=>`<td>${(s.Results||{})[h] ?? ''}</td>`).join('')}
+      <td><button class="btn danger" data-del-sample="${i}">Delete</button></td>
+    `;
+    body.appendChild(tr);
+  });
+}
+
+/* ===== Filtering ===== */
+function currentActiveTags(){ return $$('#tagBar .pill.active').map(x=>x.dataset.tag.toLowerCase()); }
+function rowMatchesFilter(tr, terms){ const text = tr.innerText.toLowerCase(); return terms.every(t => text.includes(t)); }
+function applyFilter(){
+  const q = ($('#q_search').value || '').trim().toLowerCase();
+  const terms = q ? q.split(/\s+/).filter(Boolean) : [];
+  const tags = currentActiveTags();
+  const allTerms = [...terms, ...tags];
+  ['#tblExp','#tblPlots','#tblSamples'].forEach(sel=>{
+    const rows = $$(sel+' tbody tr');
+    rows.forEach(tr=>{ tr.classList.remove('hide'); let ok=true; if(allTerms.length) ok = rowMatchesFilter(tr, allTerms); if(!ok) tr.classList.add('hide'); });
+  });
+}
+
+/* ===== Storage ===== */
+function saveLocal(){ localStorage.setItem(KEY, JSON.stringify(state)); toast('Saved to browser.'); }
+function loadLocal(){ const raw = localStorage.getItem(KEY); if(!raw) return toast('Nothing saved yet.'); try{ const data = JSON.parse(raw); state.exp=data.exp||[]; state.plots=data.plots||[]; state.plan=data.plan||[]; state.samples=data.samples||[]; renderTables(); toast('Loaded from browser.'); }catch(e){ toast('Load failed: ' + e.message) } }
+function toCSV(arr){ if(!arr.length) return ''; const headers = Object.keys(arr[0]); const rows = arr.map(o => headers.map(h => { const v=(o[h] ?? ''); if(typeof v==='string' && (v.includes(',')||v.includes('"')||v.includes('\n'))){ return `"${v.replace(/"/g,'""')}"`; } return v; }).join(',')); return headers.join(',') + '\n' + rows.join('\n'); }
+function toSamplesCSV(){
+  // Flatten results map into columns (union of headers)
+  const indHeaders = allSampleIndicatorHeaders();
+  const headers = ['Sample_ID','Exp_ID','Plot_ID','Layer_ID','Replicate','Date', ...indHeaders];
+  const rows = state.samples.map(s=> headers.map(h=>{
+    if(h in s) return s[h];
+    if(indHeaders.includes(h)) return (s.Results||{})[h] ?? '';
+    return '';
+  }).join(','));
+  return headers.join(',') + '\n' + rows.join('\n');
+}
+function download(filename, text){ const blob = new Blob([text], {type: 'text/plain;charset=utf-8'}); const url = URL.createObjectURL(blob); const a = document.createElement('a'); a.href = url; a.download = filename; a.click(); URL.revokeObjectURL(url); }
+
+/* ===== Nav tabs ===== */
+$$('.tab').forEach(t=>{ t.addEventListener('click', ()=>{ $$('.tab').forEach(x=>x.classList.remove('active')); t.classList.add('active'); const target=t.getAttribute('data-target'); ['experiment','plots','sampling','dashboard'].forEach(id=>{ const el=$('#panel-'+id); if(el) el.hidden = (id!==target); }); }); });
+
+/* ===== Trials bindings ===== */
+$('#btnAddExp').addEventListener('click', ()=>{
+  const Exp_ID = $('#e_expId'); const Practice_ID = $('#e_practiceSelect'); const Field_ID=$('#e_fieldId');
+  const Params=$('#e_params'); const Start=$('#e_start'); const End=$('#e_end');
+  const sel = Array.from($('#e_inds').selectedOptions).map(o=>o.value);
+  const extra = ($('#e_inds_extra').value||'').split(',').map(s=>s.trim()).filter(Boolean);
+  const Indicators = [...sel, ...extra];
+  [Exp_ID, Practice_ID, Start, End].forEach(el=>setErr(el,false));
+  let ok = true;
+  if(!required(Exp_ID.value)) { setErr(Exp_ID,true); ok=false; }
+  if(!required(Practice_ID.value)) { setErr(Practice_ID,true); ok=false; }
+  if(End.value && !Start.value){ setErr(Start,true); ok=false; toast('Provide a Start date when End date is set.'); }
+  if(Start.value && End.value && (new Date(Start.value) > new Date(End.value))){ setErr(Start,true); setErr(End,true); ok=false; toast('Start date must be before End date.'); }
+  if(Indicators.length===0){ ok=false; toast('Select at least one linked indicator or provide extra IDs.'); }
+  if(!ok){ toast('Please fix the highlighted fields.'); scrollFirstError(); return; }
+
+  state.exp.push({Exp_ID: Exp_ID.value.trim(), Field_ID: Field_ID.value.trim(), Practice_ID: Practice_ID.value, Params: Params.value.trim(), Start: Start.value, End: End.value, Indicators: Indicators.join(', ')});
+  renderTables(); $('#e_expId').value=''; $('#e_fieldId').value=''; $('#e_practiceSelect').value=''; $('#e_params').value=''; $('#e_start').value=''; $('#e_end').value=''; $('#e_inds_extra').value=''; Array.from($('#e_inds').options).forEach(o=>o.selected=false);
+});
+$('#tblExp').addEventListener('click', (e)=>{ const btn = e.target.closest('button[data-del-exp]'); if(!btn) return; state.exp.splice(+btn.getAttribute('data-del-exp'),1); renderTables(); });
+$('#btnClearExpForm').addEventListener('click', ()=>{ ['e_expId','e_fieldId','e_practiceSelect','e_params','e_start','e_end','e_inds_extra'].forEach(id=>$('#'+id).value=''); Array.from($('#e_inds').options).forEach(o=>o.selected=false); });
+
+// Generate plots directly from Experiments section
+$('#btnGenPlots').addEventListener('click', ()=>{ const id=$('#e_expId').value.trim(); if(!required(id)) return toast('Enter Exp_ID first.'); addStdPlotsForExp(id); });
+
+/* ===== Plots bindings ===== */
+function addStdPlotsForExp(exp){
+  const std = [ ['C','Control'], ['T1','Treatment 1'], ['T2','Treatment 2'], ['T12','T1+T2'] ];
+  std.forEach(([pid, label])=>{ state.plots.push({Exp_ID:exp, Plot_ID:pid, Treatments:label, Reps:3}); });
+  renderTables(); $('#p_exp').value=exp; refreshPlotOptionsForSampling();
+}
+$('#btnAddStdPlots').addEventListener('click', ()=>{ const exp=$('#p_exp').value; if(!required(exp)) return toast('Choose an experiment.'); addStdPlotsForExp(exp); });
+$('#btnAddPlot').addEventListener('click', ()=>{
+  const exp=$('#p_exp').value; const plot=$('#p_plotId').value; const label=$('#p_treat').value.trim()||plot; const reps=$('#p_reps').value||1; if(!required(exp)) return toast('Choose an experiment.'); state.plots.push({Exp_ID:exp, Plot_ID:plot, Treatments:label, Reps: Number(reps)}); renderTables(); });
+$('#tblPlots').addEventListener('click', (e)=>{ const btn=e.target.closest('button[data-del-plot]'); if(!btn) return; state.plots.splice(+btn.getAttribute('data-del-plot'),1); renderTables(); });
+
+/* ===== Sampling bindings ===== */
+function refreshPlotOptionsForSampling(){
+  const exp = $('#s_exp').value;
+  const plots = state.plots.filter(p=>p.Exp_ID===exp);
+  const opts = (plots.length?plots:[{Plot_ID:'C'},{Plot_ID:'T1'},{Plot_ID:'T2'},{Plot_ID:'T12'}]).map(p=>`<option value="${p.Plot_ID}">${p.Plot_ID}</option>`).join('');
+  $('#s_plot').innerHTML = `<option value="">— plot —</option>` + opts;
+  refreshIndicatorsGrid();
+  computeSampleId();
+}
+$('#s_exp').addEventListener('change', ()=>{ refreshPlotOptionsForSampling(); });
+$('#s_plot').addEventListener('change', computeSampleId);
+$('#s_layer').addEventListener('input', computeSampleId);
+$('#s_rep').addEventListener('input', computeSampleId);
+$('#s_date').addEventListener('change', computeSampleId);
+
+function sanitize(str){ return String(str||'').replace(/\s+/g,'').replace(/[^A-Za-z0-9\-\_]/g,''); }
+function computeSampleId(){
+  const exp=$('#s_exp').value||'EXP'; const plot=$('#s_plot').value||'P'; const layer=sanitize($('#s_layer').value||'L'); const rep=$('#s_rep').value||'1'; $('#s_sampleId').value = `${exp}-${plot}-${layer||'L'}-R${rep}`; }
+
+function indicatorsForExp(exp){
+  // derive from plan rows for this exp; if none, fallback to all INDICATORS (first 12)
+  const ids = state.plan.filter(r=>r.Exp_ID===exp).map(r=>r.Indicator_ID);
+  const uniq = Array.from(new Set(ids));
+  if(uniq.length) return uniq.slice(0,12);
+  return INDICATORS.slice(0,12).map(([id])=>id);
+}
+function refreshIndicatorsGrid(){
+  const exp=$('#s_exp').value; const ids = indicatorsForExp(exp);
+  const grid = $('#s_indGrid'); grid.innerHTML='';
+  ids.forEach(id=>{
+    const wrap=document.createElement('div');
+    wrap.innerHTML = `<label style="margin-bottom:4px">${id}</label><input data-ind="${id}" placeholder="Result" />`;
+    grid.appendChild(wrap);
+  });
+}
+$('#btnClearIndVals').addEventListener('click', ()=>{ $$('#s_indGrid input').forEach(i=>i.value=''); });
+$('#btnFillNA').addEventListener('click', ()=>{ $$('#s_indGrid input').forEach(i=>{ if(!i.value) i.value='NA'; }); });
+
+$('#btnAddSample').addEventListener('click', ()=>{
+  const Exp_ID=$('#s_exp'); const Plot_ID=$('#s_plot'); const DateEl=$('#s_date');
+  [Exp_ID, Plot_ID, DateEl].forEach(el=>setErr(el,false));
+  let ok=true; if(!required(Exp_ID.value)){ setErr(Exp_ID,true); ok=false; } if(!required(Plot_ID.value)){ setErr(Plot_ID,true); ok=false; } if(!required(DateEl.value)){ setErr(DateEl,true); ok=false; }
+  if(!ok){ toast('Please select Experiment, Plot and Date.'); scrollFirstError(); return; }
+
+  const Layer_ID = $('#s_layer').value.trim(); const Replicate = $('#s_rep').value||1; const Sample_ID=$('#s_sampleId').value;
+  const Results = {}; $$('#s_indGrid input').forEach(i=>{ const id=i.getAttribute('data-ind'); if(required(i.value)) Results[id]=i.value; });
+  state.samples.push({ Sample_ID, Exp_ID:Exp_ID.value, Plot_ID:Plot_ID.value, Layer_ID, Replicate:Number(Replicate), Date:$('#s_date').value, Results });
+  renderTables();
+  // clear values but keep context
+  $$('#s_indGrid input').forEach(i=>i.value=''); $('#s_rep').value = Number(Replicate)+1;
+  computeSampleId();
+});
+$('#tblSamples').addEventListener('click', (e)=>{ const btn=e.target.closest('button[data-del-sample]'); if(!btn) return; state.samples.splice(+btn.getAttribute('data-del-sample'),1); renderTables(); });
+
+/* ===== Filter bar events ===== */
+$('#btnApplyFilter').addEventListener('click', applyFilter);
+$('#btnClearFilter').addEventListener('click', ()=>{ $('#q_search').value=''; $$('#tagBar .pill.active').forEach(p=>p.classList.remove('active')); applyFilter(); });
+$('#q_search').addEventListener('keyup', (e)=>{ if(e.key==='Enter') applyFilter(); });
+
+/* ===== Import/Export ===== */
+$('#btnSave').addEventListener('click', saveLocal);
+$('#btnLoad').addEventListener('click', loadLocal);
+$('#btnExportJSON').addEventListener('click', ()=>{ const text = JSON.stringify(state, null, 2); download('soilcrates_data.json', text); });
+$('#btnExportCSV').addEventListener('click', ()=>{
+  if(state.exp.length) download('trials.csv', toCSV(state.exp));
+  if(state.plots.length) download('plots.csv', toCSV(state.plots));
+  if(state.samples.length) download('samples.csv', toSamplesCSV());
+  if(!state.exp.length && !state.plots.length && !state.samples.length) toast('No data to export.');
+});
+$('#btnClearAll').addEventListener('click', ()=>{ if(confirm('Clear ALL data? This cannot be undone.')){ state.exp=[]; state.plots=[]; state.plan=[]; state.samples=[]; localStorage.removeItem(KEY); renderTables(); } });
+$('#btnImport').addEventListener('click', ()=>{ const f=$('#fileImport').files[0]; if(!f) return toast('Choose a JSON file first.'); const reader=new FileReader(); reader.onload=e=>{ try{ const data=JSON.parse(e.target.result); state.exp=data.exp||[]; state.plots=data.plots||[]; state.plan=data.plan||[]; state.samples=data.samples||[]; renderTables(); toast('Import successful.'); }catch(err){ toast('Import failed: ' + err.message) } }; reader.readAsText(f); });
+
+/* ===== Init ===== */
+populateDropdowns();
+renderTables();
+</script>
+</body>
+</html>

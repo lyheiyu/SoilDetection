@@ -1,0 +1,681 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>SOILCRATES · Data Capture Prototype (with Preloaded Lists & Tag Search)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root{
+      --bg:#0b1220;--card:#12192b;--muted:#90a3b4;--text:#eaf2ff;--accent:#6ee7b7;--accent2:#60a5fa;--danger:#ef4444;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial;color:var(--text);
+      background:linear-gradient(180deg,#0b1220,#0b1220 60%,#111827)}
+    header{padding:20px 24px;border-bottom:1px solid #1f2937;background:#0b1220;position:sticky;top:0;z-index:10}
+    h1{margin:0;font-size:20px;letter-spacing:.2px}
+    .sub{color:var(--muted);font-size:12px;margin-top:6px}
+    main{max-width:1100px;margin:24px auto;padding:0 16px;display:grid;grid-template-columns:260px 1fr;gap:16px}
+    nav{background:#12192b;border:1px solid #1f2937;border-radius:14px;padding:12px;height:max-content;position:sticky;top:88px}
+    .tab{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:10px;color:#c9d6e5;cursor:pointer}
+    .tab.active{background:#1d2436;color:#fff;border:1px solid #293246}
+    section.panel{background:#12192b;border:1px solid #1f2937;border-radius:16px;padding:16px}
+    .row{display:grid;grid-template-columns:repeat(12,1fr);gap:10px}
+    .col-2{grid-column:span 2}.col-3{grid-column:span 3}.col-4{grid-column:span 4}.col-6{grid-column:span 6}.col-8{grid-column:span 8}.col-12{grid-column:span 12}
+    label{font-size:12px;color:#90a3b4;display:block;margin-bottom:6px}
+    input,select,textarea{width:100%;padding:10px 12px;border-radius:10px;border:1px solid #293246;background:#0f1524;color:#eaf2ff}
+    textarea{min-height:72px;resize:vertical}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 12px;border-radius:10px;border:1px solid #2a3548;background:#162036;color:#eaf2ff;cursor:pointer}
+    .btn:hover{filter:brightness(1.08)}
+    .btn.primary{background:linear-gradient(135deg,#2563eb,#10b981);border-color:transparent}
+    .btn.ghost{background:transparent;border-color:#2a3548}
+    .btn.danger{background:#361620;border-color:#4b1d24;color:#fecaca}
+    .bar{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
+    table{width:100%;border-collapse:collapse;margin-top:8px;border-radius:12px;overflow:hidden}
+    th,td{font-size:13px;text-align:left;padding:10px;border-bottom:1px solid #223049}
+    th{color:#a7b6c9;background:#131b2c;position:sticky;top:0;z-index:1}
+    tr.hide{display:none}
+    .pill{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border-radius:999px;font-size:12px;border:1px solid #2a3548;color:#dbe7f6;cursor:pointer}
+    .pill:hover{filter:brightness(1.1)}
+    .pill.active{background:#1e293b}
+    .hint{color:#94a3b8;font-size:12px}
+    .sep{height:1px;background:#223049;margin:14px 0}
+    footer{max-width:1100px;margin:24px auto;color:#91a4b6;font-size:12px;padding:0 16px}
+    .multiselect{height:110px}
+  </style>
+</head>
+<body>
+<header>
+  <h1>SOILCRATES · Data Capture Prototype</h1>
+  <div class="sub">Preloaded 35 practices & core indicators · Tag search across all tables · Local save/import/export.</div>
+</header>
+
+<main>
+  <!-- NAV -->
+  <nav>
+    <div class="tab active" data-target="farmer">👩‍🌾 Farmer Survey (WP3)</div>
+    <div class="tab" data-target="experiment">🧪 Trial Practices (WP5)</div>
+    <div class="tab" data-target="dataplan">📈 Indicator Plan (Section 4)</div>
+    <div class="tab" data-target="dashboard">📊 Dashboard & Import/Export</div>
+  </nav>
+
+  <!-- CONTENT -->
+  <div>
+    <!-- GLOBAL SEARCH / TAGS -->
+    <section class="panel">
+      <div class="row">
+        <div class="col-8">
+          <label>Search / Tags (filters all tables)</label>
+          <input id="q_search" placeholder="Type to filter by Farmer_ID, Exp_ID, Region, Practice, Indicator, etc." />
+        </div>
+        <div class="col-4" style="display:flex;align-items:end;gap:8px">
+          <button class="btn" id="btnApplyFilter">🔎 Apply</button>
+          <button class="btn ghost" id="btnClearFilter">✖ Clear</button>
+        </div>
+        <div class="col-12">
+          <div class="bar" id="tagBar"></div>
+          <div class="hint">Click a chip to filter. Chips include practice IDs and core indicators. You can also type your own search above.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FARMER -->
+    <section class="panel" id="panel-farmer">
+      <div class="row">
+        <div class="col-6">
+          <label>Farmer_ID *</label>
+          <input id="f_farmerId" placeholder="e.g., IE-F001" />
+        </div>
+        <div class="col-6">
+          <label>Region_ID (NUTS2/3)</label>
+          <input id="f_regionId" placeholder="e.g., IE06 / FRK1" />
+        </div>
+        <div class="col-6">
+          <label>Main crop</label>
+          <input id="f_crop" placeholder="e.g., wheat / maize / barley" />
+        </div>
+        <div class="col-3">
+          <label>Area (ha)</label>
+          <input id="f_area" type="number" min="0" step="0.01" />
+        </div>
+        <div class="col-3">
+          <label>Irrigated</label>
+          <select id="f_irrigation"><option value="">—</option><option>Y</option><option>N</option></select>
+        </div>
+
+        <div class="col-12"><div class="sep"></div></div>
+
+        <div class="col-4">
+          <label>Practice (preloaded 38) *</label>
+          <select id="f_practiceSelect"></select>
+        </div>
+        <div class="col-4">
+          <label>Practice name</label>
+          <input id="f_practiceName" placeholder="auto-filled, editable" />
+        </div>
+        <div class="col-2">
+          <label>Adopted</label>
+          <select id="f_adopted"><option value="">—</option><option>Y</option><option>N</option></select>
+        </div>
+        <div class="col-2">
+          <label>Years in use</label>
+          <input id="f_years" type="number" min="0" step="1" />
+        </div>
+
+        <div class="col-6">
+          <label>Cost (€/ha)</label>
+          <input id="f_cost" type="number" min="0" step="0.01" />
+        </div>
+        <div class="col-6">
+          <label>Perceived benefit (yield/soil/other)</label>
+          <input id="f_benefit" placeholder="e.g., +5% yield; higher SOM" />
+        </div>
+
+        <div class="col-12">
+          <label>Reason for adoption / non-adoption</label>
+          <textarea id="f_reason" placeholder="Subsidy? knowledge gap? labour? market demand?"></textarea>
+        </div>
+
+        <div class="col-12 bar">
+          <button class="btn primary" id="btnAddFarmer">➕ Add to list</button>
+          <button class="btn ghost" id="btnClearFarmerForm">🧽 Clear form</button>
+        </div>
+
+        <div class="col-12">
+          <table id="tblFarmer">
+            <thead><tr>
+              <th>Farmer_ID</th><th>Region</th><th>Crop</th><th>Area(ha)</th><th>Practice_ID</th><th>Name</th><th>Adopted</th><th>Years</th><th>Cost(€/ha)</th><th>Benefit</th><th>Reason</th><th></th>
+            </tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRIALS -->
+    <section class="panel" id="panel-experiment" hidden>
+      <div class="row">
+        <div class="col-4"><label>Exp_ID *</label><input id="e_expId" placeholder="e.g., NL-2" /></div>
+        <div class="col-4"><label>Field_ID</label><input id="e_fieldId" placeholder="e.g., Field-01" /></div>
+        <div class="col-4">
+          <label>Practice (preloaded 35) *</label>
+          <select id="e_practiceSelect"></select>
+        </div>
+
+        <div class="col-6"><label>Parameters (rate / timing / method)</label><input id="e_params" placeholder="N=50kg/ha; mid-April sowing; no-till" /></div>
+        <div class="col-3"><label>Start date</label><input id="e_start" type="date" /></div>
+        <div class="col-3"><label>End date</label><input id="e_end" type="date" /></div>
+
+        <div class="col-6">
+          <label>Linked indicators (multi-select core list)</label>
+          <select id="e_inds" class="multiselect" multiple></select>
+        </div>
+        <div class="col-6">
+          <label>Additional indicator IDs (optional, comma-separated)</label>
+          <input id="e_inds_extra" placeholder="e.g., IND999, IND1000" />
+        </div>
+
+        <div class="col-12 bar">
+          <button class="btn primary" id="btnAddExp">➕ Add to trials</button>
+          <button class="btn ghost" id="btnClearExpForm">🧽 Clear form</button>
+        </div>
+
+        <div class="col-12">
+          <table id="tblExp">
+            <thead><tr>
+              <th>Exp_ID</th><th>Field_ID</th><th>Practice_ID</th><th>Params</th><th>Start</th><th>End</th><th>Indicators</th><th></th>
+            </tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- INDICATOR PLAN -->
+    <section class="panel" id="panel-dataplan" hidden>
+      <div class="row">
+        <div class="col-3"><label>Exp_ID *</label><input id="d_expId" placeholder="NL-2" /></div>
+        <div class="col-3">
+          <label>Indicator (core list) *</label>
+          <select id="d_indSelect"></select>
+        </div>
+        <div class="col-6"><label>Indicator name</label><input id="d_indName" placeholder="Auto-filled, editable" /></div>
+
+        <div class="col-3"><label>Type</label>
+          <select id="d_type"><option>Biological</option><option>Chemical</option><option>Physical</option><option>Crop</option></select>
+        </div>
+        <div class="col-3"><label>Unit</label><input id="d_unit" placeholder="%, t/ha, mg/kg…" /></div>
+        <div class="col-6"><label>Project timepoints</label>
+          <div class="bar" style="padding:0">
+            <label><input type="checkbox" id="d_T0" /> T0</label>
+            <label><input type="checkbox" id="d_T1" /> T1</label>
+            <label><input type="checkbox" id="d_T2" /> T2</label>
+            <label><input type="checkbox" id="d_Tf" /> T_final</label>
+          </div>
+        </div>
+
+        <div class="col-6"><label>Seasonal timing</label><input id="d_timing" placeholder="Sept/Oct, Feb/March, at harvest…" /></div>
+        <div class="col-6"><label>Sampling method</label><input id="d_method" placeholder="Control vs Treatment; all replicates; 0–30 cm depth" /></div>
+
+        <div class="col-12 bar">
+          <button class="btn primary" id="btnAddPlan">➕ Add to plan</button>
+          <button class="btn ghost" id="btnClearPlanForm">🧽 Clear form</button>
+        </div>
+
+        <div class="col-12">
+          <table id="tblPlan">
+            <thead><tr>
+              <th>Exp_ID</th><th>Indicator_ID</th><th>Name</th><th>Type</th><th>Unit</th>
+              <th>T0</th><th>T1</th><th>T2</th><th>T_final</th><th>Timing</th><th>Method</th><th></th>
+            </tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- DASHBOARD -->
+    <section class="panel" id="panel-dashboard" hidden>
+      <div class="bar">
+        <button class="btn primary" id="btnSave">💾 Save to browser</button>
+        <button class="btn" id="btnLoad">📥 Load</button>
+        <button class="btn" id="btnExportJSON">🧾 Export JSON</button>
+        <button class="btn" id="btnExportCSV">📤 Export CSV (separate files)</button>
+        <button class="btn danger" id="btnClearAll">🗑️ Clear all</button>
+      </div>
+      <div class="sep"></div>
+      <div class="bar">
+        <input type="file" id="fileImport" accept=".json" />
+        <button class="btn" id="btnImport">📤 Import from JSON</button>
+      </div>
+      <div class="sep"></div>
+      <div id="stats" class="hint">Stats: —</div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  Production tips: add validation rules, role-based access, API, file uploads, and map widgets. Dropdowns can be locked to codes from your master catalogue.
+</footer>
+
+<script>
+/* ===== Preloaded lists ===== */
+// 35 practices (ID → name). IDs PR001..PR035 order mirrors D5.1 grouping (incl. 6a–6d).
+const PRACTICES = [
+  ["PR001","Minimum/No tillage"],
+  ["PR002","Buffer strips"],
+  ["PR003","Agroforestry"],
+  ["PR004","Diversified crop rotations"],
+  ["PR005","Strip cropping"],
+  ["PR006","Cover crops – carbon sequestration (6a)"],
+  ["PR007","Cover crops – biological N fixation (6b)"],
+  ["PR008","Catch crops – reduce N leaching (6c)"],
+  ["PR009","Cover crops – nematode control (6d)"],
+  ["PR010","Intercropping"],
+  ["PR011","Tagetes for nematode control"],
+  ["PR012","Grassland species diversification"],
+  ["PR013","Compost (various types)"],
+  ["PR014","Bokashi"],
+  ["PR015","Biochar"],
+  ["PR016","Seaweed products"],
+  ["PR017","Digestate"],
+  ["PR018","Clay minerals / rocky material"],
+  ["PR019","Wood ashes"],
+  ["PR020","Gypsum"],
+  ["PR021","Microbial biostimulants"],
+  ["PR022","Humic acids / humates"],
+  ["PR023","Water erosion/runoff control"],
+  ["PR024","Wind erosion control (windbreaks)"],
+  ["PR025","Low-pressure tyres (compaction)"],
+  ["PR026","Deep-rooting crops"],
+  ["PR027","Perennial crops"],
+  ["PR028","Phytoremediation (soil remediation)"],
+  ["PR029","Field inundation"],
+  ["PR030","Permanent grassland on poor soils"],
+  ["PR031","Integrated Crop Management (ICM)"],
+  ["PR032","Irrigation systems"],
+  ["PR033","Water catchment infrastructure"],
+  ["PR034","Man-made rills (water mgmt/erosion)"],
+  ["PR035","Deep ploughing & natural processes"]
+];
+
+// Core indicator list (ID → name). Extend as needed.
+const INDICATORS = [
+  ["IND001","Soil organic matter (SOM)"],
+  ["IND002","Organic carbon (TOC)"],
+  ["IND003","Total nitrogen (TN)"],
+  ["IND004","Available phosphorus (P)"],
+  ["IND005","Potassium (K)"],
+  ["IND006","Soil pH"],
+  ["IND007","Electrical conductivity (EC)"],
+  ["IND008","C/N ratio (TOC/TON)"],
+  ["IND009","CEC & exchangeable cations"],
+  ["IND010","Bulk density"],
+  ["IND011","Aggregate stability / MWD"],
+  ["IND012","Texture / particle size"],
+  ["IND013","Water holding capacity (WHC)"],
+  ["IND014","Soil moisture (field)"],
+  ["IND015","Soil respiration"],
+  ["IND016","GHG fluxes (CO2, N2O, CH4)"],
+  ["IND017","Heavy metals"],
+  ["IND018","PFAS / PAHs (pollutants)"],
+  ["IND019","Microbial biomass C"],
+  ["IND020","Enzyme activity (dehydrogenase)"],
+  ["IND021","Microbial diversity (bac/arch/fungi)"],
+  ["IND022","Earthworm count"],
+  ["IND023","Yield"],
+  ["IND024","NDVI / NPP / LAI"],
+  ["IND025","Albedo / LST"],
+  ["IND026","Soil sealing / bare soil index"]
+];
+
+/* ===== State + storage ===== */
+const state = { farmer: [], exp: [], plan: [] };
+const KEY = 'soilcrates_demo_v2';
+
+/* ===== Helpers ===== */
+const $ = s => document.querySelector(s);
+const $$ = s => Array.from(document.querySelectorAll(s));
+const required = v => v != null && String(v).trim() !== '';
+const toast = m => alert(m);
+
+function populateDropdowns(){
+  // practice selects
+  const practiceOpts = PRACTICES.map(([id, name]) => `<option value="${id}">${id} — ${name}</option>`).join('');
+  $('#f_practiceSelect').innerHTML = `<option value="">— select —</option>` + practiceOpts;
+  $('#e_practiceSelect').innerHTML = `<option value="">— select —</option>` + practiceOpts;
+
+  // indicator selects
+  const indOpts = INDICATORS.map(([id, name]) => `<option value="${id}">${id} — ${name}</option>`).join('');
+  $('#e_inds').innerHTML = indOpts;               // multi
+  $('#d_indSelect').innerHTML = `<option value="">— select —</option>` + indOpts;
+
+  // tag chips (practice IDs + indicator IDs)
+  const tagBar = $('#tagBar');
+  const chips = [
+    ...PRACTICES.map(([id]) => id),
+    ...INDICATORS.map(([id]) => id),
+    "Adopted:Y","Adopted:N","Irrigated:Y","Irrigated:N"
+  ];
+  tagBar.innerHTML = '';
+  chips.forEach(tag=>{
+    const span = document.createElement('span');
+    span.className = 'pill';
+    span.textContent = tag;
+    span.dataset.tag = tag;
+    span.addEventListener('click', ()=>{
+      span.classList.toggle('active');
+      applyFilter(); // auto-apply on click
+    });
+    tagBar.appendChild(span);
+  });
+}
+
+function renderTables(){
+  // Farmer table
+  const tbF = $('#tblFarmer tbody'); tbF.innerHTML = '';
+  state.farmer.forEach((r,i)=>{
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td>${r.Farmer_ID||''}</td>
+      <td>${r.Region_ID||''}</td>
+      <td>${r.Crop||''}</td>
+      <td>${r.Area||''}</td>
+      <td>${r.Practice_ID||''}</td>
+      <td>${r.Practice_Name||''}</td>
+      <td>${r.Adopted||''}</td>
+      <td>${r.Years||''}</td>
+      <td>${r.Cost||''}</td>
+      <td>${r.Benefit||''}</td>
+      <td>${r.Reason||''}</td>
+      <td><button class="btn danger" data-del-farmer="${i}">Delete</button></td>
+    `;
+    tbF.appendChild(tr);
+  });
+
+  // Trials table
+  const tbE = $('#tblExp tbody'); tbE.innerHTML = '';
+  state.exp.forEach((r,i)=>{
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td>${r.Exp_ID||''}</td>
+      <td>${r.Field_ID||''}</td>
+      <td>${r.Practice_ID||''}</td>
+      <td>${r.Params||''}</td>
+      <td>${r.Start||''}</td>
+      <td>${r.End||''}</td>
+      <td>${r.Indicators||''}</td>
+      <td><button class="btn danger" data-del-exp="${i}">Delete</button></td>
+    `;
+    tbE.appendChild(tr);
+  });
+
+  // Indicator plan table
+  const tbP = $('#tblPlan tbody'); tbP.innerHTML = '';
+  state.plan.forEach((r,i)=>{
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td>${r.Exp_ID||''}</td>
+      <td>${r.Indicator_ID||''}</td>
+      <td>${r.Indicator_Name||''}</td>
+      <td>${r.Type||''}</td>
+      <td>${r.Unit||''}</td>
+      <td>${r.T0?'✓':''}</td>
+      <td>${r.T1?'✓':''}</td>
+      <td>${r.T2?'✓':''}</td>
+      <td>${r.Tf?'✓':''}</td>
+      <td>${r.Timing||''}</td>
+      <td>${r.Method||''}</td>
+      <td><button class="btn danger" data-del-plan="${i}">Delete</button></td>
+    `;
+    tbP.appendChild(tr);
+  });
+
+  $('#stats') && ($('#stats').textContent =
+    `Stats: farmer rows ${state.farmer.length} · trial rows ${state.exp.length} · indicator rows ${state.plan.length}`);
+
+  // re-apply filter if any
+  applyFilterSilently();
+}
+
+/* ===== Filtering (Search / Tag chips) ===== */
+function currentActiveTags(){
+  return $$('#tagBar .pill.active').map(x=>x.dataset.tag.toLowerCase());
+}
+function rowMatchesFilter(tr, terms){
+  const text = tr.innerText.toLowerCase();
+  return terms.every(t => text.includes(t));
+}
+function applyFilter(){
+  const q = ($('#q_search').value || '').trim().toLowerCase();
+  const terms = q ? q.split(/\s+/).filter(Boolean) : [];
+  const tags = currentActiveTags(); // include chips
+  const allTerms = [...terms, ...tags];
+
+  // Special tags toggles (Adopted/Y/N and Irrigated/Y/N)
+  const special = { adopted: null, irrigated: null };
+  tags.forEach(t=>{
+    if(t === 'adopted:y') special.adopted = 'y';
+    if(t === 'adopted:n') special.adopted = 'n';
+    if(t === 'irrigated:y') special.irrigated = 'y';
+    if(t === 'irrigated:n') special.irrigated = 'n';
+  });
+
+  [ '#tblFarmer', '#tblExp', '#tblPlan' ].forEach(sel=>{
+    const rows = $$(sel+' tbody tr');
+    rows.forEach(tr=>{
+      tr.classList.remove('hide'); // reset
+      let ok = true;
+
+      // text terms
+      if(allTerms.length){
+        ok = rowMatchesFilter(tr, allTerms);
+      }
+
+      // extra logic for Farmer irrigated/adopted if needed
+      if(ok && sel === '#tblFarmer'){
+        const tds = tr.querySelectorAll('td');
+        const adopted = (tds[6]?.innerText||'').trim().toLowerCase();
+        const irrigCell = null; // not printed in table; skip strict filter
+        if(special.adopted && adopted !== special.adopted) ok = false;
+      }
+
+      if(!ok) tr.classList.add('hide');
+    });
+  });
+}
+function applyFilterSilently(){ // keep current selection
+  applyFilter();
+}
+
+/* ===== Storage ===== */
+function saveLocal(){ localStorage.setItem(KEY, JSON.stringify(state)); toast('Saved to browser.'); }
+function loadLocal(){
+  const raw = localStorage.getItem(KEY);
+  if(!raw) return toast('Nothing saved yet.');
+  try{
+    const data = JSON.parse(raw);
+    state.farmer = data.farmer || [];
+    state.exp = data.exp || [];
+    state.plan = data.plan || [];
+    renderTables(); toast('Loaded from browser.');
+  }catch(e){ toast('Load failed: ' + e.message) }
+}
+function toCSV(arr){
+  if(!arr.length) return '';
+  const headers = Object.keys(arr[0]);
+  const rows = arr.map(o => headers.map(h => {
+    const v = (o[h] ?? '');
+    if(typeof v === 'string' && (v.includes(',') || v.includes('"') || v.includes('\n'))){
+      return `"${v.replace(/"/g,'""')}"`;
+    }
+    return v;
+  }).join(','));
+  return headers.join(',') + '\n' + rows.join('\n');
+}
+function download(filename, text){
+  const blob = new Blob([text], {type: 'text/plain;charset=utf-8'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a'); a.href = url; a.download = filename; a.click(); URL.revokeObjectURL(url);
+}
+
+/* ===== Nav tabs ===== */
+$$('.tab').forEach(t=>{
+  t.addEventListener('click', ()=>{
+    $$('.tab').forEach(x=>x.classList.remove('active'));
+    t.classList.add('active');
+    const target = t.getAttribute('data-target');
+    ['farmer','experiment','dataplan','dashboard'].forEach(id=>{
+      const el = $('#panel-'+id);
+      if(el) el.hidden = (id!==target);
+    });
+  });
+});
+
+/* ===== Form bindings ===== */
+// Farmer: when a practice is selected, autofill ID & name
+$('#f_practiceSelect').addEventListener('change', ()=>{
+  const val = $('#f_practiceSelect').value;
+  const found = PRACTICES.find(([id])=>id===val);
+  if(found){
+    $('#f_practiceName').value = found[1];
+  }else{
+    $('#f_practiceName').value = '';
+  }
+});
+
+$('#btnAddFarmer').addEventListener('click', ()=>{
+  const Farmer_ID = $('#f_farmerId').value.trim();
+  const Region_ID = $('#f_regionId').value.trim();
+  const Crop = $('#f_crop').value.trim();
+  const Area = $('#f_area').value;
+  const irrig = $('#f_irrigation').value;
+  const practiceSel = $('#f_practiceSelect').value;
+  if(!required(Farmer_ID) || !required(practiceSel)) return toast('Farmer_ID and Practice are required.');
+
+  const Practice_ID = practiceSel;
+  const Practice_Name = $('#f_practiceName').value.trim() || (PRACTICES.find(p=>p[0]===practiceSel)?.[1]||'');
+  const Adopted = $('#f_adopted').value;
+  const Years = $('#f_years').value;
+  const Cost = $('#f_cost').value;
+  const Benefit = $('#f_benefit').value.trim();
+  const Reason = $('#f_reason').value.trim();
+
+  state.farmer.push({Farmer_ID, Region_ID, Crop, Area, Irrigated:irrig, Practice_ID, Practice_Name, Adopted, Years, Cost, Benefit, Reason});
+  renderTables();
+});
+$('#btnClearFarmerForm').addEventListener('click', ()=>{
+  ['f_farmerId','f_regionId','f_crop','f_area','f_irrigation','f_practiceSelect','f_practiceName','f_adopted','f_years','f_cost','f_benefit','f_reason']
+    .forEach(id=>{ const el = $('#'+id); if(el.tagName==='SELECT') el.value=''; else el.value=''; });
+});
+$('#tblFarmer').addEventListener('click', (e)=>{
+  const btn = e.target.closest('button[data-del-farmer]'); if(!btn) return;
+  state.farmer.splice(+btn.getAttribute('data-del-farmer'),1); renderTables();
+});
+
+// Trials: practice & indicators
+$('#btnAddExp').addEventListener('click', ()=>{
+  const Exp_ID = $('#e_expId').value.trim();
+  const Field_ID = $('#e_fieldId').value.trim();
+  const Practice_ID = $('#e_practiceSelect').value;
+  if(!required(Exp_ID) || !required(Practice_ID)) return toast('Exp_ID and Practice are required.');
+  const Params = $('#e_params').value.trim();
+  const Start = $('#e_start').value;
+  const End = $('#e_end').value;
+  // collect multi-select indicators
+  const sel = Array.from($('#e_inds').selectedOptions).map(o=>o.value);
+  const extra = ($('#e_inds_extra').value||'').split(',').map(s=>s.trim()).filter(Boolean);
+  const Indicators = [...sel, ...extra].join(', ');
+
+  state.exp.push({Exp_ID, Field_ID, Practice_ID, Params, Start, End, Indicators});
+  renderTables();
+});
+$('#btnClearExpForm').addEventListener('click', ()=>{
+  ['e_expId','e_fieldId','e_practiceSelect','e_params','e_start','e_end','e_inds_extra'].forEach(id=>$('#'+id).value='');
+  Array.from($('#e_inds').options).forEach(o=>o.selected=false);
+});
+$('#tblExp').addEventListener('click', (e)=>{
+  const btn = e.target.closest('button[data-del-exp]'); if(!btn) return;
+  state.exp.splice(+btn.getAttribute('data-del-exp'),1); renderTables();
+});
+
+// Indicator plan: when indicator picked, fill name
+$('#d_indSelect').addEventListener('change', ()=>{
+  const val = $('#d_indSelect').value;
+  const found = INDICATORS.find(([id])=>id===val);
+  $('#d_indName').value = found ? found[1] : '';
+});
+
+$('#btnAddPlan').addEventListener('click', ()=>{
+  const Exp_ID = $('#d_expId').value.trim();
+  const Indicator_ID = $('#d_indSelect').value;
+  if(!required(Exp_ID) || !required(Indicator_ID)) return toast('Exp_ID and Indicator are required.');
+
+  const Indicator_Name = $('#d_indName').value.trim() || (INDICATORS.find(([id])=>id===Indicator_ID)?.[1]||'');
+  const Type = $('#d_type').value;
+  const Unit = $('#d_unit').value.trim();
+  const T0 = $('#d_T0').checked, T1=$('#d_T1').checked, T2=$('#d_T2').checked, Tf=$('#d_Tf').checked;
+  const Timing = $('#d_timing').value.trim();
+  const Method = $('#d_method').value.trim();
+
+  state.plan.push({Exp_ID, Indicator_ID, Indicator_Name, Type, Unit, T0, T1, T2, Tf, Timing, Method});
+  renderTables();
+});
+$('#btnClearPlanForm').addEventListener('click', ()=>{
+  ['d_expId','d_indSelect','d_indName','d_unit','d_timing','d_method'].forEach(id=>$('#'+id).value='');
+  ['d_T0','d_T1','d_T2','d_Tf'].forEach(id=>$('#'+id).checked=false);
+});
+$('#tblPlan').addEventListener('click', (e)=>{
+  const btn = e.target.closest('button[data-del-plan]'); if(!btn) return;
+  state.plan.splice(+btn.getAttribute('data-del-plan'),1); renderTables();
+});
+
+/* ===== Filter bar events ===== */
+$('#btnApplyFilter').addEventListener('click', applyFilter);
+$('#btnClearFilter').addEventListener('click', ()=>{
+  $('#q_search').value = '';
+  $$('#tagBar .pill.active').forEach(p=>p.classList.remove('active'));
+  applyFilter();
+});
+$('#q_search').addEventListener('keyup', (e)=>{ if(e.key==='Enter') applyFilter(); });
+
+/* ===== Import/Export ===== */
+$('#btnSave').addEventListener('click', saveLocal);
+$('#btnLoad').addEventListener('click', loadLocal);
+$('#btnExportJSON').addEventListener('click', ()=>{
+  const text = JSON.stringify(state, null, 2);
+  download('soilcrates_data.json', text);
+});
+$('#btnExportCSV').addEventListener('click', ()=>{
+  if(state.farmer.length) download('farmer.csv', toCSV(state.farmer));
+  if(state.exp.length) download('trials.csv', toCSV(state.exp));
+  if(state.plan.length) download('indicator_plan.csv', toCSV(state.plan));
+  if(!state.farmer.length && !state.exp.length && !state.plan.length) toast('No data to export.');
+});
+$('#btnClearAll').addEventListener('click', ()=>{
+  if(confirm('Clear ALL data? This cannot be undone.')){
+    state.farmer = []; state.exp = []; state.plan = [];
+    localStorage.removeItem(KEY); renderTables();
+  }
+});
+$('#btnImport').addEventListener('click', ()=>{
+  const f = $('#fileImport').files[0];
+  if(!f) return toast('Choose a JSON file first.');
+  const reader = new FileReader();
+  reader.onload = e=>{
+    try{
+      const data = JSON.parse(e.target.result);
+      state.farmer = data.farmer || [];
+      state.exp = data.exp || [];
+      state.plan = data.plan || [];
+      renderTables(); toast('Import successful.');
+    }catch(err){ toast('Import failed: ' + err.message) }
+  };
+  reader.readAsText(f);
+});
+
+/* ===== Init ===== */
+populateDropdowns();
+renderTables();
+</script>
+</body>
+</html>

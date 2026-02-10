@@ -433,7 +433,7 @@ from datetime import datetime
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 
-# Load the full JSON content (manually truncated here for demo purposes)
+# Load the full JSON content (manually truncated here for Platform html demo purposes)
 # The user already provided a very long JSON string; in practice, this would be parsed from response.
 
 # For demonstration, here's how you would parse the JSON response text:

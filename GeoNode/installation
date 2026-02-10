@@ -1,0 +1,34 @@
+# Python 3.10
+python3.10 -m venv ~/.venvs/my_geonode_env
+source ~/.venvs/my_geonode_env/bin/activate
+
+#  Django
+pip install Django==4.2.9
+
+#
+GN_VERSION=master
+
+#
+mkdir -p ~/geonode-project && cd ~/geonode-project
+
+#  GeoNode
+django-admin startproject \
+  --template=https://github.com/GeoNode/geonode-project/archive/refs/heads/$GN_VERSION.zip \
+  -e py,sh,md,rst,json,yml,ini,env,sample,properties \
+  -n monitoring-cron -n Dockerfile \
+  my_geonode
+
+cd ~/my_geonode
+
+#
+python create-envfile.py \
+  --env_type dev \
+  --hostname localhost \
+  --geonodepwd admin \
+  --geoserverpwd 890723
+
+
+docker compose build
+docker compose up -d
+
+http://localhost

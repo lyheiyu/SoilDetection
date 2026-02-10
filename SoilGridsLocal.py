@@ -122,7 +122,8 @@ import numpy as np
 import pandas as pd
 
 # 读取 TIFF 文件
-tif_file = "test3.tif"
+# tif_file = "test3.tif"
+tif_file= 'Tif/france_soil_ph.tif'
 with rasterio.open(tif_file) as src:
     data = src.read(1)  # 读取第一个波段
     transform = src.transform  # 获取地理变换参数
