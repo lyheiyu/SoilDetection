@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Air01 Monitoring Dashboard</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 24px;
+            font-family: Arial, sans-serif;
+            background: #f4f7f8;
+            color: #243238;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            margin-bottom: 8px;
+        }
+
+        .status {
+            margin-bottom: 24px;
+            color: #607078;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(
+                auto-fit,
+                minmax(180px, 1fr)
+            );
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .card {
+            padding: 20px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .card-title {
+            margin-bottom: 12px;
+            font-size: 14px;
+            color: #6a7c84;
+        }
+
+        .card-value {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .chart-panel,
+        .table-panel {
+            margin-bottom: 24px;
+            padding: 20px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .chart-container {
+            position: relative;
+            height: 350px;
+        }
+
+        .table-wrapper {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #e3e8ea;
+            white-space: nowrap;
+        }
+
+        th {
+            background: #f7f9fa;
+        }
+
+        .error {
+            color: #b00020;
+        }
+
+        button {
+            padding: 10px 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <h1>Air01 Monitoring Dashboard</h1>
+
+    <div id="status" class="status">
+        Loading ThingSpeak data...
+    </div>
+
+    <div class="cards">
+        <div class="card">
+            <div class="card-title">Temperature</div>
+            <div id="temperature" class="card-value">-- °C</div>
+        </div>
+
+        <div class="card">
+            <div class="card-title">Humidity</div>
+            <div id="humidity" class="card-value">-- %</div>
+        </div>
+
+        <div class="card">
+            <div class="card-title">eCO2</div>
+            <div id="eco2" class="card-value">-- ppm</div>
+        </div>
+
+        <div class="card">
+            <div class="card-title">Light</div>
+            <div id="lux" class="card-value">-- lux</div>
+        </div>
+
+<!--        <div class="card">-->
+<!--            <div class="card-title">Battery</div>-->
+<!--            <div id="battery" class="card-value">&#45;&#45; V</div>-->
+<!--        </div>-->
+    </div>
+
+    <div class="chart-panel">
+        <h2>Temperature and Humidity</h2>
+
+        <div class="chart-container">
+            <canvas id="sensorChart"></canvas>
+        </div>
+    </div>
+
+    <div class="table-panel">
+        <h2>Recent Measurements</h2>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Temperature</th>
+                    <th>Humidity</th>
+                    <th>eCO2</th>
+                    <th>Lux</th>
+<!--                    <th>Battery</th>-->
+                </tr>
+                </thead>
+
+                <tbody id="dataTable"></tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script>
+    const CHANNEL_ID = "3416100";
+    const READ_API_KEY = "UVI6E0Y7F7Z1AXHT";
+
+    const RESULT_COUNT = 20;
+    const REFRESH_INTERVAL_MS = 60000;
+
+    let sensorChart = null;
+
+    function toNumber(value) {
+        if (value === null || value === undefined || value === "") {
+            return null;
+        }
+
+        const parsedValue = Number(value);
+        return Number.isFinite(parsedValue) ? parsedValue : null;
+    }
+
+    function displayValue(value, unit, decimals = 2) {
+        if (value === null) {
+            return `-- ${unit}`;
+        }
+
+        return `${value.toFixed(decimals)} ${unit}`;
+    }
+
+    function formatTime(dateString) {
+        if (!dateString) {
+            return "--";
+        }
+
+        return new Date(dateString).toLocaleString();
+    }
+
+    async function loadThingSpeakData() {
+        const statusElement = document.getElementById("status");
+
+        try {
+            statusElement.classList.remove("error");
+            statusElement.textContent = "Loading ThingSpeak data...";
+
+            const url =
+                `https://api.thingspeak.com/channels/${CHANNEL_ID}` +
+                `/feeds.json?api_key=${READ_API_KEY}` +
+                `&results=${RESULT_COUNT}`;
+
+            const response = await fetch(url);
+
+            if (!response.ok) {
+                throw new Error(
+                    `ThingSpeak request failed with status ${response.status}`
+                );
+            }
+
+            const data = await response.json();
+
+            if (!Array.isArray(data.feeds) || data.feeds.length === 0) {
+                throw new Error("No Air01 measurements were returned.");
+            }
+
+            const measurements = data.feeds.map((feed) => ({
+                time: feed.created_at,
+                temperature: toNumber(feed.field1),
+                humidity: toNumber(feed.field2),
+                eco2: toNumber(feed.field3),
+                lux: toNumber(feed.field4),
+                battery: toNumber(feed.field5)
+            }));
+
+            const latest = measurements[measurements.length - 1];
+
+            updateCards(latest);
+            updateChart(measurements);
+            updateTable(measurements);
+
+            statusElement.textContent =
+                `Last updated: ${formatTime(latest.time)}. ` +
+                `Showing ${measurements.length} measurements.`;
+        } catch (error) {
+            console.error(error);
+
+            statusElement.classList.add("error");
+            statusElement.textContent =
+                `Unable to load ThingSpeak data: ${error.message}`;
+        }
+    }
+
+    function updateCards(latest) {
+        document.getElementById("temperature").textContent =
+            displayValue(latest.temperature, "°C");
+
+        document.getElementById("humidity").textContent =
+            displayValue(latest.humidity, "%");
+
+        document.getElementById("eco2").textContent =
+            displayValue(latest.eco2, "ppm");
+
+        document.getElementById("lux").textContent =
+            displayValue(latest.lux, "lux");
+
+        // document.getElementById("battery").textContent =
+        //     displayValue(latest.battery, "V");
+    }
+
+    function updateChart(measurements) {
+        const labels = measurements.map((item) =>
+            new Date(item.time).toLocaleTimeString()
+        );
+
+        const temperatureValues = measurements.map(
+            (item) => item.temperature
+        );
+        const humidityValues = measurements.map(
+            (item) => item.humidity
+        );
+
+        const eCO2Values = measurements.map(
+            (item) => item.eco2
+        );
+        const lightValues = measurements.map(
+            (item) => item.lux
+        );
+
+
+        const chartData = {
+            labels,
+            datasets: [
+                {
+                    label: "Temperature (°C)",
+                    data: temperatureValues,
+                    tension: 0.25
+                },
+                {
+                    label: "Humidity (%)",
+                    data: humidityValues,
+                    tension: 0.25
+                },
+
+
+                {
+                    label: "eco2 (ppm)",
+                    data: eCO2Values,
+                    tension: 0.25
+                },
+                {
+                    label: "Light (lux)",
+                    data: lightValues,
+                    tension: 0.25
+                },
+            ]
+        };
+
+        if (sensorChart) {
+            sensorChart.data = chartData;
+            sensorChart.update();
+            return;
+        }
+
+        const context = document
+            .getElementById("sensorChart")
+            .getContext("2d");
+
+        sensorChart = new Chart(context, {
+            type: "line",
+            data: chartData,
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                interaction: {
+                    mode: "index",
+                    intersect: false
+                },
+                scales: {
+                    y: {
+                        beginAtZero: false
+                    }
+                }
+            }
+        });
+    }
+
+    function updateTable(measurements) {
+        const tableBody = document.getElementById("dataTable");
+        tableBody.innerHTML = "";
+
+        const newestFirst = [...measurements].reverse();
+
+        newestFirst.forEach((item) => {
+            const row = document.createElement("tr");
+
+            row.innerHTML = `
+                <td>${formatTime(item.time)}</td>
+                <td>${displayValue(item.temperature, "°C")}</td>
+                <td>${displayValue(item.humidity, "%")}</td>
+                <td>${displayValue(item.eco2, "ppm")}</td>
+                <td>${displayValue(item.lux, "lux")}</td>
+
+            `;
+
+            tableBody.appendChild(row);
+        });
+    }
+
+    loadThingSpeakData();
+
+    setInterval(
+        loadThingSpeakData,
+        REFRESH_INTERVAL_MS
+    );
+</script>
+</body>
+</html>

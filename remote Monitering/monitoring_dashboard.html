@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Environmental Monitoring Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            padding: 24px;
+            font-family: Arial, sans-serif;
+            background: #f4f7f8;
+            color: #243238;
+        }
+        .container { max-width: 1200px; margin: 0 auto; }
+        h1 { margin: 0 0 16px; }
+        .tabs {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #d9e1e4;
+        }
+        .tab-button {
+            padding: 12px 22px;
+            border: 0;
+            border-bottom: 3px solid transparent;
+            background: transparent;
+            color: #52656d;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .tab-button.active {
+            color: #23851d;
+            border-bottom-color: #23851d;
+            font-weight: 700;
+        }
+        .status { margin-bottom: 24px; color: #607078; }
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+        .card,
+        .chart-panel,
+        .table-panel {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+        }
+        .card { padding: 20px; }
+        .card-title { margin-bottom: 12px; font-size: 14px; color: #6a7c84; }
+        .card-value { font-size: 28px; font-weight: bold; word-break: break-word; }
+        .chart-panel,
+        .table-panel { margin-bottom: 24px; padding: 20px; }
+        .chart-container { position: relative; height: 380px; }
+        .table-wrapper { overflow-x: auto; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #e3e8ea;
+            white-space: nowrap;
+        }
+        th { background: #f7f9fa; }
+        .error { color: #b00020; }
+        .hint {
+            padding: 14px 16px;
+            margin-bottom: 20px;
+            background: #fff8dc;
+            border: 1px solid #ead98c;
+            border-radius: 8px;
+            color: #5f531d;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Environmental Monitoring Dashboard</h1>
+
+    <div class="tabs" role="tablist">
+        <button class="tab-button active" data-sensor="air01">Air 01</button>
+        <button class="tab-button" data-sensor="soil01">Soil 01</button>
+        <button class="tab-button" data-sensor="soil02">Soil 02</button>
+    </div>
+
+    <div id="configurationHint" class="hint" hidden></div>
+    <div id="status" class="status">Loading ThingSpeak data...</div>
+    <div id="cards" class="cards"></div>
+
+    <div class="chart-panel">
+        <h2 id="chartTitle">Measurements</h2>
+        <div class="chart-container">
+            <canvas id="sensorChart"></canvas>
+        </div>
+    </div>
+
+    <div class="table-panel">
+        <h2>Recent Measurements</h2>
+        <div class="table-wrapper">
+            <table>
+                <thead><tr id="tableHead"></tr></thead>
+                <tbody id="dataTable"></tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script>
+    const SENSORS = {
+        air01: {
+            name: "Air 01",
+            channelId: "3416100",
+            readApiKey: "UVI6E0Y7F7Z1AXHT",
+            units: {
+                field1: "°C",
+                field2: "%",
+                field3: "ppm",
+                field4: "lux",
+                field5: "V"
+            },
+            fallbackNames: {
+                field1: "Temperature",
+                field2: "Humidity",
+                field3: "eCO2",
+                field4: "Light",
+                field5: "Battery"
+            }
+        },
+        soil01: {
+            name: "Soil 01",
+            channelId: "2805488",
+            readApiKey: "T0QVSGBDY9Y6OVRJ",
+            units: {
+                field1: "",
+                field2: "",
+                field3: "",
+                field4: "",
+                field5: "",
+                field6: "",
+                field7: "",
+                field8: ""
+            },
+            fallbackNames: {}
+        },
+        soil02: {
+            name: "Soil 02",
+            channelId: "3415072",
+            readApiKey: "0429ORT3V46P0LWA",
+            units: {
+                field1: "",
+                field2: "",
+                field3: "",
+                field4: "",
+                field5: "",
+                field6: "",
+                field7: "",
+                field8: ""
+            },
+            fallbackNames: {}
+        }
+    };
+
+    const RESULT_COUNT = 20;
+    const REFRESH_INTERVAL_MS = 60000;
+
+    let activeSensorId = "air01";
+    let sensorChart = null;
+
+    function toNumber(value) {
+        if (value === null || value === undefined || value === "") return null;
+        const parsedValue = Number(value);
+        return Number.isFinite(parsedValue) ? parsedValue : null;
+    }
+
+    function escapeHtml(value) {
+        return String(value)
+            .replaceAll("&", "&amp;")
+            .replaceAll("<", "&lt;")
+            .replaceAll(">", "&gt;")
+            .replaceAll('"', "&quot;")
+            .replaceAll("'", "&#039;");
+    }
+
+    function formatTime(dateString) {
+        return dateString ? new Date(dateString).toLocaleString() : "--";
+    }
+
+    function displayValue(value, unit = "", decimals = 2) {
+        if (value === null || value === undefined || value === "") return "--";
+        const numeric = toNumber(value);
+        const shown = numeric === null ? String(value) : numeric.toFixed(decimals);
+        return unit ? `${shown} ${unit}` : shown;
+    }
+
+    function getFields(channel, feeds, sensor) {
+        const fields = [];
+        for (let i = 1; i <= 8; i += 1) {
+            const key = `field${i}`;
+            const channelName = channel?.[key];
+            const hasData = feeds.some(feed => feed[key] !== null && feed[key] !== "");
+            if (channelName || hasData) {
+                fields.push({
+                    key,
+                    name: channelName || sensor.fallbackNames?.[key] || `Field ${i}`,
+                    unit: sensor.units?.[key] || ""
+                });
+            }
+        }
+        return fields;
+    }
+
+    async function loadThingSpeakData() {
+        const sensor = SENSORS[activeSensorId];
+        const statusElement = document.getElementById("status");
+        const hintElement = document.getElementById("configurationHint");
+
+        if (!/^\d+$/.test(sensor.channelId)) {
+            hintElement.hidden = false;
+            hintElement.textContent = "Please add the Soil 02 Channel ID in the SENSORS configuration before loading this tab.";
+            statusElement.classList.add("error");
+            statusElement.textContent = "Soil 02 is not configured yet.";
+            clearDashboard();
+            return;
+        }
+
+        hintElement.hidden = true;
+
+        try {
+            statusElement.classList.remove("error");
+            statusElement.textContent = `Loading ${sensor.name} data...`;
+
+            const url = `https://api.thingspeak.com/channels/${sensor.channelId}/feeds.json` +
+                `?api_key=${encodeURIComponent(sensor.readApiKey)}&results=${RESULT_COUNT}`;
+
+            const response = await fetch(url);
+            if (!response.ok) {
+                throw new Error(`ThingSpeak request failed with status ${response.status}`);
+            }
+
+            const data = await response.json();
+            if (!Array.isArray(data.feeds) || data.feeds.length === 0) {
+                throw new Error(`No ${sensor.name} measurements were returned.`);
+            }
+
+            const fields = getFields(data.channel, data.feeds, sensor);
+            if (fields.length === 0) {
+                throw new Error("The channel has no configured fields or measurement values.");
+            }
+
+            const measurements = data.feeds.map(feed => {
+                const item = { time: feed.created_at };
+                fields.forEach(field => { item[field.key] = toNumber(feed[field.key]); });
+                return item;
+            });
+
+            const latest = measurements[measurements.length - 1];
+            updateCards(latest, fields);
+            updateChart(measurements, fields, sensor.name);
+            updateTable(measurements, fields);
+
+            statusElement.textContent =
+                `${sensor.name} last updated: ${formatTime(latest.time)}. ` +
+                `Showing ${measurements.length} measurements.`;
+        } catch (error) {
+            console.error(error);
+            statusElement.classList.add("error");
+            statusElement.textContent = `Unable to load ${sensor.name} data: ${error.message}`;
+            clearDashboard();
+        }
+    }
+
+    function updateCards(latest, fields) {
+        const cards = document.getElementById("cards");
+        cards.innerHTML = fields.map(field => `
+            <div class="card">
+                <div class="card-title">${escapeHtml(field.name)}</div>
+                <div class="card-value">${escapeHtml(displayValue(latest[field.key], field.unit))}</div>
+            </div>
+        `).join("");
+    }
+
+    function updateChart(measurements, fields, sensorName) {
+        const labels = measurements.map(item => new Date(item.time).toLocaleTimeString());
+        const datasets = fields.map(field => ({
+            label: field.unit ? `${field.name} (${field.unit})` : field.name,
+            data: measurements.map(item => item[field.key]),
+            tension: 0.25,
+            spanGaps: true
+        }));
+
+        document.getElementById("chartTitle").textContent = `${sensorName} Measurements`;
+
+        if (sensorChart) {
+            sensorChart.destroy();
+        }
+
+        const context = document.getElementById("sensorChart").getContext("2d");
+        sensorChart = new Chart(context, {
+            type: "line",
+            data: { labels, datasets },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                interaction: { mode: "index", intersect: false },
+                scales: { y: { beginAtZero: false } }
+            }
+        });
+    }
+
+    function updateTable(measurements, fields) {
+        document.getElementById("tableHead").innerHTML =
+            `<th>Time</th>` + fields.map(field =>
+                `<th>${escapeHtml(field.name)}${field.unit ? ` (${escapeHtml(field.unit)})` : ""}</th>`
+            ).join("");
+
+        document.getElementById("dataTable").innerHTML = [...measurements]
+            .reverse()
+            .map(item => `
+                <tr>
+                    <td>${escapeHtml(formatTime(item.time))}</td>
+                    ${fields.map(field => `<td>${escapeHtml(displayValue(item[field.key], field.unit))}</td>`).join("")}
+                </tr>
+            `).join("");
+    }
+
+    function clearDashboard() {
+        document.getElementById("cards").innerHTML = "";
+        document.getElementById("tableHead").innerHTML = "";
+        document.getElementById("dataTable").innerHTML = "";
+        document.getElementById("chartTitle").textContent = "Measurements";
+        if (sensorChart) {
+            sensorChart.destroy();
+            sensorChart = null;
+        }
+    }
+
+    document.querySelectorAll(".tab-button").forEach(button => {
+        button.addEventListener("click", () => {
+            activeSensorId = button.dataset.sensor;
+            document.querySelectorAll(".tab-button").forEach(item =>
+                item.classList.toggle("active", item === button)
+            );
+            loadThingSpeakData();
+        });
+    });
+
+    loadThingSpeakData();
+    setInterval(loadThingSpeakData, REFRESH_INTERVAL_MS);
+</script>
+</body>
+</html>
