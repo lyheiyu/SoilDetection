@@ -1,0 +1,8 @@
+﻿ATTRIBUTE,ORDER,CODE,DESCRIPTION,DRAI_nat_code,DRAI_nat_description
+DRAI,1,E,Excessively drained,1,National description-1
+DRAI,2,S,Somewhat excessively,2,National description-2
+DRAI,3,W,Well drained,3,National description-3
+DRAI,4,M,Moderately well drained,4,National description-4
+DRAI,5,I,Imperfectly drained,5,National description-5
+DRAI,6,P,Poorly drained,6,National description-6
+DRAI,7,V,Very poorly drained,7,National description-7
